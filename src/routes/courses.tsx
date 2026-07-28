@@ -32,6 +32,8 @@ const courses = [
     price: "₹5,999",
     subtitle: "N8N, Make & Low-Code Workflow Automation",
     duration: "30 Days",
+    payLink:
+      "https://wa.me/918639191907?text=Hello%20AutoDigiX,%20I'd%20like%20to%20enroll%20in%20the%20AI%20Automation%20program!",
     bullets: [
       "N8N, Make.com (Integromat) & Zapier Pipelines",
       "AI Chatbots & Voice Agent Integration",
@@ -47,6 +49,7 @@ const courses = [
     price: "₹4,999",
     subtitle: "Frontend Development & AI Assisted Coding",
     duration: "30 Days",
+    payLink: "https://pages.razorpay.com/pl_SJthrjgrXeMdb6/view",
     bullets: [
       "HTML5, CSS3, Flexbox & CSS Grid",
       "JavaScript Core & Dynamic DOM Logic",
@@ -62,6 +65,7 @@ const courses = [
     price: "₹3,499",
     subtitle: "Performance Marketing & Growth Hacking",
     duration: "30 Days",
+    payLink: "https://pages.razorpay.com/pl_SJtVZ97RW4IDW8/view",
     bullets: [
       "Meta Ads (Facebook & Instagram Campaigns)",
       "Google Search, Display & YouTube Ads",
@@ -227,7 +231,7 @@ function CoursesPage() {
                   </div>
 
                   <a
-                    href={`https://wa.me/918639191907?text=Hello%20AutoDigiX,%20I'd%20like%20to%20enroll%20in%20the%20${encodeURIComponent(course.title)}%20program!`}
+                    href={course.payLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`block text-center w-full py-3.5 rounded-full text-sm font-medium transition-all duration-300 relative z-10 ${
