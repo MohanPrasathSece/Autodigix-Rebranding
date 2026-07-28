@@ -30,10 +30,10 @@ const courses = [
   {
     title: "AI Automation",
     price: "₹5,999",
-    subtitle: "No-Code & Low-Code Workflow Automation",
+    subtitle: "N8N, Make & Low-Code Workflow Automation",
     duration: "30 Days",
     bullets: [
-      "Make.com (Integromat) & Zapier Pipelines",
+      "N8N, Make.com (Integromat) & Zapier Pipelines",
       "AI Chatbots & Voice Agent Integration",
       "OpenAI, Anthropic & Claude API Tools",
       "Database Integration (Airtable, Notion, Sheets)",
@@ -150,10 +150,17 @@ function CoursesPage() {
                     </div>
                   )}
                   <div>
-                    <div
-                      className={`text-[10px] uppercase tracking-[0.2em] mb-4 ${isFeatured ? "text-[var(--gold)]" : "text-[var(--ink-soft)]"}`}
-                    >
-                      {course.duration} Certification
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span
+                        className={`px-3.5 py-1 bg-[var(--ink)]/[0.04] text-[10px] uppercase tracking-[0.2em] rounded-full font-medium ${isFeatured ? "text-[var(--gold)] bg-[var(--gold)]/10" : "text-[var(--ink-soft)] bg-[var(--ink)]/5"}`}
+                      >
+                        {course.duration} Program
+                      </span>
+                      <span
+                        className={`px-3.5 py-1 bg-[var(--gold)]/10 text-[var(--gold)] text-[10px] uppercase tracking-[0.2em] rounded-full font-medium`}
+                      >
+                        Certificate
+                      </span>
                     </div>
                     <h3 className="font-display text-2xl md:text-3xl font-light leading-tight mb-2">
                       {course.title}

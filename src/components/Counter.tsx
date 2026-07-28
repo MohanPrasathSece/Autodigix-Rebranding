@@ -5,7 +5,8 @@ type Props = { to: number; suffix?: string; duration?: number };
 
 export function Counter({ to, suffix = "", duration = 2 }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const inView = useInView(ref, { once: true, margin: isMobile ? "-10px" : "-60px" });
   const [val, setVal] = useState(0);
 
   useEffect(() => {

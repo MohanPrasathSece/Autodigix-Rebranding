@@ -7,10 +7,10 @@ const courses = [
   {
     title: "AI Automation",
     price: "₹5,999",
-    subtitle: "No-Code & Low-Code Workflow Automation",
+    subtitle: "N8N, Make & Low-Code Workflow Automation",
     duration: "30 Days",
     bullets: [
-      "Make.com (Integromat) & Zapier Pipelines",
+      "N8N, Make.com (Integromat) & Zapier Pipelines",
       "AI Chatbots & Voice Agent Integration",
       "OpenAI, Anthropic & Claude API Tools",
       "Database Integration (Airtable, Notion, Sheets)",
@@ -89,9 +89,12 @@ export function CoursesSection() {
               >
                 <div className="glow-card-border" />
                 <div>
-                  <div className="mb-6">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     <span className="px-3.5 py-1.5 bg-[var(--ink)]/[0.04] text-[var(--ink)] text-[10px] uppercase tracking-[0.2em] rounded-full font-medium">
                       {course.duration} Program
+                    </span>
+                    <span className="px-3.5 py-1.5 bg-[var(--gold)]/10 text-[var(--ink)] text-[10px] uppercase tracking-[0.2em] rounded-full font-medium">
+                      Certificate
                     </span>
                   </div>
 

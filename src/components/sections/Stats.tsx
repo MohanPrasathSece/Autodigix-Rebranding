@@ -55,23 +55,23 @@ export function Stats() {
               </h2>
             </Reveal>
 
-            <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-20">
+            <div className="mt-12 md:mt-24 grid grid-cols-2 gap-x-6 gap-y-12 md:gap-x-12 md:gap-y-20">
               {metrics.map((m, i) => (
                 <Reveal key={i} delay={i * 0.08}>
                   <div className="group">
-                    <div className="flex items-baseline gap-4 border-b border-[var(--ink)]/20 pb-6">
-                      <div className="font-display text-7xl md:text-8xl text-gold leading-none font-medium drop-shadow-sm">
+                    <div className="flex items-baseline gap-2 md:gap-4 border-b border-[var(--ink)]/20 pb-4 md:pb-6">
+                      <div className="font-display text-5xl md:text-8xl text-gold leading-none font-medium drop-shadow-sm">
                         <Counter to={m.v} suffix={m.s} />
                       </div>
                       <div className="ml-auto text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)]">
                         0{i + 1}
                       </div>
                     </div>
-                    <div className="mt-6 flex items-start justify-between gap-6">
-                      <div className="font-display text-xl md:text-2xl text-[var(--ink)]">
+                    <div className="mt-4 md:mt-6 flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-6">
+                      <div className="font-display text-base md:text-2xl text-[var(--ink)]">
                         {m.k}
                       </div>
-                      <div className="text-sm text-[var(--ink-soft)] max-w-xs text-right">
+                      <div className="text-xs md:text-sm text-[var(--ink-soft)] max-w-xs md:text-right">
                         {m.note}
                       </div>
                     </div>

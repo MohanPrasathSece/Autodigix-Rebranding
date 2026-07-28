@@ -13,7 +13,7 @@ const services = [
   {
     icon: Bot,
     title: "AI Automations",
-    desc: "Automated workflows that eliminate operational overhead.",
+    desc: "Automated workflows using N8N and Make that eliminate operational overhead.",
   },
   {
     icon: Globe,

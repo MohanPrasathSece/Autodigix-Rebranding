@@ -59,7 +59,7 @@ export function CTA() {
   return (
     <section
       ref={ref}
-      className="relative py-32 px-6 bg-[var(--beige-light)] border-t border-[var(--ink)]/5"
+      className="relative py-20 md:py-32 px-6 bg-[var(--beige-light)] border-t border-[var(--ink)]/5"
     >
       <motion.div
         style={{ y }}
@@ -71,14 +71,14 @@ export function CTA() {
 
       <div className="relative max-w-5xl mx-auto text-center z-10">
         <Reveal>
-          <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-6">
+          <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4 md:mb-6">
             {content.top}
           </div>
-          <h2 className="font-display text-5xl md:text-8xl leading-[0.95] text-[var(--ink)] font-light mb-8">
+          <h2 className="font-display text-3xl md:text-8xl leading-[0.95] text-[var(--ink)] font-light mb-6 md:mb-8">
             {content.heading1} <br />
             <span className="">{content.heading2}</span>
           </h2>
-          <p className="mt-6 text-[var(--ink-soft)] text-lg leading-relaxed max-w-2xl mx-auto mb-12">
+          <p className="mt-4 md:mt-6 text-[var(--ink-soft)] text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8 md:mb-12">
             {content.description}
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -107,7 +107,7 @@ export function FAQSection() {
             <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
               ◆ Questions & Answers
             </div>
-            <h2 className="font-display text-5xl md:text-7xl text-[var(--ink)] leading-[0.95] font-light">
+            <h2 className="font-display text-3xl md:text-7xl text-[var(--ink)] leading-[0.95] font-light">
               Frequently Asked <br />
               <span>Questions.</span>
             </h2>

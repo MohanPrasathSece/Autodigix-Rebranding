@@ -48,7 +48,7 @@ const services = [
     short: "Automated workflows that eliminate operational overhead.",
     long: "Intelligent systems automating lead captures, database updates, and follow-ups via AI agents.",
     bullets: [
-      "AI Automation Workflows",
+      "N8N & AI Automation Workflows",
       "Custom AI Chatbots & Agents",
       "CRM & Lead Nurturing Setup",
       "Business Process Integration",
