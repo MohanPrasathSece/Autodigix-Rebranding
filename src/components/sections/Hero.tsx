@@ -39,10 +39,6 @@ export function Hero() {
         }}
         className="relative w-full h-full min-h-[calc(100vh-2rem)] flex items-center overflow-hidden bg-[var(--beige-light)] border border-[var(--ink)]/5 shadow-soft bg-grid-pattern"
       >
-        {/* Ambient Gold/Blue lights */}
-        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 gold-accent-glow" />
-        <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 gold-accent-glow" />
-
         <motion.div
           style={{ y: bgY, willChange: "transform" }}
           className="pointer-events-none absolute inset-0"
@@ -52,9 +48,6 @@ export function Hero() {
             alt=""
             className="w-full h-full object-cover opacity-30 md:opacity-40"
           />
-          {/* Desktop-only overlays */}
-          <div className="hidden md:block absolute -top-20 -left-20 w-[700px] h-[700px] rounded-full bg-[var(--gold-soft)] blur-[100px] opacity-80 will-change-[filter]" />
-          <div className="hidden md:block absolute -bottom-20 -right-20 w-[800px] h-[800px] rounded-full bg-[var(--gold-soft)] blur-[120px] opacity-70 will-change-[filter]" />
           {/* Additional mobile white overlay for better readability */}
           <div className="absolute inset-0 bg-white/40 md:hidden pointer-events-none" />
           <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/50 to-transparent md:hidden pointer-events-none" />
