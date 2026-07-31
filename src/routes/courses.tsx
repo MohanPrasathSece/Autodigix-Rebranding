@@ -49,7 +49,7 @@ const courses = [
     price: "₹4,999",
     subtitle: "Frontend Development & AI Assisted Coding",
     duration: "30 Days",
-    payLink: "https://pages.razorpay.com/pl_SJthrjgrXeMdb6/view",
+    payLink: "https://rzp.io/rzp/dxXNSM2D",
     bullets: [
       "HTML5, CSS3, Flexbox & CSS Grid",
       "JavaScript Core & Dynamic DOM Logic",
@@ -65,7 +65,7 @@ const courses = [
     price: "₹3,499",
     subtitle: "Performance Marketing & Growth Hacking",
     duration: "30 Days",
-    payLink: "https://pages.razorpay.com/pl_SJtVZ97RW4IDW8/view",
+    payLink: "https://rzp.io/rzp/whMcDOtc",
     bullets: [
       "Meta Ads (Facebook & Instagram Campaigns)",
       "Google Search, Display & YouTube Ads",

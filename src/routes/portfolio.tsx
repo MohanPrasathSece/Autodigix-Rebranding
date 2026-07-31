@@ -28,24 +28,24 @@ export const Route = createFileRoute("/portfolio")({
 
 const projects = [
   {
-    client: "Nirvana Projects",
-    sector: "Web3 Yield Optimizer",
-    metric: "$12.4M TVL Secured",
+    client: "Octolit",
+    sector: "Digital Marketing & AI",
+    metric: "High Growth",
     year: "2024",
     color: "oklch(0.60 0.16 240)",
     image:
       "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=600&auto=format&fit=crop",
-    desc: "Developed automated DeFi yield farming smart contracts and custom staking frontends.",
+    desc: "Built scalable digital solutions and marketing automation.",
   },
   {
-    client: "Zyra Digitals",
-    sector: "Crypto Marketing Partner",
-    metric: "120k+ Community Grew",
+    client: "Hostingial",
+    sector: "Web Hosting Infrastructure",
+    metric: "High Uptime",
     year: "2024",
     color: "oklch(0.60 0.16 240)",
     image:
       "https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=600&auto=format&fit=crop",
-    desc: "Managed token pre-launches, social outreach campaigns, and viral community growth funnels.",
+    desc: "Developed reliable web hosting infrastructure and dashboard management.",
   },
   {
     client: "Solana Nexus",
@@ -189,7 +189,7 @@ function PortfolioPage() {
             ◆ Selected work · Web3 & Crypto
           </div>
           <h1 className="font-display text-[clamp(3rem,9vw,9rem)] leading-[0.9] text-[var(--ink)] font-light">
-            <CinematicTitle text="Crypto Systems" />
+            <CinematicTitle text="Digital Systems" />
             <br />
             <span className="">
               <CinematicTitle text="we've engineered." delay={0.25} />
@@ -197,7 +197,7 @@ function PortfolioPage() {
           </h1>
           <Reveal delay={0.4}>
             <p className="mt-10 max-w-xl text-lg text-[var(--ink-soft)] leading-relaxed">
-              A selection of decentralized protocols and web3 partnerships we've built
+              A selection of innovative digital projects and partnerships we've built
               high-performance marketing and infrastructure for.
             </p>
           </Reveal>

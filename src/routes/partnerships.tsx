@@ -36,27 +36,7 @@ const partners = [
     website: "https://zyradigitals.com",
     active: true,
   },
-  {
-    name: "Strategic Alliance II",
-    role: "Workflow Automation Affiliate",
-    desc: "Collaborative systems design, data architecture, and workflow integrations to be announced. Expanding capabilities in backend API pipelines.",
-    img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
-    active: false,
-  },
-  {
-    name: "Strategic Alliance III",
-    role: "Full-Funnel Creative Associate",
-    desc: "Visual branding, production operations, and multi-channel marketing assets design to be announced. Expanding reach in creative distribution.",
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-    active: false,
-  },
-  {
-    name: "Strategic Alliance IV",
-    role: "Enterprise Lead Partner",
-    desc: "Corporate market scaling, outbound database development, and strategic account execution systems to be announced.",
-    img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
-    active: false,
-  },
+
 ];
 
 function PartnerCard({ partner, i }: { partner: (typeof partners)[number]; i: number }) {
