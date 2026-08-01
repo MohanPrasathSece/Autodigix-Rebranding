@@ -205,13 +205,13 @@ export function ExpandingCard() {
   const imgY = useTransform(scrollYProgress, [0, 1], ["-10%", isMobile ? "0%" : "10%"]);
 
   return (
-    <section ref={ref} className="relative pt-20 md:pt-32 bg-[var(--beige)]">
+    <section ref={ref} className="relative pt-20 md:pt-20 md:pt-32 bg-[var(--beige)]">
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <Reveal>
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
             ◆ Philosophy
           </div>
-          <h2 className="font-display text-4xl md:text-8xl text-[var(--ink)] max-w-4xl leading-[0.95] font-light">
+          <h2 className="font-display text-4xl md:text-8xl text-[var(--ink)] max-w-4xl leading-[1.1] font-light">
             Stronger brand authority & <span className="">sustainability.</span>
           </h2>
           <p className="mt-8 text-[var(--ink-soft)] max-w-2xl text-lg leading-relaxed">

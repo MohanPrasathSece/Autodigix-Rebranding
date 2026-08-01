@@ -59,12 +59,12 @@ export function CTA() {
   return (
     <section
       ref={ref}
-      className="relative py-20 md:py-32 px-6 bg-[var(--beige-light)] border-t border-[var(--ink)]/5"
+      className="relative py-20 md:py-16 md:py-32 px-6 bg-[var(--beige-light)] border-t border-[var(--ink)]/5"
     >
       <motion.div
         style={{ y }}
         aria-hidden
-        className="absolute top-16 md:top-0 left-8 font-display  text-[14vw] md:text-[12vw] text-ink opacity-5 leading-none select-none pointer-events-none"
+        className="absolute top-16 md:top-0 left-8 font-display  text-[14vw] md:text-[12vw] text-ink opacity-5 leading-[1.1] select-none pointer-events-none"
       >
         scale
       </motion.div>
@@ -74,7 +74,7 @@ export function CTA() {
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4 md:mb-6">
             {content.top}
           </div>
-          <h2 className="font-display text-3xl md:text-8xl leading-[0.95] text-[var(--ink)] font-light mb-6 md:mb-8">
+          <h2 className="font-display text-3xl md:text-8xl leading-[1.1] text-[var(--ink)] font-light mb-6 md:mb-8">
             {content.heading1} <br />
             <span className="">{content.heading2}</span>
           </h2>

@@ -9,6 +9,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 
 import appCss from "../styles.css?url";
+import logo from "../assets/logo.png";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { ScrollProgress } from "../components/ScrollProgress";

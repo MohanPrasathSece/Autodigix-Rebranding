@@ -33,7 +33,7 @@ export function Stats() {
   const wordY = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "0%" : "-30%"]);
 
   return (
-    <section ref={ref} className="relative py-20 md:py-32 bg-[var(--beige-light)]">
+    <section ref={ref} className="relative py-20 md:py-16 md:py-32 bg-[var(--beige-light)]">
       {/* huge parallax word - removed */}
       <motion.div
         style={{ display: "none" }}
@@ -50,7 +50,7 @@ export function Stats() {
               <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
                 ◆ Track Record
               </div>
-              <h2 className="font-display text-4xl md:text-7xl text-[var(--ink)] max-w-3xl leading-[0.95] font-light">
+              <h2 className="font-display text-4xl md:text-7xl text-[var(--ink)] max-w-3xl leading-[1.1] font-light">
                 Numbers we've earned <span className="">through execution.</span>
               </h2>
             </Reveal>
@@ -60,7 +60,7 @@ export function Stats() {
                 <Reveal key={i} delay={i * 0.08}>
                   <div className="group">
                     <div className="flex items-baseline gap-2 md:gap-4 border-b border-[var(--ink)]/20 pb-4 md:pb-6">
-                      <div className="font-display text-5xl md:text-8xl text-gold leading-none font-medium drop-shadow-sm">
+                      <div className="font-display text-5xl md:text-8xl text-gold leading-[1.1] font-medium drop-shadow-sm">
                         <Counter to={m.v} suffix={m.s} />
                       </div>
                       <div className="ml-auto text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)]">

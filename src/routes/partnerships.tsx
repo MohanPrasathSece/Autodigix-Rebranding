@@ -133,7 +133,7 @@ function PartnershipsPage() {
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-6 font-medium">
             ◆ Strategic Ecosystem
           </div>
-          <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.9] text-[var(--ink)] font-light mb-8">
+          <h1 className="font-display text-[clamp(2rem,8vw,8rem)] leading-[1.1] text-[var(--ink)] font-light mb-8">
             <CinematicTitle text="Partnerships" />
             <br />
             <span className="font-normal">
@@ -150,7 +150,7 @@ function PartnershipsPage() {
           </Reveal>
 
           {/* Partners Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mt-20">
+          <div className="grid md:grid-cols-2 gap-8 mt-10 md:mt-20">
             {partners.map((partner, idx) => (
               <PartnerCard key={idx} partner={partner} i={idx} />
             ))}

@@ -26,66 +26,97 @@ export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
 });
 
+import img1 from "../components/brands/altum.png";
+import img2 from "../components/brands/winsta.png";
+import img3 from "../components/brands/nirvana.png";
+import img4 from "../components/brands/solter - crypto.png";
+import img5 from "../components/brands/murtik.png";
+import img6 from "../components/brands/city pet mart.png";
+import imgCrypto1 from "../components/brands/asset office crypto.png";
+import imgCrypto2 from "../components/brands/vertex iq crypto.png";
+import img7 from "../components/brands/bhumi.png";
+
 const projects = [
   {
-    client: "Octolit",
-    sector: "Digital Marketing & AI",
-    metric: "High Growth",
+    client: "Altum Systems",
+    sector: "Premium Windows & Doors",
+    metric: "High Value Lead Gen",
     year: "2024",
     color: "oklch(0.60 0.16 240)",
-    image:
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=600&auto=format&fit=crop",
-    desc: "Built scalable digital solutions and marketing automation.",
+    image: img1,
+    desc: "Digital marketing strategies targeting premium customers for high-value architectural products.",
   },
   {
-    client: "Hostingial",
-    sector: "Web Hosting Infrastructure",
-    metric: "High Uptime",
+    client: "Winsta",
+    sector: "Premium Windows & Doors",
+    metric: "Targeted Reach",
     year: "2024",
     color: "oklch(0.60 0.16 240)",
-    image:
-      "https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=600&auto=format&fit=crop",
-    desc: "Developed reliable web hosting infrastructure and dashboard management.",
+    image: img2,
+    desc: "Optimized digital campaigns driving qualified leads for luxury window and door installations.",
   },
   {
-    client: "Solana Nexus",
-    sector: "L2 Analytics Dashboard",
-    metric: "40k+ Active Addresses",
+    client: "Nirvana Pain Clinic",
+    sector: "Healthcare",
+    metric: "Patient Acquisition",
     year: "2025",
     color: "oklch(0.60 0.16 240)",
-    image:
-      "https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=600&auto=format&fit=crop",
-    desc: "Built a low-latency web interface tracking network congestion and volume flows.",
+    image: img3,
+    desc: "Comprehensive digital marketing to increase local visibility and patient bookings.",
   },
   {
-    client: "Aether Finance",
-    sector: "Decentralized Lending",
-    metric: "$8.5M Borrowing Vol",
+    client: "Solter",
+    sector: "Web3 & Crypto",
+    metric: "Brand Growth",
     year: "2024",
     color: "oklch(0.60 0.16 240)",
-    image:
-      "https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=600&auto=format&fit=crop",
-    desc: "Designed collateralized peer-to-peer lending web apps with high responsiveness.",
+    image: img4,
+    desc: "Showcasing design portfolios through targeted social media and search engine marketing.",
   },
   {
-    client: "Krypton Security",
-    sector: "Account Abstraction Wallet",
-    metric: "50k+ Installs Achieved",
+    client: "Murtik",
+    sector: "E-Commerce",
+    metric: "Online Sales",
     year: "2025",
     color: "oklch(0.60 0.16 240)",
-    image:
-      "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=600&auto=format&fit=crop",
-    desc: "Created frictionless web onboarding flows and gasless smart wallet contract layers.",
+    image: img5,
+    desc: "E-commerce marketing campaigns to drive sales for divine murtis and spiritual products.",
   },
   {
-    client: "Apex Marketplace",
-    sector: "Digital NFT Launchpad",
-    metric: "$3.2M Trading Volume",
+    client: "City Pet Mart USA",
+    sector: "Pet Retail",
+    metric: "Market Expansion",
+    year: "2024",
+    color: "oklch(0.60 0.16 240)",
+    image: img6,
+    desc: "Cross-border digital marketing strategies to scale pet item retail operations in the US market.",
+  },
+  {
+    client: "Bhumi Safety Nets",
+    sector: "Home Safety Services",
+    metric: "Local Dominance",
     year: "2023",
     color: "oklch(0.60 0.16 240)",
-    image:
-      "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600&auto=format&fit=crop",
-    desc: "Engineered high-performance token listing boards, NFT filters, and search indexing.",
+    image: img7,
+    desc: "Localized search campaigns driving immediate inquiries for safety net installations.",
+  },
+  {
+    client: "Asset Office",
+    sector: "Web3 & Crypto",
+    metric: "User Adoption",
+    year: "2025",
+    color: "oklch(0.60 0.16 240)",
+    image: imgCrypto1,
+    desc: "High-performance digital marketing campaigns tailored for cryptocurrency projects and user onboarding.",
+  },
+  {
+    client: "Vertex IQ",
+    sector: "Web3 & Crypto",
+    metric: "Community Growth",
+    year: "2024",
+    color: "oklch(0.60 0.16 240)",
+    image: imgCrypto2,
+    desc: "Strategic community building and engagement strategies for decentralized ecosystems.",
   },
 ];
 
@@ -118,17 +149,15 @@ function ProjectCard({ p, i }: { p: (typeof projects)[number]; i: number }) {
     <Reveal delay={i * 0.05}>
       <div
         onMouseMove={handleMouseMove}
-        data-cursor="view"
         className="glow-container relative group bg-[var(--beige-light)] rounded-[2rem] overflow-hidden border border-[var(--ink)]/5 shadow-soft h-[480px] flex flex-col cursor-pointer transition-all duration-300"
       >
         <div className="glow-card-border" />
-        <div className="relative h-48 overflow-hidden z-10">
+        <div className="relative h-48 overflow-hidden z-10 flex items-center justify-center bg-white p-6">
           <img
             src={p.image}
             alt={p.client}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--beige-light)] to-transparent opacity-80" />
           <div className="absolute top-4 left-4 text-xs font-medium bg-[var(--ink)] text-[var(--beige-light)] px-3 py-1 rounded-full uppercase tracking-wider">
             {p.year}
           </div>
@@ -175,7 +204,7 @@ function PortfolioPage() {
 
   return (
     <>
-      <section ref={ref} className="relative pt-44 pb-16 px-6 overflow-hidden">
+      <section ref={ref} className="relative pt-28 md:pt-44 pb-16 px-6 overflow-hidden">
         {/* Adjusted background text position and size to prevent overlap */}
         <motion.div
           style={{ y }}
@@ -186,9 +215,9 @@ function PortfolioPage() {
         </motion.div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-6">
-            ◆ Selected work · Web3 & Crypto
+            ◆ Selected work · Brands & Crypto
           </div>
-          <h1 className="font-display text-[clamp(3rem,9vw,9rem)] leading-[0.9] text-[var(--ink)] font-light">
+          <h1 className="font-display text-[clamp(2rem,9vw,9rem)] leading-[1.1] text-[var(--ink)] font-light">
             <CinematicTitle text="Digital Systems" />
             <br />
             <span className="">
@@ -224,14 +253,6 @@ function PortfolioPage() {
             </ParallaxColumn>
           </div>
         </div>
-      </section>
-
-      <section className="py-32 px-6 bg-[var(--beige-light)] text-center">
-        <Reveal>
-          <h2 className="font-display text-5xl md:text-7xl text-[var(--ink)] font-light max-w-3xl mx-auto leading-[0.95]">
-            Want to be the next <span className="">case study?</span>
-          </h2>
-        </Reveal>
       </section>
     </>
   );

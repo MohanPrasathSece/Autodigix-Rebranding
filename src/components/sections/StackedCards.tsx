@@ -44,7 +44,7 @@ function Card({ i, total, item }: { i: number; total: number; item: (typeof step
         <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[var(--ink)]/[0.03] blur-[60px] will-change-[filter]" />
         <div className="relative grid md:grid-cols-12 gap-6 md:gap-10 items-center">
           <div className="md:col-span-3">
-            <div className="font-display text-5xl md:text-9xl text-[var(--ink)] leading-none font-light">
+            <div className="font-display text-5xl md:text-9xl text-[var(--ink)] leading-[1.1] font-light">
               {item.n}
             </div>
           </div>
@@ -67,14 +67,14 @@ function Card({ i, total, item }: { i: number; total: number; item: (typeof step
 
 export function StackedCards() {
   return (
-    <section className="pt-4 pb-20 md:py-32 px-6 bg-[var(--beige)]">
+    <section className="pt-4 pb-20 md:py-16 md:py-32 px-6 bg-[var(--beige)]">
       <div className="max-w-6xl mx-auto">
         {/* Removed GlobeInteractive on mobile for performance */}
         <Reveal>
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
             ◆ The Process
           </div>
-          <h2 className="font-display text-5xl md:text-8xl text-[var(--ink)] max-w-3xl leading-[0.95] mb-20 font-light">
+          <h2 className="font-display text-5xl md:text-8xl text-[var(--ink)] max-w-3xl leading-[1.1] mb-10 md:mb-20 font-light">
             Four steps to a <br />
             <span className="">predictable growth engine.</span>
           </h2>

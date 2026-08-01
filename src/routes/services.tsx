@@ -184,7 +184,7 @@ function ServicesHero() {
         <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-6">
           ◆ Capabilities
         </div>
-        <h1 className="font-display text-[clamp(3rem,9vw,9rem)] leading-[1.2] md:leading-[1.1] text-[var(--ink)] font-light">
+        <h1 className="font-display text-[clamp(2rem,9vw,9rem)] leading-[1.2] md:leading-[1.1] text-[var(--ink)] font-light">
           <CinematicTitle text="Performance Marketing" />
           <br />
           <span className="">
@@ -204,7 +204,7 @@ function ServicesHero() {
 
 function PricingTease() {
   return (
-    <section className="py-32 px-6 bg-[var(--ink)] text-[var(--beige-light)] relative overflow-hidden">
+    <section className="py-16 md:py-32 px-6 bg-[var(--ink)] text-[var(--beige-light)] relative overflow-hidden">
       <div className="absolute inset-0 noise-bg opacity-[0.05]" />
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
         {[

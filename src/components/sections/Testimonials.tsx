@@ -22,7 +22,7 @@ function Card({ t }: { t: (typeof items)[number] }) {
   return (
     <figure className="bg-[var(--beige-light)] rounded-xl md:rounded-3xl p-5 md:p-8 border border-[var(--ink)]/10 shadow-soft flex flex-col justify-between overflow-hidden min-h-[320px] md:aspect-square">
       <div>
-        <div className="font-display text-3xl md:text-5xl text-[var(--ink-soft)] leading-none ">
+        <div className="font-display text-3xl md:text-5xl text-[var(--ink-soft)] leading-[1.1] ">
           "
         </div>
         <blockquote className="mt-2 md:mt-3 text-sm md:text-lg text-[var(--ink)] leading-relaxed">
@@ -51,13 +51,13 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="relative py-32 px-6 overflow-hidden bg-[var(--beige)]">
-      <div className="max-w-7xl mx-auto mb-20">
+    <section className="relative py-16 md:py-32 px-6 overflow-hidden bg-[var(--beige)]">
+      <div className="max-w-7xl mx-auto mb-10 md:mb-20">
         <Reveal>
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
             ◆ Voices
           </div>
-          <h2 className="font-display text-5xl md:text-8xl text-[var(--ink)] max-w-4xl leading-[0.95] font-light">
+          <h2 className="font-display text-5xl md:text-8xl text-[var(--ink)] max-w-4xl leading-[1.1] font-light">
             Trusted by operators and <span className="">growing businesses.</span>
           </h2>
         </Reveal>

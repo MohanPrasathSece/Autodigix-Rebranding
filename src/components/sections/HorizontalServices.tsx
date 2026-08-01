@@ -154,14 +154,14 @@ export function HorizontalServices() {
   const labelY = useTransform(scrollYProgress, [0, 1], [isMobile ? 0 : 60, isMobile ? 0 : -60]);
 
   return (
-    <section ref={ref} className="relative pt-32 pb-20 md:py-32 px-6 bg-[var(--beige)]">
+    <section ref={ref} className="relative pt-20 md:pt-32 pb-20 md:py-16 md:py-32 px-6 bg-[var(--beige)]">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-16 md:mb-24">
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
               ◆ Capabilities
             </div>
-            <h2 className="font-display text-4xl md:text-8xl text-[var(--ink)] leading-[0.95] font-light mt-12 md:mt-0">
+            <h2 className="font-display text-4xl md:text-8xl text-[var(--ink)] leading-[1.1] font-light mt-12 md:mt-0">
               Our Core <br />
               <span className="">Services.</span>
             </h2>

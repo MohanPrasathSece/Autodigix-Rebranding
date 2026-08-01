@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/Untitled_design-removebg-preview.png";
+import logo from "../assets/logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -62,10 +62,8 @@ export function Navbar() {
             onClick={() => window.scrollTo(0, 0)}
             className="flex items-center gap-3 group"
           >
-            <div className="leading-tight">
-              <div className="font-display text-xl md:text-2xl text-[var(--ink)] font-medium tracking-tight">
-                AutoDigiX
-              </div>
+            <div className="leading-[1.1]">
+              <img src={logo} alt="AutoDigiX Logo" className="h-10 w-auto object-contain" />
             </div>
           </Link>
 

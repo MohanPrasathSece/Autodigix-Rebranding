@@ -97,7 +97,7 @@ export function FAQSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section className="py-20 md:py-32 px-6 bg-[var(--beige)] bg-grid-pattern relative overflow-hidden">
+    <section className="py-20 md:py-16 md:py-32 px-6 bg-[var(--beige)] bg-grid-pattern relative overflow-hidden">
       {/* Soft background ambient light */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gold-accent-glow" />
 
@@ -107,7 +107,7 @@ export function FAQSection() {
             <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
               ◆ Questions & Answers
             </div>
-            <h2 className="font-display text-3xl md:text-7xl text-[var(--ink)] leading-[0.95] font-light">
+            <h2 className="font-display text-3xl md:text-7xl text-[var(--ink)] leading-[1.1] font-light">
               Frequently Asked <br />
               <span>Questions.</span>
             </h2>

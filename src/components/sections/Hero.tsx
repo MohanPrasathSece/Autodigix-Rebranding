@@ -71,7 +71,7 @@ export function Hero() {
             ◆ Performance Marketing • Lead Generation • Automation Systems • Growth Strategy
           </div>
 
-          <h1 className="font-display text-[clamp(2.5rem,10vw,10rem)] leading-[0.9] text-[var(--ink)] font-light">
+          <h1 className="font-display text-[clamp(2rem,10vw,10rem)] leading-[1.1] text-[var(--ink)] font-light">
             <RevealText text="AI Automation &" />
             <br />
             <span className="font-normal">

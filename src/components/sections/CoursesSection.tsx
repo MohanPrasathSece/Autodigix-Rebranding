@@ -63,13 +63,13 @@ export function CoursesSection() {
   };
 
   return (
-    <section ref={ref} className="py-32 px-6 bg-[var(--beige-light)]">
+    <section ref={ref} className="py-16 md:py-32 px-6 bg-[var(--beige-light)]">
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
             ◆ Training
           </div>
-          <h2 className="font-display text-4xl md:text-8xl text-[var(--ink)] max-w-4xl leading-[0.95] font-light">
+          <h2 className="font-display text-4xl md:text-8xl text-[var(--ink)] max-w-4xl leading-[1.1] font-light">
             Our Professional <span className="">Courses.</span>
           </h2>
           <p className="mt-8 text-[var(--ink-soft)] max-w-2xl text-lg leading-relaxed mb-16">

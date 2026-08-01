@@ -1,35 +1,23 @@
-import dti from "../../assets/brands/2020_DTI-Logo-Horizontal_Color.webp";
-import logo2 from "../../assets/brands/3e98de_653350b3982442c9b925893b6588bd5f~mv2.avif";
-import circular from "../../assets/brands/66a00a04a484465ad92e1616_Circular-TR-p-500.png";
-import holloway from "../../assets/brands/67c65963fdb193ed862cef9c_Holloway-Solutions-logo.png";
-import aztech from "../../assets/brands/Aztech-Main-Logo-1.png.webp";
-import crs from "../../assets/brands/CRSEmail-1-1-removebg-preview.png";
-import itsecure from "../../assets/brands/IT-Secure-Logo_Name-scaled.png";
-import nerdranges from "../../assets/brands/Nerd-Ranges-Logo.avif";
-import highway99 from "../../assets/brands/highway-99-logo-white.svg";
-import industrypro from "../../assets/brands/industrypro-reverse-logo.svg";
-import ll from "../../assets/brands/ll-removebg-preview.png";
-import logowhite from "../../assets/brands/logo-white-removebg-preview.png";
-import logomin from "../../assets/brands/logo_min.png";
-import se from "../../assets/brands/se_logo.webp";
-import markgraf from "../../assets/brands/tag_Markgraf-logo-horz_white-v2-scaled.png";
+import img1 from "../brands/altum.png";
+import img2 from "../brands/winsta.png";
+import img3 from "../brands/nirvana.png";
+import img4 from "../brands/solter - crypto.png";
+import img5 from "../brands/murtik.png";
+import img6 from "../brands/city pet mart.png";
+import img7 from "../brands/bhumi.png";
+import imgCrypto1 from "../brands/asset office crypto.png";
+import imgCrypto2 from "../brands/vertex iq crypto.png";
 
 const brands = [
-  { name: "DTI", logo: dti },
-  { name: "Logo2", logo: logo2 },
-  { name: "Circular", logo: circular },
-  { name: "Holloway", logo: holloway },
-  { name: "Aztech", logo: aztech },
-  { name: "CRS", logo: crs },
-  { name: "IT Secure", logo: itsecure },
-  { name: "Nerd Ranges", logo: nerdranges },
-  { name: "Highway 99", logo: highway99 },
-  { name: "Industry Pro", logo: industrypro },
-  { name: "LL", logo: ll },
-  { name: "Logo White", logo: logowhite },
-  { name: "Logo Min", logo: logomin },
-  { name: "SE", logo: se },
-  { name: "Markgraf", logo: markgraf },
+  { name: "Altum Systems", logo: img1 },
+  { name: "Winsta", logo: img2 },
+  { name: "Nirvana Pain Clinic", logo: img3 },
+  { name: "Solter", logo: img4 },
+  { name: "Murtik", logo: img5 },
+  { name: "City Pet Mart USA", logo: img6 },
+  { name: "Bhumi Safety Nets", logo: img7 },
+  { name: "Asset Office", logo: imgCrypto1 },
+  { name: "Vertex IQ", logo: imgCrypto2 },
 ];
 
 export function LogoMarquee() {

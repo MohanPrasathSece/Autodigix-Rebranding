@@ -73,7 +73,7 @@ function AboutHero() {
       <motion.div
         style={{ y: y2 }}
         aria-hidden
-        className="absolute top-10 right-10 font-display  text-[18vw] md:text-[16vw] text-ink opacity-5 leading-none select-none pointer-events-none"
+        className="absolute top-10 right-10 font-display  text-[18vw] md:text-[16vw] text-ink opacity-5 leading-[1.1] select-none pointer-events-none"
       >
         about
       </motion.div>
@@ -81,7 +81,7 @@ function AboutHero() {
         <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-6">
           ◆ About AutoDigiX
         </div>
-        <h1 className="font-display text-[clamp(3rem,9vw,9rem)] leading-[0.9] text-[var(--ink)] font-light">
+        <h1 className="font-display text-[clamp(2rem,9vw,9rem)] leading-[1.1] text-[var(--ink)] font-light">
           <RevealText text="AI Automation &" />
           <br />
           <span className="">
@@ -110,7 +110,7 @@ function ParallaxQuote() {
   return (
     <section
       ref={ref}
-      className="py-32 px-6 overflow-hidden bg-[var(--ink)] text-[var(--beige-light)] relative"
+      className="py-16 md:py-32 px-6 overflow-hidden bg-[var(--ink)] text-[var(--beige-light)] relative"
     >
       <div className="absolute inset-0 noise-bg opacity-[0.05]" />
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
@@ -147,14 +147,14 @@ function StickyNarrative() {
   const y = useTransform(scrollYProgress, [0, 1], [80, -80]);
 
   return (
-    <section ref={ref} className="relative py-32 px-6 bg-[var(--beige)]">
+    <section ref={ref} className="relative py-16 md:py-32 px-6 bg-[var(--beige)]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
         <div className="md:col-span-5">
           <div className="md:sticky md:top-32">
             <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
               ◆ Why AutoDigiX
             </div>
-            <h2 className="font-display text-5xl md:text-7xl text-[var(--ink)] leading-[0.95] font-light">
+            <h2 className="font-display text-5xl md:text-7xl text-[var(--ink)] leading-[1.1] font-light">
               Drive Real <br />
               <span className="">Business</span>
               <br /> Growth.
@@ -186,13 +186,13 @@ function AboutPage() {
     <>
       <AboutHero />
 
-      <section className="py-32 px-6 bg-[var(--beige-light)]">
+      <section className="py-16 md:py-32 px-6 bg-[var(--beige-light)]">
         <div className="max-w-6xl mx-auto">
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
               ◆ Our Mission
             </div>
-            <h2 className="font-display text-5xl md:text-7xl text-[var(--ink)] mb-20 font-light">
+            <h2 className="font-display text-5xl md:text-7xl text-[var(--ink)] mb-10 md:mb-20 font-light">
               Stronger Brand Authority & <br />
               <span className="">Sustainability.</span>
             </h2>
@@ -230,14 +230,14 @@ function AboutPage() {
 
       <StickyNarrative />
 
-      <section className="py-32 px-6 bg-[var(--beige-light)]">
+      <section className="py-16 md:py-32 px-6 bg-[var(--beige-light)]">
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Reveal>
               <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-4">
                 ◆ How We Work
               </div>
-              <h2 className="font-display text-5xl md:text-7xl text-[var(--ink)] leading-[0.95] font-light">
+              <h2 className="font-display text-5xl md:text-7xl text-[var(--ink)] leading-[1.1] font-light">
                 Modern digital <br />
                 <span className="">infrastructure.</span>
               </h2>
@@ -258,7 +258,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-[var(--beige)] border-t border-[var(--ink)]/5 text-center">
+      <section className="py-12 md:py-24 px-6 bg-[var(--beige)] border-t border-[var(--ink)]/5 text-center">
         <div className="max-w-4xl mx-auto">
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-8">

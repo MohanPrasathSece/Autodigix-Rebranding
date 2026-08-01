@@ -79,12 +79,12 @@ function ContactHero() {
       <motion.div
         style={{ y }}
         aria-hidden
-        className="absolute top-0 right-8 font-display  text-[16vw] md:text-[14vw] text-ink opacity-5 leading-none select-none pointer-events-none"
+        className="absolute top-0 right-8 font-display  text-[16vw] md:text-[14vw] text-ink opacity-5 leading-[1.1] select-none pointer-events-none"
       >
         talk
       </motion.div>
       <div className="relative max-w-7xl mx-auto">
-        <h1 className="font-display text-[clamp(3rem,9vw,9rem)] leading-[0.9] text-[var(--ink)] font-light">
+        <h1 className="font-display text-[clamp(2rem,9vw,9rem)] leading-[1.1] text-[var(--ink)] font-light">
           <RevealText text="Get In Touch" />
           <br />
           <span className="">
@@ -138,7 +138,7 @@ function ContactPage() {
                     value: "praveengorla150102@gmail.com",
                     link: "mailto:praveengorla150102@gmail.com",
                   },
-                  { icon: Phone, label: "Phone", value: "8639191907", link: "tel:8639191907" },
+                  { icon: Phone, label: "Phone", value: "+91 8639191907", link: "tel:+918639191907" },
                 ].map((c) => (
                   <motion.div
                     key={c.label}
@@ -235,7 +235,7 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="py-32 px-6 bg-[var(--beige)] border-t border-[var(--ink)]/5">
+      <section className="py-16 md:py-32 px-6 bg-[var(--beige)] border-t border-[var(--ink)]/5">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-16 text-center">

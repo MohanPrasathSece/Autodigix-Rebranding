@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import logo from "../assets/Untitled_design-removebg-preview.png";
+import logo from "../assets/logo.png";
 
 // Footer component sync'd with header branding
 export function Footer() {
@@ -9,16 +9,14 @@ export function Footer() {
     <footer className="relative bg-[var(--ink)] text-[var(--beige-light)] overflow-hidden">
       <div className="absolute inset-0 noise-bg opacity-[0.04] pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <div className="flex flex-col md:flex-row items-start justify-between mb-10 md:mb-20 gap-10">
+        <div className="flex flex-col md:flex-row items-start justify-between mb-10 md:mb-10 md:mb-20 gap-10">
           <Link
             to="/"
             onClick={() => window.scrollTo(0, 0)}
             className="flex items-center gap-3 group"
           >
-            <div className="leading-tight">
-              <div className="font-display text-2xl text-[var(--beige-light)] font-medium tracking-tight">
-                AutoDigiX
-              </div>
+            <div className="leading-[1.1]">
+              <img src={logo} alt="AutoDigiX Logo" className="h-10 w-auto object-contain brightness-0 invert" />
             </div>
           </Link>
           <Link
@@ -38,7 +36,7 @@ export function Footer() {
           className="grid md:grid-cols-12 gap-8 md:gap-12 pb-16 border-b border-[var(--beige-light)]/15"
         >
           <div className="hidden md:block md:col-span-6">
-            <h2 className="font-display text-4xl md:text-8xl leading-[0.9] text-[var(--beige-light)] font-light">
+            <h2 className="font-display text-4xl md:text-8xl leading-[1.1] text-[var(--beige-light)] font-light">
               Scale Your
               <br />
               <span className="">Business.</span>
@@ -166,8 +164,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:8639191907" className="hover:text-[var(--beige-light)] transition">
-                  8639191907
+                <a href="tel:+918639191907" className="hover:text-[var(--beige-light)] transition">
+                  +91 8639191907
                 </a>
               </li>
             </ul>

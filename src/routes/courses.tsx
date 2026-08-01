@@ -105,7 +105,7 @@ function CoursesPage() {
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-6">
             ◆ Industry-Focused AI Programs
           </div>
-          <h1 className="font-display text-[clamp(3rem,9vw,9rem)] leading-[0.9] text-[var(--ink)] font-light">
+          <h1 className="font-display text-[clamp(2rem,9vw,9rem)] leading-[1.1] text-[var(--ink)] font-light">
             <CinematicTitle text="Transform Your" />
             <br />
             <span className="">
@@ -249,7 +249,7 @@ function CoursesPage() {
         </div>
       </section>
 
-      <section className="py-32 px-6 bg-[var(--beige-light)]">
+      <section className="py-16 md:py-32 px-6 bg-[var(--beige-light)]">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-12 text-center">

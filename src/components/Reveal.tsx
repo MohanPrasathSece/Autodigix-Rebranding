@@ -159,7 +159,7 @@ export function CinematicTitle({
       {words.map((word, wordIdx) => (
         <span
           key={wordIdx}
-          className="inline-block mr-[0.25em] whitespace-nowrap overflow-hidden py-3 -my-3 align-bottom"
+          className="inline-block mr-[0.25em] whitespace-nowrap overflow-hidden py-[0.2em] -my-[0.2em] align-bottom"
         >
           {word.split("").map((letter, letterIdx) => (
             <motion.span

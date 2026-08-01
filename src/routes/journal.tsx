@@ -114,7 +114,7 @@ function JournalPage() {
           <div className="text-[10px] uppercase tracking-[0.35em] text-[var(--ink-soft)] mb-6">
             ◆ Field notes · Est. 2022
           </div>
-          <h1 className="font-display text-[clamp(3rem,9vw,9rem)] leading-[0.9] text-[var(--ink)] font-light">
+          <h1 className="font-display text-[clamp(2rem,9vw,9rem)] leading-[1.1] text-[var(--ink)] font-light">
             <RevealText text="Notes from" />
             <br />
             <span className="">
