@@ -135,8 +135,8 @@ function ContactPage() {
                   {
                     icon: Mail,
                     label: "Support Email",
-                    value: "praveengorla150102@gmail.com",
-                    link: "mailto:praveengorla150102@gmail.com",
+                    value: "info@autodigix.in",
+                    link: "mailto:info@autodigix.in",
                   },
                   { icon: Phone, label: "Phone", value: "+91 8639191907", link: "tel:+918639191907" },
                 ].map((c) => (
