@@ -103,6 +103,12 @@ function ContactPage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setSent(true);
+
+    // Google Ads conversion tracking
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {'send_to': 'AW-18369902559/4hq9CO24jdwcEN_vubdE'});
+    }
+
     setTimeout(() => {
       setSent(false);
       setForm({ name: "", email: "", company: "", budget: "", message: "" });
