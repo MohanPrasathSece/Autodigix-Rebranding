@@ -36,7 +36,7 @@ export function PageIntro() {
             >
               AutoDigiX
             </motion.div>
-            <motion.div className="overflow-hidden py-[0.2em] -my-[0.2em]">
+            <motion.div className="overflow-hidden py-[0.4em] -my-[0.4em]">
               <motion.h1
                 initial={{ y: "100%" }}
                 animate={{ y: "0%" }}
