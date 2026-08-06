@@ -111,20 +111,43 @@ function ContactHero() {
 function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", company: "", budget: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setIsSubmitting(true);
 
-    // Google Ads conversion tracking
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {'send_to': 'AW-18369902559/4hq9CO24jdwcEN_vubdE'});
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        setSent(true);
+
+        // Google Ads conversion tracking
+        if (typeof window !== "undefined" && (window as any).gtag) {
+          (window as any).gtag('event', 'conversion', {'send_to': 'AW-18369902559/4hq9CO24jdwcEN_vubdE'});
+        }
+
+        setTimeout(() => {
+          setSent(false);
+          setForm({ name: "", email: "", company: "", budget: "", message: "" });
+        }, 3000);
+      } else {
+        console.error("Failed to send message");
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setTimeout(() => {
-      setSent(false);
-      setForm({ name: "", email: "", company: "", budget: "", message: "" });
-    }, 3500);
   };
 
   return (
@@ -230,9 +253,10 @@ function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full mt-4 flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[var(--ink)] text-[var(--beige-light)] font-medium hover:shadow-gold transition-shadow"
+                    disabled={isSubmitting}
+                    className="w-full mt-4 flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[var(--ink)] text-[var(--beige-light)] font-medium hover:shadow-gold transition-shadow disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Submit <Send className="w-4 h-4" />
+                    {isSubmitting ? "Sending..." : "Submit"} <Send className="w-4 h-4" />
                   </button>
                 </div>
               ) : (
@@ -244,8 +268,10 @@ function ContactPage() {
                   <div className="w-16 h-16 rounded-full bg-green-500/10 text-green-600 flex items-center justify-center mb-6">
                     <Check className="w-8 h-8" />
                   </div>
-                  <div className="font-display text-2xl text-[var(--ink)] mb-2">Thank you</div>
-                  <p className="text-[var(--ink-soft)]">We'll be in touch shortly.</p>
+                  <div className="font-display text-2xl text-[var(--ink)] mb-2">Thank You for Reaching Out</div>
+                  <p className="text-[var(--ink-soft)] mt-2 max-w-xs text-center leading-relaxed">
+                    Our team has received your message and will contact you shortly.
+                  </p>
                 </motion.div>
               )}
             </form>
