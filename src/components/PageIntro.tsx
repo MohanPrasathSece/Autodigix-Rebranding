@@ -36,13 +36,13 @@ export function PageIntro() {
             >
               AutoDigiX
             </motion.div>
-            <motion.div className="overflow-hidden py-[0.4em] -my-[0.4em]">
+            <motion.div className="overflow-hidden pb-[0.6em] -mb-[0.6em] pt-[0.2em] -mt-[0.2em]">
               <motion.h1
-                initial={{ y: "100%" }}
+                initial={{ y: "120%" }}
                 animate={{ y: "0%" }}
-                exit={{ y: "-100%" }}
+                exit={{ y: "-120%" }}
                 transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1], delay: 0.35 }}
-                className="font-display text-5xl md:text-8xl text-[var(--beige-light)] "
+                className="font-display text-5xl md:text-8xl text-[var(--beige-light)] leading-normal"
               >
                 AutoDigiX
               </motion.h1>
