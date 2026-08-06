@@ -23,6 +23,18 @@ export const Route = createFileRoute("/about")({
       { property: "og:url", content: "https://autodigix.in/about" },
       { tagName: "link", rel: "canonical", href: "https://autodigix.in/about" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About AutoDigiX",
+          description: "Learn about AutoDigiX, founded by Praveen Gorla. We are a premier agency combining data-driven digital marketing with AI automation to scale your business.",
+          url: "https://autodigix.in/about"
+        }),
+      }
+    ],
   }),
   component: AboutPage,
 });

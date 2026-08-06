@@ -14,6 +14,18 @@ export const Route = createFileRoute("/journal")({
       { property: "og:title", content: "Journal · AutoDigiX" },
       { property: "og:description", content: "Field notes from a boutique revenue studio." },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "AutoDigiX Journal",
+          description: "Field notes on outbound, AI automation and the craft of revenue engineering.",
+          url: "https://autodigix.in/journal"
+        }),
+      }
+    ],
   }),
   component: JournalPage,
 });

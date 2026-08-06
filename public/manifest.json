@@ -1,0 +1,21 @@
+{
+  "name": "AutoDigiX · AI Automation & Digital Marketing",
+  "short_name": "AutoDigiX",
+  "description": "AutoDigiX helps businesses scale with data-driven performance marketing, AI automation systems, and growth strategies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

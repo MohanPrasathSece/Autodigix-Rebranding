@@ -22,6 +22,18 @@ export const Route = createFileRoute("/contact")({
       { property: "og:url", content: "https://autodigix.in/contact" },
       { tagName: "link", rel: "canonical", href: "https://autodigix.in/contact" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact AutoDigiX",
+          description: "Get in touch with AutoDigiX to scale your business with performance marketing and AI automation. Book a free consultation with our experts today.",
+          url: "https://autodigix.in/contact"
+        }),
+      }
+    ],
   }),
   component: ContactPage,
 });

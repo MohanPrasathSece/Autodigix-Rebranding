@@ -76,6 +76,22 @@ export const Route = createRootRoute({
       { name: "twitter:image", content: "https://autodigix.in/logo.png" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "AutoDigiX",
+          url: "https://autodigix.in",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://autodigix.in/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }),
+      },
+    ],
   }),
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

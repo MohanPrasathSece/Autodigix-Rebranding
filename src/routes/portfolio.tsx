@@ -22,6 +22,18 @@ export const Route = createFileRoute("/portfolio")({
       { property: "og:url", content: "https://autodigix.in/portfolio" },
       { tagName: "link", rel: "canonical", href: "https://autodigix.in/portfolio" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Portfolio & Crypto Case Studies",
+          description: "View our portfolio of successful Web3 and cryptocurrency projects showcasing ROI driven by our digital marketing and AI automation strategies.",
+          url: "https://autodigix.in/portfolio"
+        }),
+      }
+    ],
   }),
   component: PortfolioPage,
 });

@@ -23,6 +23,18 @@ export const Route = createFileRoute("/partnerships")({
       { property: "og:url", content: "https://autodigix.in/partnerships" },
       { tagName: "link", rel: "canonical", href: "https://autodigix.in/partnerships" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "Partnerships & Alliances",
+          description: "Collaborative growth ecosystems. Discover how AutoDigiX partners with Zyra Digitals and industry leaders to deliver growth and automation.",
+          url: "https://autodigix.in/partnerships"
+        }),
+      }
+    ],
   }),
   component: PartnershipsPage,
 });

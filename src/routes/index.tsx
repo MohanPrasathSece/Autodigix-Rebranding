@@ -28,6 +28,23 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://autodigix.in/" },
       { tagName: "link", rel: "canonical", href: "https://autodigix.in/" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "AutoDigiX",
+          image: "https://autodigix.in/logo.png",
+          description: "AutoDigiX is a leading AI Automation & Digital Marketing Agency. We scale brands with data-driven SEO, Google Ads, Meta Ads, and AI systems.",
+          url: "https://autodigix.in",
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "IN"
+          }
+        }),
+      }
+    ],
   }),
   component: Index,
 });

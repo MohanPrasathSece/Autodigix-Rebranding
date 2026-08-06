@@ -22,6 +22,22 @@ export const Route = createFileRoute("/courses")({
       { property: "og:url", content: "https://autodigix.in/courses" },
       { tagName: "link", rel: "canonical", href: "https://autodigix.in/courses" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: "Digital Marketing & Web Development Courses",
+          description: "Master Digital Marketing, Performance Marketing, and AI-Assisted Web Development with our 30-day intensive practical courses. Get certified.",
+          provider: {
+            "@type": "Organization",
+            name: "AutoDigiX",
+            sameAs: "https://autodigix.in"
+          }
+        }),
+      }
+    ],
   }),
   component: CoursesPage,
 });

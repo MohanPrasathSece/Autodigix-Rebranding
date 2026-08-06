@@ -25,6 +25,21 @@ export const Route = createFileRoute("/services")({
       { property: "og:url", content: "https://autodigix.in/services" },
       { tagName: "link", rel: "canonical", href: "https://autodigix.in/services" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Digital Marketing & AI Automation",
+          provider: {
+            "@type": "LocalBusiness",
+            name: "AutoDigiX"
+          },
+          url: "https://autodigix.in/services"
+        }),
+      }
+    ],
   }),
   component: ServicesPage,
 });
