@@ -8,6 +8,8 @@ type Props = {
   variant?: "primary" | "ghost";
   className?: string;
   href?: string;
+  target?: string;
+  rel?: string;
 };
 
 export function MagneticButton({
@@ -16,6 +18,8 @@ export function MagneticButton({
   variant = "primary",
   className = "",
   href,
+  target,
+  rel,
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -55,13 +59,13 @@ export function MagneticButton({
   if (href) {
     if (href.startsWith("http") || href.startsWith("mailto:")) {
       return (
-        <a href={href} className="inline-block">
+        <a href={href} target={target} rel={rel} className="inline-block">
           {content}
         </a>
       );
     }
     return (
-      <Link to={href as any} className="inline-block">
+      <Link to={href as any} target={target} rel={rel} className="inline-block">
         {content}
       </Link>
     );
