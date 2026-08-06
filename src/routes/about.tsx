@@ -130,12 +130,12 @@ function ParallaxQuote() {
         <div className="md:col-span-4 flex justify-center">
           <motion.div
             style={{ y }}
-            className="relative w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden border border-[var(--beige-light)]/10 shadow-soft"
+            className="relative w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden border border-[var(--beige-light)]/10 shadow-soft flex items-center justify-center bg-[var(--beige-light)]/5"
           >
             <img
               src={founderImage}
               alt="Praveen Gorla - Founder"
-              className="w-full h-full object-cover filter grayscale contrast-110 hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-contain p-4 transition-all duration-700"
             />
           </motion.div>
         </div>
