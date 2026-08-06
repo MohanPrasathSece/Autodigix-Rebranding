@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Reveal, RevealText } from "../components/Reveal";
 import { MagneticButton } from "../components/MagneticButton";
+import founderImage from "../assets/founder.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -120,7 +121,7 @@ function ParallaxQuote() {
             className="relative w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden border border-[var(--beige-light)]/10 shadow-soft"
           >
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+              src={founderImage}
               alt="Praveen Gorla - Founder"
               className="w-full h-full object-cover filter grayscale contrast-110 hover:grayscale-0 transition-all duration-700"
             />
