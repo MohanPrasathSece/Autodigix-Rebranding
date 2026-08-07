@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState, type FormEvent } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Mail, MapPin, Phone, Send, Check, Calendar, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Check, Calendar, ArrowUpRight, Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
 import { Reveal, RevealText } from "../components/Reveal";
 
 export const Route = createFileRoute("/contact")({
@@ -207,6 +207,28 @@ function ContactPage() {
                     </div>
                   </motion.div>
                 ))}
+              </div>
+
+              <div className="pt-8 mt-8 border-t border-[var(--ink)]/15">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] mb-5">
+                  Follow Us
+                </div>
+                <div className="flex gap-4">
+                  {[
+                    { icon: Instagram, link: "#" },
+                    { icon: Linkedin, link: "#" },
+                    { icon: Twitter, link: "#" },
+                    { icon: Facebook, link: "#" },
+                  ].map((social, i) => (
+                    <a
+                      key={i}
+                      href={social.link}
+                      className="w-10 h-10 rounded-full border border-[var(--ink)]/20 flex items-center justify-center text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--beige-light)] transition-colors"
+                    >
+                      <social.icon className="w-4 h-4" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </Reveal>

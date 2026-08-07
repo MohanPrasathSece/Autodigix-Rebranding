@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
 import logo from "../assets/logo.png";
 
 // Footer component sync'd with header branding
@@ -169,6 +169,24 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+            
+            <div className="text-[10px] uppercase tracking-[0.3em] opacity-50 mb-4 mt-10">
+              Follow Us
+            </div>
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </motion.div>
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 text-[11px] opacity-50">
