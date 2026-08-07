@@ -174,10 +174,10 @@ export function Footer() {
               Follow Us
             </div>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">
+              <a href="https://www.instagram.com/autodigix/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">
+              <a href="https://www.linkedin.com/company/autodigix/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="hover:text-[var(--beige-light)] transition hover:opacity-100 opacity-70">

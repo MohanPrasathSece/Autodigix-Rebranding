@@ -215,14 +215,16 @@ function ContactPage() {
                 </div>
                 <div className="flex gap-4">
                   {[
-                    { icon: Instagram, link: "#" },
-                    { icon: Linkedin, link: "#" },
+                    { icon: Instagram, link: "https://www.instagram.com/autodigix/" },
+                    { icon: Linkedin, link: "https://www.linkedin.com/company/autodigix/" },
                     { icon: Twitter, link: "#" },
                     { icon: Facebook, link: "#" },
                   ].map((social, i) => (
                     <a
                       key={i}
                       href={social.link}
+                      target={social.link !== "#" ? "_blank" : undefined}
+                      rel={social.link !== "#" ? "noopener noreferrer" : undefined}
                       className="w-10 h-10 rounded-full border border-[var(--ink)]/20 flex items-center justify-center text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--beige-light)] transition-colors"
                     >
                       <social.icon className="w-4 h-4" />
