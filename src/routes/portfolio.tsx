@@ -46,14 +46,19 @@ import img5 from "../components/brands/murtik.png";
 import img6 from "../components/brands/city pet mart.png";
 import imgCrypto1 from "../components/brands/asset office crypto.png";
 import imgCrypto2 from "../components/brands/vertex iq crypto.png";
+import imgCrypto3 from "../assets/portfolio/alphachain vault german.png";
+import imgCrypto4 from "../assets/portfolio/lumera markets italian.png";
+import imgCrypto5 from "../assets/portfolio/nova ledger french.png";
+import imgCrypto6 from "../assets/portfolio/the capital space .png";
 import img7 from "../components/brands/bhumi.png";
 
 const projects = [
   {
     client: "Altum Systems",
     sector: "Premium Windows & Doors",
+    location: "India",
     metric: "High Value Lead Gen",
-    year: "2024",
+    year: "2025",
     color: "oklch(0.60 0.16 240)",
     image: img1,
     desc: "Digital marketing strategies targeting premium customers for high-value architectural products.",
@@ -61,8 +66,9 @@ const projects = [
   {
     client: "Winsta",
     sector: "Premium Windows & Doors",
+    location: "India",
     metric: "Targeted Reach",
-    year: "2024",
+    year: "2025",
     color: "oklch(0.60 0.16 240)",
     image: img2,
     desc: "Optimized digital campaigns driving qualified leads for luxury window and door installations.",
@@ -70,6 +76,7 @@ const projects = [
   {
     client: "Nirvana Pain Clinic",
     sector: "Healthcare",
+    location: "India",
     metric: "Patient Acquisition",
     year: "2025",
     color: "oklch(0.60 0.16 240)",
@@ -79,8 +86,9 @@ const projects = [
   {
     client: "Solter",
     sector: "Web3 & Crypto",
+    location: "India",
     metric: "Brand Growth",
-    year: "2024",
+    year: "2026",
     color: "oklch(0.60 0.16 240)",
     image: img4,
     desc: "Showcasing design portfolios through targeted social media and search engine marketing.",
@@ -88,6 +96,7 @@ const projects = [
   {
     client: "Murtik",
     sector: "E-Commerce",
+    location: "India",
     metric: "Online Sales",
     year: "2025",
     color: "oklch(0.60 0.16 240)",
@@ -97,8 +106,9 @@ const projects = [
   {
     client: "City Pet Mart USA",
     sector: "Pet Retail",
+    location: "USA",
     metric: "Market Expansion",
-    year: "2024",
+    year: "2025",
     color: "oklch(0.60 0.16 240)",
     image: img6,
     desc: "Cross-border digital marketing strategies to scale pet item retail operations in the US market.",
@@ -106,8 +116,9 @@ const projects = [
   {
     client: "Bhumi Safety Nets",
     sector: "Home Safety Services",
+    location: "India",
     metric: "Local Dominance",
-    year: "2023",
+    year: "2025",
     color: "oklch(0.60 0.16 240)",
     image: img7,
     desc: "Localized search campaigns driving immediate inquiries for safety net installations.",
@@ -115,8 +126,9 @@ const projects = [
   {
     client: "Asset Office",
     sector: "Web3 & Crypto",
+    location: "India",
     metric: "User Adoption",
-    year: "2025",
+    year: "2026",
     color: "oklch(0.60 0.16 240)",
     image: imgCrypto1,
     desc: "High-performance digital marketing campaigns tailored for cryptocurrency projects and user onboarding.",
@@ -124,12 +136,53 @@ const projects = [
   {
     client: "Vertex IQ",
     sector: "Web3 & Crypto",
+    location: "India",
     metric: "Community Growth",
-    year: "2024",
+    year: "2026",
     color: "oklch(0.60 0.16 240)",
     image: imgCrypto2,
     desc: "Strategic community building and engagement strategies for decentralized ecosystems.",
   },
+  {
+    client: "Alpha Chain Vault",
+    sector: "Web3 & Crypto",
+    location: "Germany",
+    metric: "Security & Trust",
+    year: "2026",
+    color: "oklch(0.60 0.16 240)",
+    image: imgCrypto3,
+    desc: "Robust digital infrastructure and marketing for secure institutional crypto asset management.",
+  },
+  {
+    client: "Lumera Markets",
+    sector: "Web3 & Crypto",
+    location: "Italy",
+    metric: "Platform Growth",
+    year: "2026",
+    color: "oklch(0.60 0.16 240)",
+    image: imgCrypto4,
+    desc: "Advanced growth campaigns establishing market presence for decentralized trading solutions.",
+  },
+  {
+    client: "Nova Ledger",
+    sector: "Web3 & Crypto",
+    location: "France",
+    metric: "Ecosystem Expansion",
+    year: "2026",
+    color: "oklch(0.60 0.16 240)",
+    image: imgCrypto5,
+    desc: "Targeted blockchain visibility strategies scaling user acquisition across European markets.",
+  },
+  {
+    client: "The Capital Space",
+    sector: "Web3 & Crypto",
+    location: "India",
+    metric: "Investor Outreach",
+    year: "2026",
+    color: "oklch(0.60 0.16 240)",
+    image: imgCrypto6,
+    desc: "Comprehensive investor relations and digital visibility campaigns for Web3 capital solutions.",
+  }
 ];
 
 function ParallaxColumn({ children, offset }: { children: React.ReactNode; offset: number }) {
@@ -177,8 +230,14 @@ function ProjectCard({ p, i }: { p: (typeof projects)[number]; i: number }) {
 
         <div className="p-8 flex-grow flex flex-col justify-between z-10">
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-[var(--ink-soft)] mb-2">
-              {p.sector}
+            <div className="text-xs uppercase tracking-[0.2em] text-[var(--ink-soft)] mb-2 flex justify-between items-center">
+              <span>{p.sector}</span>
+              {/* Added location display here */}
+              {p.location && (
+                <span className="bg-[var(--ink)]/5 text-[var(--ink)] px-2 py-0.5 rounded-full text-[9px] font-medium tracking-widest">
+                  {p.location}
+                </span>
+              )}
             </div>
             <h3 className="font-display text-2xl md:text-3xl text-[var(--ink)] font-light leading-tight mb-3">
               {p.client}
@@ -253,12 +312,12 @@ function PortfolioPage() {
                 <ProjectCard key={i} p={p} i={i * 3} />
               ))}
             </ParallaxColumn>
-            <ParallaxColumn offset={40}>
+            <ParallaxColumn offset={0}>
               {col2.map((p, i) => (
                 <ProjectCard key={i} p={p} i={i * 3 + 1} />
               ))}
             </ParallaxColumn>
-            <ParallaxColumn offset={-40}>
+            <ParallaxColumn offset={0}>
               {col3.map((p, i) => (
                 <ProjectCard key={i} p={p} i={i * 3 + 2} />
               ))}
