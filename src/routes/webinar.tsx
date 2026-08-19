@@ -278,7 +278,7 @@ function WebinarPage() {
           <div className="flex justify-center mb-6">
             <AlertCircle className="w-10 h-10 text-[var(--gold)] max-md:w-8 max-md:h-8" strokeWidth={1.5} />
           </div>
-          <h2 className="font-display text-4xl lg:text-5xl max-md:text-3xl leading-tight font-medium mb-8 max-md:mb-6 text-white tracking-wide">
+          <h2 className="font-display text-3xl lg:text-4xl max-md:text-2xl leading-tight font-medium mb-8 max-md:mb-6 text-white tracking-wide">
             Don't wait until you need the skill<br className="hidden md:block" /> to start learning it.
           </h2>
           <p className="text-white/70 text-lg max-md:text-base leading-relaxed max-w-3xl mx-auto font-light mb-12 max-md:mb-10">
