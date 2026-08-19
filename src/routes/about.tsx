@@ -8,34 +8,115 @@ import founderImage from "../assets/founder.png";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About AutoDigiX · AI Automation & Digital Marketing" },
+      { title: "About AutoDigiX | Digital Marketing Company" },
       {
         name: "description",
         content:
-          "Learn about AutoDigiX, founded by Praveen Gorla. We are a premier agency combining data-driven digital marketing with AI automation to scale your business.",
+          "Learn about AutoDigiX, a digital marketing company helping businesses grow with SEO, paid advertising, social media, websites and AI automation.",
       },
-      { property: "og:title", content: "About AutoDigiX · AI Automation & Digital Marketing" },
+      {
+        name: "keywords",
+        content:
+          "digital marketing company, AutoDigiX, digital marketing agency, Praveen Gorla, AI automation company, performance marketing company India",
+      },
+      { property: "og:title", content: "About AutoDigiX | Digital Marketing Company" },
       {
         property: "og:description",
         content:
-          "Learn about AutoDigiX, founded by Praveen Gorla. We are a premier agency combining data-driven digital marketing with AI automation to scale your business.",
+          "Learn about AutoDigiX, a digital marketing company helping businesses grow with SEO, paid advertising, social media, websites and AI automation.",
       },
       { property: "og:url", content: "https://autodigix.in/about" },
-      { tagName: "link", rel: "canonical", href: "https://autodigix.in/about" },
     ],
+    links: [{ rel: "canonical", href: "https://autodigix.in/about" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "AboutPage",
-          name: "About AutoDigiX",
-          description: "Learn about AutoDigiX, founded by Praveen Gorla. We are a premier agency combining data-driven digital marketing with AI automation to scale your business.",
-          url: "https://autodigix.in/about"
+          "@type": "WebPage",
+          "@id": "https://autodigix.in/about#webpage",
+          url: "https://autodigix.in/about",
+          name: "About AutoDigiX | Digital Marketing Company",
+          description:
+            "Learn about AutoDigiX, a digital marketing company helping businesses grow with SEO, paid advertising, social media, websites and AI automation.",
+          headline: "About AutoDigiX – Digital Marketing Company",
+          keywords: "digital marketing company",
+          isPartOf: { "@id": "https://autodigix.in/#website" },
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h2",
+              name: "Helping Businesses Grow Through Digital Innovation",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h3",
+              name: "Our Digital Marketing Approach",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h4",
+              name: "Our Expertise & Experience",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h5",
+              name: "Why Choose AutoDigiX?",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h6",
+              name: "Your Growth Is Our Priority",
+            },
+          ],
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://autodigix.in/" },
+              { "@type": "ListItem", position: 2, name: "About", item: "https://autodigix.in/about" },
+            ],
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "AutoDigiX",
+            url: "https://autodigix.in",
+            logo: "https://autodigix.in/logo.png",
+          },
         }),
-      }
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About AutoDigiX — Leading Digital Marketing Company",
+          description:
+            "AutoDigiX is a leading digital marketing company founded by Praveen Gorla, combining performance marketing, SEO, Google Ads, AI automation, and growth strategy.",
+          url: "https://autodigix.in/about",
+          mainEntity: {
+            "@type": "Organization",
+            name: "AutoDigiX",
+            url: "https://autodigix.in",
+            logo: "https://autodigix.in/logo.png",
+            foundingDate: "2022",
+            founder: {
+              "@type": "Person",
+              name: "Praveen Gorla",
+              jobTitle: "Founder & CEO",
+              worksFor: {
+                "@type": "Organization",
+                name: "AutoDigiX",
+              },
+            },
+            description:
+              "A leading digital marketing company offering SEO, Google Ads, Meta Ads, social media marketing, AI automation, and web development.",
+            areaServed: { "@type": "Country", name: "India" },
+          },
+        }),
+      },
     ],
   }),
+
   component: AboutPage,
 });
 

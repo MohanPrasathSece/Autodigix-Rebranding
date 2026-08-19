@@ -7,38 +7,192 @@ import { MagneticButton } from "../components/MagneticButton";
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Digital Marketing & Web Development Courses · AutoDigiX" },
+      {
+        title:
+          "Digital Marketing Courses | Learn & Grow | AutoDigiX",
+      },
       {
         name: "description",
         content:
-          "Master Digital Marketing, Performance Marketing, and AI-Assisted Web Development with our 30-day intensive practical courses. Get certified.",
+          "Learn digital marketing with practical courses from AutoDigiX. Build skills in SEO, Google Ads, Meta Ads, social media and online marketing.",
       },
-      { property: "og:title", content: "Digital Marketing & Web Development Courses · AutoDigiX" },
+      {
+        name: "keywords",
+        content:
+          "digital marketing course, digital marketing courses, digital marketing training, digital marketing course online, online digital marketing course, digital marketing course for beginners, digital marketing certification course, digital marketing course with internship, AI digital marketing course, digital marketing classes, web development course, AI automation course",
+      },
+      {
+        property: "og:title",
+        content:
+          "Digital Marketing Courses | Learn & Grow | AutoDigiX",
+      },
       {
         property: "og:description",
         content:
-          "Master Digital Marketing, Performance Marketing, and AI-Assisted Web Development with our 30-day intensive practical courses. Get certified.",
+          "Learn digital marketing with practical courses from AutoDigiX. Build skills in SEO, Google Ads, Meta Ads, social media and online marketing.",
       },
       { property: "og:url", content: "https://autodigix.in/courses" },
-      { tagName: "link", rel: "canonical", href: "https://autodigix.in/courses" },
     ],
+    links: [{ rel: "canonical", href: "https://autodigix.in/courses" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Course",
-          name: "Digital Marketing & Web Development Courses",
-          description: "Master Digital Marketing, Performance Marketing, and AI-Assisted Web Development with our 30-day intensive practical courses. Get certified.",
-          provider: {
+          "@type": "ItemList",
+          name: "AutoDigiX Digital Marketing & Tech Courses",
+          url: "https://autodigix.in/courses",
+          description: "30-day live digital marketing courses online with internship support, certification, and AI-integrated curriculum.",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              item: {
+                "@type": "Course",
+                name: "AI Automation Course",
+                description: "30-day live AI automation course covering N8N, Make.com, AI chatbots, OpenAI API, CRM automation, and real-world business workflows.",
+                url: "https://autodigix.in/courses",
+                courseMode: ["online", "onsite"],
+                educationalLevel: "beginner",
+                hasCourseInstance: {
+                  "@type": "CourseInstance",
+                  courseMode: "online",
+                  duration: "P30D",
+                  inLanguage: "en",
+                },
+                offers: {
+                  "@type": "Offer",
+                  price: "5999",
+                  priceCurrency: "INR",
+                  availability: "https://schema.org/InStock",
+                },
+                provider: {
+                  "@type": "Organization",
+                  name: "AutoDigiX",
+                  sameAs: "https://autodigix.in",
+                },
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              item: {
+                "@type": "Course",
+                name: "Web Development Course with Internship",
+                description: "30-day online web development course covering HTML, CSS, JavaScript, React, AI coding tools, and deployment. Includes internship support and certification.",
+                url: "https://autodigix.in/courses",
+                courseMode: ["online", "onsite"],
+                educationalLevel: "beginner",
+                hasCourseInstance: {
+                  "@type": "CourseInstance",
+                  courseMode: "online",
+                  duration: "P30D",
+                  inLanguage: "en",
+                },
+                offers: {
+                  "@type": "Offer",
+                  price: "4999",
+                  priceCurrency: "INR",
+                  availability: "https://schema.org/InStock",
+                },
+                provider: {
+                  "@type": "Organization",
+                  name: "AutoDigiX",
+                  sameAs: "https://autodigix.in",
+                },
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              item: {
+                "@type": "Course",
+                name: "Digital Marketing Course Online",
+                description: "30-day online digital marketing course for beginners — covers Meta Ads, Google Ads, SEO, AI digital marketing, analytics, and live campaign practice. Certification + internship support included.",
+                url: "https://autodigix.in/courses",
+                courseMode: ["online", "onsite"],
+                educationalLevel: "beginner",
+                hasCourseInstance: {
+                  "@type": "CourseInstance",
+                  courseMode: "online",
+                  duration: "P30D",
+                  inLanguage: "en",
+                },
+                offers: {
+                  "@type": "Offer",
+                  price: "3499",
+                  priceCurrency: "INR",
+                  availability: "https://schema.org/InStock",
+                },
+                provider: {
+                  "@type": "Organization",
+                  name: "AutoDigiX",
+                  sameAs: "https://autodigix.in",
+                },
+              },
+            },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://autodigix.in/courses#webpage",
+          url: "https://autodigix.in/courses",
+          name: "Digital Marketing Courses | Learn & Grow | AutoDigiX",
+          description:
+            "Learn digital marketing with practical courses from AutoDigiX. Build skills in SEO, Google Ads, Meta Ads, social media and online marketing.",
+          headline: "Digital Marketing Courses & Training",
+          keywords:
+            "digital marketing course, digital marketing courses, digital marketing training, digital marketing course online, online digital marketing course, digital marketing course for beginners, digital marketing certification course, digital marketing course with internship, AI digital marketing course, digital marketing classes",
+          isPartOf: { "@id": "https://autodigix.in/#website" },
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h2",
+              name: "Learn Digital Marketing With Practical Training",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h3",
+              name: "SEO Training",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h4",
+              name: "Google Ads Training",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h5",
+              name: "Meta Ads & Social Media Training",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h6",
+              name: "AI & Digital Marketing Skills",
+            },
+          ],
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://autodigix.in/" },
+              { "@type": "ListItem", position: 2, name: "Courses", item: "https://autodigix.in/courses" },
+            ],
+          },
+          publisher: {
             "@type": "Organization",
             name: "AutoDigiX",
-            sameAs: "https://autodigix.in"
-          }
+            url: "https://autodigix.in",
+            logo: "https://autodigix.in/logo.png",
+          },
         }),
-      }
+      },
     ],
   }),
+
   component: CoursesPage,
 });
 

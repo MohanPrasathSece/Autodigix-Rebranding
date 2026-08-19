@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Block private / build paths from crawling
+Disallow: /src/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /dist/
+
 Sitemap: https://autodigix.in/sitemap.xml

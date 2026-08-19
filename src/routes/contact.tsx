@@ -7,34 +7,125 @@ import { Reveal, RevealText } from "../components/Reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us · AutoDigiX | Digital Marketing Agency" },
+      { title: "Contact AutoDigiX | Digital Marketing Agency" },
       {
         name: "description",
         content:
-          "Get in touch with AutoDigiX to scale your business with performance marketing and AI automation. Book a free consultation with our experts today.",
+          "Contact AutoDigiX for digital marketing, SEO, Google Ads, Meta Ads, social media, website development and AI automation services.",
       },
-      { property: "og:title", content: "Contact Us · AutoDigiX | Digital Marketing Agency" },
+      {
+        name: "keywords",
+        content:
+          "digital marketing agency near me, marketing agency near me, SEO agency near me, digital marketing agency, contact digital marketing agency, book free consultation, local marketing agency",
+      },
+      { property: "og:title", content: "Contact AutoDigiX | Digital Marketing Agency" },
       {
         property: "og:description",
         content:
-          "Get in touch with AutoDigiX to scale your business with performance marketing and AI automation. Book a free consultation with our experts today.",
+          "Contact AutoDigiX for digital marketing, SEO, Google Ads, Meta Ads, social media, website development and AI automation services.",
       },
       { property: "og:url", content: "https://autodigix.in/contact" },
-      { tagName: "link", rel: "canonical", href: "https://autodigix.in/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://autodigix.in/contact" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "ContactPage",
-          name: "Contact AutoDigiX",
-          description: "Get in touch with AutoDigiX to scale your business with performance marketing and AI automation. Book a free consultation with our experts today.",
-          url: "https://autodigix.in/contact"
+          "@type": "WebPage",
+          "@id": "https://autodigix.in/contact#webpage",
+          url: "https://autodigix.in/contact",
+          name: "Contact AutoDigiX | Digital Marketing Agency",
+          description:
+            "Contact AutoDigiX for digital marketing, SEO, Google Ads, Meta Ads, social media, website development and AI automation services.",
+          headline: "Contact AutoDigiX – Digital Marketing Agency",
+          keywords:
+            "digital marketing agency near me, marketing agency near me, SEO agency near me",
+          isPartOf: { "@id": "https://autodigix.in/#website" },
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h2",
+              name: "Let's Grow Your Business Together",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h3",
+              name: "Talk to Our Digital Marketing Experts",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h4",
+              name: "Get SEO, Ads & Marketing Solutions",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h5",
+              name: "Request a Free Consultation",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h6",
+              name: "Start Your Digital Growth Journey",
+            },
+          ],
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://autodigix.in/" },
+              { "@type": "ListItem", position: 2, name: "Contact", item: "https://autodigix.in/contact" },
+            ],
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "AutoDigiX",
+            url: "https://autodigix.in",
+            logo: "https://autodigix.in/logo.png",
+          },
         }),
-      }
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact AutoDigiX — Digital Marketing Agency Near Me",
+          description:
+            "Contact AutoDigiX for digital marketing, SEO, Google Ads, Meta Ads, social media, website development and AI automation services.",
+          url: "https://autodigix.in/contact",
+          mainEntity: {
+            "@type": "LocalBusiness",
+            name: "AutoDigiX",
+            url: "https://autodigix.in",
+            telephone: "+91-8639191907",
+            email: "hello@autodigix.in",
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "IN",
+              addressRegion: "India",
+            },
+            areaServed: [
+              { "@type": "Country", name: "India" },
+              { "@type": "AdministrativeArea", name: "Global" },
+            ],
+            openingHoursSpecification: {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              opens: "09:00",
+              closes: "18:00",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+91-8639191907",
+              contactType: "customer service",
+              availableLanguage: ["English", "Hindi"],
+            },
+          },
+        }),
+      },
     ],
   }),
+
   component: ContactPage,
 });
 

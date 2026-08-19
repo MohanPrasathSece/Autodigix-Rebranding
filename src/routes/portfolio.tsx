@@ -20,8 +20,8 @@ export const Route = createFileRoute("/portfolio")({
           "View our portfolio of successful Web3 and cryptocurrency projects showcasing ROI driven by our digital marketing and AI automation strategies.",
       },
       { property: "og:url", content: "https://autodigix.in/portfolio" },
-      { tagName: "link", rel: "canonical", href: "https://autodigix.in/portfolio" },
     ],
+    links: [{ rel: "canonical", href: "https://autodigix.in/portfolio" }],
     scripts: [
       {
         type: "application/ld+json",

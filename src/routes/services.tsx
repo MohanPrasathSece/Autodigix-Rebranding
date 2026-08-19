@@ -10,37 +10,176 @@ import { StackedCards } from "../components/sections/StackedCards";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Digital Marketing & AI Automation Services · AutoDigiX" },
+      {
+        title: "Digital Marketing Services | SEO, Ads & More | AutoDigiX",
+      },
       {
         name: "description",
         content:
-          "Explore AutoDigiX's core services: SEO Optimization, Meta & Google Ads, AI Automation, Web Development, and Lead Generation.",
+          "AutoDigiX digital marketing services including SEO, Google Ads, Meta Ads, social media marketing, website development and AI automation.",
       },
-      { property: "og:title", content: "Digital Marketing & AI Automation Services · AutoDigiX" },
+      {
+        name: "keywords",
+        content:
+          "digital marketing services, SEO services, SEO agency, SEO company, local SEO services, Google Ads agency, Google Ads services, Google Ads management, PPC agency, PPC management, Meta Ads agency, Facebook Ads agency, Facebook advertising agency, Instagram marketing agency, social media marketing, social media marketing services, social media management agency, website development company, website development services, website design company, website design services, digital marketing services for small business, marketing agency for small business",
+      },
+      {
+        property: "og:title",
+        content: "Digital Marketing Services | SEO, Ads & More | AutoDigiX",
+      },
       {
         property: "og:description",
         content:
-          "Explore AutoDigiX's core services: SEO Optimization, Meta & Google Ads, AI Automation, Web Development, and Lead Generation.",
+          "AutoDigiX digital marketing services including SEO, Google Ads, Meta Ads, social media marketing, website development and AI automation.",
       },
       { property: "og:url", content: "https://autodigix.in/services" },
-      { tagName: "link", rel: "canonical", href: "https://autodigix.in/services" },
     ],
+    links: [{ rel: "canonical", href: "https://autodigix.in/services" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Service",
-          serviceType: "Digital Marketing & AI Automation",
-          provider: {
-            "@type": "LocalBusiness",
-            name: "AutoDigiX"
-          },
-          url: "https://autodigix.in/services"
+          "@type": "ItemList",
+          name: "AutoDigiX Digital Marketing Services",
+          url: "https://autodigix.in/services",
+          description: "Comprehensive digital marketing services including SEO, Google Ads, Meta Ads, social media marketing, and website development.",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              item: {
+                "@type": "Service",
+                name: "SEO Services",
+                serviceType: ["SEO Agency", "SEO Company", "Local SEO Services", "SEO Optimization"],
+                description: "On-page, technical, and local SEO services to improve organic rankings, traffic, and inbound searches.",
+                provider: { "@type": "Organization", name: "AutoDigiX", url: "https://autodigix.in" },
+                url: "https://autodigix.in/services?service=seo-optimization",
+                areaServed: { "@type": "Country", name: "India" },
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              item: {
+                "@type": "Service",
+                name: "Google Ads Management",
+                serviceType: ["Google Ads Agency", "Google Ads Services", "PPC Agency", "PPC Management"],
+                description: "Expert Google Ads management and PPC agency services — Search, Display, Performance Max, and YouTube campaigns.",
+                provider: { "@type": "Organization", name: "AutoDigiX", url: "https://autodigix.in" },
+                url: "https://autodigix.in/services?service=google-meta-ads",
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              item: {
+                "@type": "Service",
+                name: "Social Media Marketing",
+                serviceType: [
+                  "Social Media Marketing Services",
+                  "Social Media Management Agency",
+                  "Meta Ads Agency",
+                  "Facebook Ads Agency",
+                  "Instagram Marketing Agency",
+                  "Facebook Advertising Agency",
+                ],
+                description: "Full-funnel social media marketing services including Meta Ads, Facebook Ads, and Instagram marketing for brand growth.",
+                provider: { "@type": "Organization", name: "AutoDigiX", url: "https://autodigix.in" },
+                url: "https://autodigix.in/services?service=all-digital-marketing",
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              item: {
+                "@type": "Service",
+                name: "Website Design & Development",
+                serviceType: [
+                  "Website Design Company",
+                  "Website Design Services",
+                  "Website Development Company",
+                  "Website Development Services",
+                ],
+                description: "High-performance website design and development company building modern, conversion-optimized websites and web apps.",
+                provider: { "@type": "Organization", name: "AutoDigiX", url: "https://autodigix.in" },
+                url: "https://autodigix.in/services?service=software-development",
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 5,
+              item: {
+                "@type": "Service",
+                name: "AI Automation",
+                serviceType: ["AI Automation", "Business Process Automation", "CRM Automation"],
+                description: "Intelligent AI automation workflows to eliminate operational overhead and scale lead management.",
+                provider: { "@type": "Organization", name: "AutoDigiX", url: "https://autodigix.in" },
+                url: "https://autodigix.in/services?service=ai-automations",
+              },
+            },
+          ],
         }),
-      }
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://autodigix.in/services#webpage",
+          url: "https://autodigix.in/services",
+          name: "Digital Marketing Services | SEO, Ads & More | AutoDigiX",
+          description:
+            "AutoDigiX digital marketing services including SEO, Google Ads, Meta Ads, social media marketing, website development and AI automation.",
+          headline: "Digital Marketing Services for Business Growth",
+          keywords:
+            "digital marketing services, digital marketing services for small business, marketing agency for small business, SEO agency, SEO services, SEO company, local SEO services, Google Ads agency, Google Ads services, Google Ads management, PPC agency, PPC management, Meta Ads agency, Facebook Ads agency, Facebook advertising agency, Instagram marketing agency, social media marketing, social media marketing services, social media management agency, website development company, website development services, website design company, website design services",
+          isPartOf: { "@id": "https://autodigix.in/#website" },
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h2",
+              name: "Complete Digital Marketing Solutions",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h3",
+              name: "SEO Services",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h4",
+              name: "Google Ads & PPC Services",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h5",
+              name: "Meta Ads & Social Media Marketing",
+            },
+            {
+              "@type": "WebPageElement",
+              cssSelector: "h6",
+              name: "Website Development & AI Automation",
+            },
+          ],
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://autodigix.in/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://autodigix.in/services" },
+            ],
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "AutoDigiX",
+            url: "https://autodigix.in",
+            logo: "https://autodigix.in/logo.png",
+          },
+        }),
+      },
     ],
   }),
+
   component: ServicesPage,
 });
 

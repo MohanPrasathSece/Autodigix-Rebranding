@@ -1,51 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage — highest priority, updated frequently -->
   <url>
     <loc>https://autodigix.in/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://autodigix.in/about</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- Services — core revenue page, high priority -->
   <url>
     <loc>https://autodigix.in/services</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Courses — high-traffic keyword page -->
   <url>
     <loc>https://autodigix.in/courses</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- About — digital marketing company keyword page -->
+  <url>
+    <loc>https://autodigix.in/about</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Portfolio — social proof page -->
   <url>
     <loc>https://autodigix.in/portfolio</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://autodigix.in/journal</loc>
-    <lastmod>2026-08-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
+  <!-- Partnerships — lead gen page -->
   <url>
     <loc>https://autodigix.in/partnerships</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Journal / Blog — content marketing -->
+  <url>
+    <loc>https://autodigix.in/journal</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact — local SEO "near me" keyword page -->
   <url>
     <loc>https://autodigix.in/contact</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
 </urlset>
