@@ -265,8 +265,8 @@ function WebinarPage() {
             <Button href={WHATSAPP_LINK} variant="primary" className="max-md:w-full">
               SAVE MY SEAT →
             </Button>
-            <div className="text-xs font-medium text-[var(--ink-soft)] tracking-widest max-md:mt-2">
-              Limited Seats Available
+            <div className="text-xs font-bold text-red-600 tracking-widest max-md:mt-2 animate-pulse mt-3 flex items-center justify-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> ONLY A FEW SEATS LEFT!
             </div>
           </motion.div>
         </div>
@@ -278,7 +278,7 @@ function WebinarPage() {
           <div className="flex justify-center mb-6">
             <AlertCircle className="w-10 h-10 text-[var(--gold)] max-md:w-8 max-md:h-8" strokeWidth={1.5} />
           </div>
-          <h2 className="font-display text-4xl max-md:text-2xl leading-tight font-light mb-8 max-md:mb-6">
+          <h2 className="font-display text-5xl lg:text-7xl max-md:text-4xl leading-tight font-medium mb-8 max-md:mb-6 text-white tracking-wide">
             Don't wait until you need the skill<br className="hidden md:block" /> to start learning it.
           </h2>
           <p className="text-white/70 text-lg max-md:text-base leading-relaxed max-w-3xl mx-auto font-light mb-12 max-md:mb-10">
@@ -322,7 +322,7 @@ function WebinarPage() {
               <span className="text-2xl max-md:text-xl text-[var(--ink-soft)] line-through mb-1">₹599</span>
               <span className="font-display text-7xl max-md:text-5xl font-light text-[var(--ink)]">₹39/-</span>
             </div>
-            <div className="text-sm max-md:text-xs text-[var(--ink-soft)] mb-8">One-time registration fee</div>
+            <div className="text-sm max-md:text-xs text-red-500 font-bold mb-8 animate-pulse">Registration Closing Soon!</div>
             <Button href={WHATSAPP_LINK} variant="primary" className="w-full">
               RESERVE MY SEAT FOR ₹39 →
             </Button>
@@ -345,7 +345,7 @@ function WebinarPage() {
       {/* ── URGENCY / FAST ACTION ──────────────────────────────────────── */}
       <section className="py-20 max-md:py-16 px-6 max-md:px-4 bg-[var(--beige)] border-y border-[var(--ink)]/5 z-10 relative">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <h2 className="font-display text-4xl max-md:text-2xl leading-tight font-light mb-8 text-[var(--ink)]">
+          <h2 className="font-display text-5xl max-md:text-3xl leading-tight font-medium mb-8 text-[var(--ink)]">
             One small investment. A bigger understanding of your digital future.
           </h2>
           <Button href={WHATSAPP_LINK} variant="primary" className="max-md:w-full">
