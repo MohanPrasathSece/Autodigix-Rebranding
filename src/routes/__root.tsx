@@ -146,6 +146,7 @@ export const Route = createRootRoute({
 function RootComponent() {
   const location = useLocation();
   const isContact = location.pathname === "/contact";
+  const isWebinar = location.pathname === "/webinar";
 
   // GA4: fire page_view on every SPA navigation
   useEffect(() => {
@@ -167,15 +168,15 @@ function RootComponent() {
       <SmoothScroll />
       <ScrollProgress />
       <Cursor />
-      <Navbar />
+      {!isWebinar && <Navbar />}
       <main className="overflow-x-clip min-h-screen">
         <Outlet />
       </main>
 
-      <CTA />
-      <Footer />
+      {!isWebinar && <CTA />}
+      {!isWebinar && <Footer />}
       <ScrollToTop />
-      <StickyCTA />
+      {!isWebinar && <StickyCTA />}
     </>
   );
 }
