@@ -12,7 +12,24 @@ import {
   AlertCircle,
   Target,
   Sparkles,
-  MessageCircle
+  MessageCircle,
+  BookOpen,
+  Share2,
+  Search,
+  Zap,
+  Award,
+  Cpu,
+  Briefcase,
+  GraduationCap,
+  UserCheck,
+  Building2,
+  Code2,
+  Video,
+  RefreshCw,
+  ChevronLeft,
+  ChevronRight,
+  ArrowRight,
+  Layers
 } from "lucide-react";
 import logo from "../assets/logo.png";
 
@@ -111,105 +128,174 @@ const sections = [
   {
     num: "01",
     title: "Fundamentals",
-    tagline: "Build Your Digital Marketing Foundation.",
-    desc: "Before running campaigns, you need to understand the fundamentals.",
-    topics: [
-      { name: "Intro to Digital Marketing", detail: "Understand the digital marketing ecosystem and how different channels work together." },
-      { name: "Canva & Graphic Design", detail: "Create professional visual content for digital platforms." },
-      { name: "Video Editing & Reels", detail: "Learn the basics of short-form video and engaging social content." },
-      { name: "Content & Copywriting", detail: "Understand how words influence attention, engagement, and action." },
-      { name: "Website & Landing Pages", detail: "Learn how websites and landing pages turn traffic into leads and customers." },
-    ],
+    tagline: "Foundation",
+    topics: ["Core Marketing", "Canva Design", "Copywriting", "Web Pages"],
   },
   {
     num: "02",
-    title: "Social Media Marketing",
-    tagline: "Turn Attention Into Engagement.",
-    desc: "Social media isn't simply about posting. It's about understanding audiences, content, algorithms, distribution, and conversion.",
-    topics: [
-      { name: "Facebook & Instagram", detail: "" },
-      { name: "LinkedIn & YouTube", detail: "" },
-      { name: "Twitter & Snapchat", detail: "" },
-      { name: "Content Automation", detail: "" },
-      { name: "Social Media SEO", detail: "Understand how brands use social platforms to build awareness, communities, and business opportunities." },
-    ],
+    title: "Social Media",
+    tagline: "Reach & Growth",
+    topics: ["Meta & Insta", "LinkedIn Reach", "Post Systems"],
   },
   {
     num: "03",
-    title: "SEO & Google Ads",
-    tagline: "Get Found When People Are Searching.",
-    desc: "Search is one of the most powerful ways businesses reach people who already have intent.",
-    topics: [
-      { name: "Keyword Research & On-Page SEO", detail: "" },
-      { name: "Technical & Off-Page SEO", detail: "" },
-      { name: "International & Local SEO", detail: "" },
-      { name: "AEO & GEO", detail: "Answer Engine & Generative Engine Optimization." },
-      { name: "Google Search, Display & Shopping Ads", detail: "From organic visibility to paid traffic, understand how businesses compete." },
-    ],
+    title: "SEO & Ads",
+    tagline: "Search & Paid",
+    topics: ["Keyword SEO", "Google PPC", "Ad Funnels"],
   },
   {
     num: "04",
-    title: "Industry Expert",
-    tagline: "Build Systems. Not Just Campaigns.",
-    desc: "Modern marketers don't work in isolation. They work with data, CRM systems, automation, communication tools, and customer journeys.",
-    topics: [
-      { name: "Zapier Automation", detail: "" },
-      { name: "CRM & Lead Flow Setup", detail: "" },
-      { name: "WhatsApp Automation & Chatbots", detail: "" },
-      { name: "Analytics & Google Tag Manager", detail: "" },
-      { name: "Email Marketing", detail: "Learn how marketing moves from manual processes to connected systems." },
-    ],
+    title: "Automations",
+    tagline: "CRM & Systems",
+    topics: ["Zapier & Make", "CRM Pipeline", "Analytics"],
   },
   {
     num: "05",
-    title: "Personal Growth & Career",
-    tagline: "Turn Skills Into Opportunities.",
-    desc: "Learning marketing is only one part. You also need to know how to present yourself and create opportunities.",
-    topics: [
-      { name: "Influencer & Affiliate Marketing", detail: "" },
-      { name: "Personal Branding", detail: "" },
-      { name: "Career Pathway & Portfolio", detail: "" },
-      { name: "Soft Skills & Aptitude", detail: "" },
-      { name: "Resume Building & Mock Interviews", detail: "Don't just learn skills. Learn how to showcase them." },
-    ],
+    title: "Career & Brand",
+    tagline: "Profile & Value",
+    topics: ["Brand Strategy", "Portfolio Setup", "Pitch Prep"],
   },
   {
     num: "06",
-    title: "A.I. Mastery",
-    tagline: "The Next Generation Of Marketing Is AI-Powered.",
-    desc: "AI is changing how marketers research, create, analyze, automate, and communicate.",
-    topics: [
-      { name: "AI-Powered Content Creation", detail: "" },
-      { name: "AI for SEO & Paid Ads", detail: "" },
-      { name: "AI Agents & Chat Marketing", detail: "" },
-      { name: "AI for Email & Personalization", detail: "" },
-      { name: "Ethical AI & Future Trends", detail: "Combine MARKETING THINKING + AI POWER to work faster and smarter." },
-    ],
+    title: "AI Mastery",
+    tagline: "Scale with AI",
+    topics: ["AI Content", "AI Copywriting", "AI Agents"],
   },
   {
     num: "07",
-    title: "Industry Leader",
-    tagline: "Go From Marketer To Growth Builder.",
-    desc: "For those who want to move beyond individual skills and understand the business side of marketing.",
-    topics: [
-      { name: "Funnel Building & Media Buying", detail: "" },
-      { name: "Freelancing & Client Acquisition", detail: "" },
-      { name: "Agency Setup", detail: "" },
-      { name: "Team & SOPs", detail: "Learn how systems become the foundation for freelancing and agency growth." },
-    ],
+    title: "Agency Scale",
+    tagline: "Clients & Growth",
+    topics: ["Freelancing", "Client Closing", "Agency SOPs"],
   },
 ];
 
+// ─── FAQ Data ───────────────────────────────────────────────────────────────
+
 const faqItems = [
-  { q: "Is this webinar suitable for beginners?", a: "Yes. You don't need prior digital marketing experience. The session is designed to introduce the digital marketing ecosystem in a simple and structured way." },
-  { q: "Do I need a marketing background?", a: "No. The webinar is suitable for students, professionals, business owners, freelancers, creators, and beginners." },
-  { q: "Is the webinar online?", a: "Yes. The webinar is conducted live online." },
-  { q: "How much does the webinar cost?", a: "The special registration price is ₹39/-." },
-  { q: "What will I learn?", a: "You'll get an overview of digital marketing, its major components, important skills, AI applications, career opportunities, and the complete learning roadmap." },
-  { q: "Will I learn SEO and Google Ads?", a: "You'll understand what SEO, Google Ads, social media marketing, content marketing, automation, analytics, and other major areas involve, and where they fit within the broader ecosystem." },
-  { q: "Will AI be covered?", a: "Yes. You'll get an introduction to how AI is transforming content creation, SEO, paid advertising, automation, chat marketing, email marketing, and personalization." },
-  { q: "Who should attend?", a: "Students, professionals, business owners, freelancers, creators, career switchers, and anyone interested in understanding digital marketing." }
+  {
+    q: "Who is this webinar for?",
+    a: "Anyone who wants to understand digital marketing — students, professionals, business owners, freelancers, creators, or career switchers. No prior experience required.",
+  },
+  {
+    q: "Is this a recorded session or a live webinar?",
+    a: "This is a live online webinar. You'll be able to interact, ask questions, and get real-time clarity from the session.",
+  },
+  {
+    q: "Why is it only ₹39?",
+    a: "We believe clarity shouldn't cost a fortune. ₹39 is a commitment fee to ensure serious attendees join, while keeping it accessible to everyone.",
+  },
+  {
+    q: "What will I learn in this webinar?",
+    a: "You'll get a complete overview of the digital marketing landscape — SEO, Google Ads, Social Media, Content, Automation, AI, and career/freelancing opportunities. You'll leave with a clear roadmap of what to learn next.",
+  },
+  {
+    q: "Do I need any tools or software?",
+    a: "No. Just a device with an internet connection. Everything is explained in a beginner-friendly way.",
+  },
+  {
+    q: "Will I get a recording after the webinar?",
+    a: "The session is live. Details about recordings, if any, will be shared with registered participants closer to the date.",
+  },
+  {
+    q: "How do I register?",
+    a: "Click any 'Register' button on this page. You'll be redirected to WhatsApp where our team will guide you through the payment and confirm your seat.",
+  },
+  {
+    q: "What happens after I register?",
+    a: "You'll receive all session details (link, timing, instructions) via WhatsApp before the webinar date.",
+  },
 ];
+
+function RoadmapSection() {
+  const icons = [BookOpen, Share2, Search, Zap, Award, Cpu, Briefcase];
+
+  return (
+    <section className="py-20 max-md:py-16 px-4 sm:px-8 md:px-12 lg:px-14 xl:px-16 bg-[var(--beige)] border-y border-[var(--ink)]/5 z-10 relative overflow-hidden">
+      <div className="max-w-[1680px] mx-auto">
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.25em] text-[var(--ink-soft)] uppercase mb-3 bg-white/80 border border-[var(--ink)]/10 px-3.5 py-1.5 rounded-full shadow-sm">
+            <Layers className="w-3.5 h-3.5 text-[var(--gold)]" /> 7-Stage Curriculum
+          </div>
+          <h2 className="font-display text-3xl md:text-5xl text-[var(--ink)] font-light leading-tight">
+            The Digital Marketing <span className="italic font-normal text-[var(--ink)]">Roadmap.</span>
+          </h2>
+        </div>
+
+        {/* 7 Cards in One Screen (Expanded Wide Grid) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 lg:gap-3.5 xl:gap-4">
+          {sections.map((section, index) => {
+            const Icon = icons[index];
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.35, delay: index * 0.04 }}
+                className="bg-white rounded-2xl p-4 sm:p-5 lg:p-4 xl:p-5 border border-[var(--ink)]/10 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 relative"
+              >
+                <div>
+                  {/* Top Bar */}
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[9px] uppercase font-bold tracking-wider bg-[var(--ink)] text-[var(--beige-light)] px-2.5 py-0.5 rounded-full">
+                      {section.num}
+                    </span>
+                    <div className="w-8 h-8 rounded-xl bg-[var(--beige)] border border-[var(--ink)]/10 flex items-center justify-center group-hover:bg-[var(--ink)] group-hover:text-[var(--beige-light)] transition-colors duration-300">
+                      <Icon className="w-4 h-4 text-[var(--ink)] group-hover:text-[var(--beige-light)] transition-colors" strokeWidth={1.5} />
+                    </div>
+                  </div>
+
+                  {/* Title & Tagline */}
+                  <div className="mb-3.5">
+                    <h3 className="font-display text-sm xl:text-base font-bold text-[var(--ink)] leading-snug truncate">
+                      {section.title}
+                    </h3>
+                    <p className="text-[9px] xl:text-[10px] uppercase tracking-wider font-semibold text-[var(--gold)] truncate">
+                      {section.tagline}
+                    </p>
+                  </div>
+
+                  {/* Topics List */}
+                  <ul className="space-y-1.5 mb-3.5 bg-[var(--beige-light)]/60 rounded-xl p-3 border border-[var(--ink)]/5">
+                    {section.topics.map((topic, ti) => (
+                      <li key={ti} className="flex items-center gap-1.5 text-xs font-medium text-[var(--ink)]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] shrink-0" />
+                        <span className="truncate whitespace-nowrap">{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Card Footer */}
+                <div className="pt-2.5 border-t border-[var(--ink)]/5 text-center text-[9px] uppercase tracking-widest font-semibold text-[var(--ink-soft)]/60">
+                  Step {index + 1}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Bottom Destination Row */}
+        <div className="mt-10 pt-6 border-t border-[var(--ink)]/10 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+          <div className="text-xs font-bold tracking-widest text-[var(--ink-soft)] uppercase">
+            Roadmap Outcomes:
+          </div>
+          <div className="flex flex-wrap justify-center gap-2">
+            {["High-Income Career", "Freelance Clients", "Business Growth", "Digital Agency"].map((path, pi) => (
+              <span
+                key={pi}
+                className="text-xs font-semibold px-3.5 py-1.5 rounded-full bg-white border border-[var(--ink)]/10 text-[var(--ink)] shadow-sm"
+              >
+                {path}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 // ─── Main Page ──────────────────────────────────────────────────────────────
 
@@ -222,15 +308,15 @@ function WebinarPage() {
       <WebinarHeader />
 
       {/* ── HERO ───────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 pt-32 pb-20 max-md:pt-24 max-md:pb-16 bg-[var(--beige)] overflow-hidden">
+      <section className="relative h-screen flex flex-col items-center justify-center px-6 bg-[var(--beige)] overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
         
-        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center -mt-32 max-md:-mt-16">
+        <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center -mt-10 max-md:-mt-6">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.25em] text-[var(--ink-soft)] mb-8 max-md:mb-6 bg-white border border-[var(--ink)]/10 px-4 py-2 rounded-full shadow-sm"
+            className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.25em] text-[var(--ink-soft)] mb-6 bg-white border border-[var(--ink)]/10 px-4 py-2 rounded-full shadow-sm"
           >
             <Sparkles className="w-3.5 h-3.5 text-[var(--gold)] shrink-0" /> LIVE WEBINAR — ₹39/-
           </motion.div>
@@ -239,21 +325,21 @@ function WebinarPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-6xl lg:text-7xl max-md:text-4xl leading-[1.1] font-light mb-6 text-[var(--ink)] max-w-4xl mx-auto"
+            className="font-display text-5xl lg:text-6xl max-md:text-4xl leading-[1.1] font-light mb-6 text-[var(--ink)] max-w-3xl mx-auto"
           >
-            Your competition is learning <br className="hidden md:block" />
-            <span className="italic text-[var(--gold)]">AI &amp; Digital Marketing.</span>
+            Your competitors are already using <br className="hidden md:block" />
+            <span className="italic text-[var(--gold)]">AI + Digital Marketing.</span>
             <br />
-            What are you waiting for?
+            Are you still figuring out where to start?
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg max-md:text-base text-[var(--ink-soft)] max-w-xl mx-auto mb-10 max-md:mb-8 leading-relaxed max-md:px-4"
+            className="text-base max-md:text-sm text-[var(--ink-soft)] max-w-lg mx-auto mb-8 max-md:mb-6 leading-relaxed max-md:px-4"
           >
-            Discover the skills shaping careers, businesses, and opportunities in the modern digital economy.
+            Join 1,000+ students, professionals & business owners who got clarity on Digital Marketing, AI, SEO, Ads & Automation — in just one live session.
           </motion.p>
 
           <motion.div
@@ -279,24 +365,29 @@ function WebinarPage() {
             <AlertCircle className="w-10 h-10 text-[var(--gold)] max-md:w-8 max-md:h-8" strokeWidth={1.5} />
           </div>
           <h2 className="font-display text-3xl lg:text-4xl max-md:text-2xl leading-tight font-light mb-8 max-md:mb-6 text-white tracking-wide">
-            Don't wait until you need the skill<br className="hidden md:block" /> to start learning it.
+            Digital Marketing is changing.<br className="hidden md:block" /> AI is changing it faster.
           </h2>
           <p className="text-white/70 text-lg max-md:text-base leading-relaxed max-w-3xl mx-auto font-light mb-12 max-md:mb-10">
-            If you are a student, professional, business owner, freelancer, creator, or career switcher, understanding digital marketing could become one of the most valuable advantages you build for the digital economy.
+            Most people waste months learning random tools and still don't understand how it all fits together.<br />
+            This webinar fixes that.<br />
+            In 60 minutes, you'll see the full picture — without the confusion.
           </p>
           
           <div className="bg-white/5 border border-white/10 rounded-2xl p-8 max-md:p-6 max-w-2xl mx-auto text-left">
-            <div className="text-xs max-md:text-[10px] tracking-widest text-white/50 mb-6 font-semibold">In this LIVE webinar, discover:</div>
+            <div className="text-xs max-md:text-[10px] tracking-widest text-white/50 mb-6 font-semibold">What You'll Learn:</div>
             <ul className="space-y-4 text-sm max-md:text-base text-white/80">
               {[
-                "What Digital Marketing really involves",
-                "Which skills businesses are looking for",
-                "How AI is transforming marketing",
-                "How SEO, Ads, Social Media, Content & Automation work together",
-                "And which path could be right for you"
+                "What digital marketing actually is",
+                "How SEO, Google Ads & Social Media drive growth",
+                "How content + websites generate real business",
+                "How automation saves hours every week",
+                "How AI is reshaping marketing right now",
+                "Which skills companies actually pay for",
+                "Career, freelance & business opportunities",
+                "Your personal learning roadmap"
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <Target className="w-5 h-5 text-[var(--gold)] shrink-0" strokeWidth={1.5} />
+                  <CheckCircle2 className="w-5 h-5 text-[var(--gold)] shrink-0" strokeWidth={1.5} />
                   <span>{item}</span>
                 </li>
               ))}
@@ -329,12 +420,10 @@ function WebinarPage() {
           </div>
 
           <div className="flex flex-row max-md:flex-col justify-center items-center gap-6 max-md:gap-4 text-sm max-md:text-xs text-[var(--ink-soft)] font-medium">
-            <div className="flex gap-1 text-[var(--gold)]">
-              ★★★★★
-            </div>
+            <div className="flex gap-1 text-[var(--gold)] font-bold">⭐ 4.9/5</div>
             <div className="max-md:hidden">•</div>
             <div className="flex flex-wrap justify-center gap-4">
-              <span className="flex items-center gap-1.5"><Ticket className="w-4 h-4" /> Limited Seats</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4" /> Beginner-Friendly</span>
               <span className="flex items-center gap-1.5"><Laptop className="w-4 h-4" /> Live Online</span>
               <span className="flex items-center gap-1.5"><Sparkles className="w-4 h-4" /> Expert-Led</span>
             </div>
@@ -415,125 +504,38 @@ function WebinarPage() {
         </div>
       </section>
 
-      {/* ── 7 SECTION ROADMAP (SCROLL STACK ANIMATIONS) ──────────────── */}
-      <section className="bg-[var(--beige)] py-32 max-md:py-20 px-6 max-md:px-4 relative z-10">
-        <div className="max-w-4xl mx-auto mb-20 max-md:mb-16 text-center">
-          <div className="text-[10px] tracking-[0.2em] text-[var(--ink-soft)] font-semibold mb-4">The 7-Section Roadmap</div>
-          <h2 className="font-display text-5xl max-md:text-3xl leading-tight font-light text-[var(--ink)] mb-6">
-            A curriculum that mirrors a real marketing career
-          </h2>
-          <p className="text-[var(--ink-soft)] text-lg max-md:text-base max-w-2xl mx-auto mb-8">
-            Digital marketing isn't one skill. It's an ecosystem of interconnected skills. 
-            Our learning roadmap takes you from the fundamentals to advanced AI-powered marketing, career development, freelancing, and agency systems.
-          </p>
-          <div className="font-display text-2xl max-md:text-xl text-[var(--ink)]">7 guided sections.<br />One complete digital marketing roadmap.</div>
-        </div>
+      {/* ── THE AUTODIGIX DIGITAL MARKETING ROADMAP ──────────────────── */}
+      <RoadmapSection />
 
-        <div className="max-w-5xl mx-auto relative space-y-0 max-md:space-y-8">
-          {sections.map((section, index) => (
-            <motion.div 
-              key={section.num}
-              className={`relative pt-10 pb-10 max-md:pt-8 max-md:pb-8 flex flex-row max-md:flex-col gap-16 max-md:gap-6 border-t border-[var(--ink)]/10 bg-[var(--beige)] section-stack-wrapper-${index}`}
-              style={{ zIndex: 10 + index } as React.CSSProperties}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ margin: "-50px", once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <style dangerouslySetInnerHTML={{__html: `
-                @media (min-width: 768px) {
-                  .section-stack-wrapper-${index} {
-                    position: sticky !important;
-                    top: ${80 + index * 10}px;
-                  }
-                }
-              `}} />
-              
-              <div className="w-full flex flex-row max-md:flex-col gap-16 max-md:gap-6">
-                <div className="w-1/3 max-md:w-full">
-                  <div className="font-display text-6xl max-md:text-5xl text-[var(--ink)]/10 mb-2">Section {section.num}</div>
-                  <h3 className="font-display text-2xl max-md:text-xl text-[var(--ink)] mb-2 ">{section.title}</h3>
-                  <div className="text-xs max-md:text-[10px] font-semibold text-[var(--gold)] tracking-widest mb-4 max-md:mb-3">{section.tagline}</div>
-                  <p className="text-[var(--ink-soft)] text-sm leading-relaxed mb-6 max-md:mb-4">{section.desc}</p>
-                  {index === 0 && <div className="text-xs max-md:text-[10px] tracking-widest text-[var(--ink)] font-bold mb-4">You'll explore:</div>}
-                </div>
-                <div className="w-2/3 max-md:w-full bg-white p-8 max-md:p-6 rounded-3xl shadow-sm border border-[var(--ink)]/5">
-                  <ul className="space-y-6 max-md:space-y-4">
-                    {section.topics.map((topic, i) => (
-                      <li key={i} className="flex gap-4 max-md:gap-3">
-                        <div className="w-1.5 h-1.5 bg-[var(--gold)] rounded-full mt-2 shrink-0" />
-                        <div>
-                          <div className="font-semibold text-[var(--ink)] text-sm tracking-wide mb-1">{topic.name}</div>
-                          {topic.detail && <div className="text-[var(--ink-soft)] text-sm max-md:text-xs">{topic.detail}</div>}
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
 
-      {/* ── THE BIG PICTURE (MULTIPLE PATHS) ───────────────────────────── */}
-      <section className="py-32 max-md:py-20 px-6 max-md:px-4 bg-[var(--ink)] text-white relative z-20 shadow-2xl">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20 max-md:mb-16">
-            <div className="text-[10px] tracking-[0.2em] text-[var(--gold)] font-bold mb-4">07. The Big Picture</div>
-            <h2 className="font-display text-5xl max-md:text-3xl leading-tight font-light mb-6">
-              One course. Multiple digital marketing paths.
-            </h2>
-            <p className="text-white/60 text-lg max-md:text-base max-w-2xl mx-auto">
-              By understanding the complete ecosystem, you can explore different directions based on your interests and goals.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-6">
-            {[
-              { title: "Career", items: ["Digital Marketing Executive", "SEO Specialist", "Social Media Marketer", "Performance Marketer", "Content Marketer", "Paid Ads Specialist", "Marketing Automation Specialist", "AI Marketing Specialist"] },
-              { title: "Freelancing", items: ["SEO Services", "Social Media Management", "Content Creation", "Paid Advertising", "Website & Landing Pages", "Marketing Automation", "AI Marketing Services"] },
-              { title: "Business", items: ["Lead Generation", "Customer Acquisition", "Personal Branding", "Marketing Automation", "Conversion Optimization"] },
-              { title: "Agency", items: ["Client Acquisition", "Service Delivery", "Team Building", "SOPs", "Campaign Management", "Scaling"] },
-            ].map((path, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 p-8 max-md:p-6 rounded-3xl backdrop-blur-sm">
-                <h3 className="font-display text-2xl max-md:text-xl text-[var(--gold)] mb-6 max-md:mb-4 text-center">{path.title}</h3>
-                <ul className="space-y-3">
-                  {path.items.map((item, j) => (
-                    <li key={j} className="text-white/70 text-sm max-md:text-xs flex items-start gap-2">
-                      <span className="text-white/30 text-xs max-md:text-[10px] mt-0.5">✦</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── WHO IS THIS FOR ────────────────────────────────────────────── */}
+
+{/* ── WHO IS THIS FOR ────────────────────────────────────────────── */}
       <section className="py-24 max-md:py-20 px-6 max-md:px-4 bg-[var(--beige-light)] z-10 relative">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16 max-md:mb-12">
-            <div className="text-[10px] tracking-[0.2em] text-[var(--ink-soft)] font-semibold mb-4">Who is this webinar for?</div>
+            <div className="text-[10px] tracking-[0.2em] text-[var(--ink-soft)] font-semibold mb-4">Who Should Attend?</div>
             <h2 className="font-display text-5xl max-md:text-2xl leading-tight font-light text-[var(--ink)] mb-6 max-md:mb-4">
-              You don't need to be a marketing expert.
+              No prior experience needed.
             </h2>
-            <p className="text-[var(--ink-soft)] text-lg max-md:text-base">This webinar is designed for anyone who wants to understand the digital marketing world.</p>
           </div>
 
           <div className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-6 max-md:gap-4">
             {[
-              { t: "Students", d: "Want to explore a modern, high-demand skill set and understand possible career paths." },
-              { t: "Working Professionals", d: "Want to add digital skills to your existing career and stay relevant in a changing workplace." },
-              { t: "Business Owners", d: "Want to understand how digital marketing can help generate visibility, leads, and customers." },
-              { t: "Freelancers", d: "Want to explore digital marketing as a service and create additional income opportunities." },
-              { t: "Creators", d: "Want to build an audience, personal brand, and digital presence." },
-              { t: "Career Switchers", d: "Want to understand the industry before making the move into digital marketing." }
-            ].map((item, i) => (
-              <div key={i} className="bg-white border border-[var(--ink)]/5 p-8 max-md:p-6 rounded-2xl shadow-sm">
-                <h3 className="font-display text-xl max-md:text-lg text-[var(--ink)] mb-3 max-md:mb-2">{item.t}</h3>
-                <p className="text-[var(--ink-soft)] text-sm leading-relaxed">{item.d}</p>
+              { Icon: GraduationCap, t: "Students", d: "Explore digital careers." },
+              { Icon: UserCheck, t: "Professionals", d: "Stay relevant at work." },
+              { Icon: Building2, t: "Business Owners", d: "Grow online & generate leads." },
+              { Icon: Code2, t: "Freelancers", d: "Offer high-demand services." },
+              { Icon: Video, t: "Creators", d: "Build audience & brand." },
+              { Icon: RefreshCw, t: "Career Switchers", d: "Understand the industry before switching." }
+            ].map(({ Icon, t, d }, i) => (
+              <div key={i} className="bg-white border border-[var(--ink)]/5 p-8 max-md:p-6 rounded-2xl shadow-sm group hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 rounded-xl bg-[var(--beige)] border border-[var(--ink)]/8 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-[var(--ink-soft)]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-display text-xl max-md:text-lg text-[var(--ink)] mb-2 max-md:mb-1">{t}</h3>
+                <p className="text-[var(--ink-soft)] text-sm leading-relaxed">{d}</p>
               </div>
             ))}
           </div>
@@ -575,18 +577,15 @@ function WebinarPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 max-md:grid-cols-1 gap-16 max-md:gap-12">
             <div>
-              <div className="text-[10px] tracking-[0.2em] text-[var(--ink-soft)] font-semibold mb-4">What you'll walk away with</div>
+              <div className="text-[10px] tracking-[0.2em] text-[var(--ink-soft)] font-semibold mb-4">What You Walk Away With</div>
               <h2 className="font-display text-4xl max-md:text-2xl leading-tight font-light text-[var(--ink)] mb-6">Leave with clarity.</h2>
-              <p className="text-[var(--ink-soft)] mb-8 max-md:mb-6 max-md:text-sm">After the webinar, you should have a clearer understanding of:</p>
               <ul className="space-y-4">
                 {[
-                  "What Digital Marketing really means",
-                  "Which major skills and channels exist",
-                  "How SEO, social media, ads, content and websites connect",
-                  "Where automation and AI fit into modern marketing",
-                  "Which skills you should consider learning first",
-                  "What career, freelancing and business paths are available",
-                  "What a complete digital marketing learning roadmap looks like"
+                  "The digital marketing ecosystem — finally clear",
+                  "The skills worth learning (and which to skip)",
+                  "Where AI fits into your work",
+                  "Career, freelance & business paths",
+                  "A practical roadmap to move forward"
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4 max-md:gap-3 items-start">
                     <span className="font-display text-[var(--ink)]/20 text-xl max-md:text-lg leading-none pt-1">0{i+1}</span>
@@ -597,17 +596,17 @@ function WebinarPage() {
             </div>
             
             <div className="bg-[var(--ink)] text-white p-10 max-md:p-8 rounded-3xl flex flex-col justify-center">
-              <div className="text-[10px] tracking-[0.2em] text-[var(--gold)] font-bold mb-4">The Autodigix Approach</div>
+              <div className="text-[10px] tracking-[0.2em] text-[var(--gold)] font-bold mb-4">Why AutoDigix?</div>
               <h2 className="font-display text-3xl max-md:text-2xl leading-tight font-light mb-6">
-                Don't just learn tools.<br />Learn how the pieces connect.
+                No random tools.<br />No overwhelm. Just clarity.
               </h2>
-              <p className="text-white/70 italic mb-10 max-md:mb-8 max-md:text-sm">A tool is only useful when you know what problem you're solving.</p>
+              <p className="text-white/70 italic mb-10 max-md:mb-8 max-md:text-sm">AutoDigix teaches you the system — so you make smarter career and business decisions, not just memorize tools.</p>
               
               <div className="bg-white/10 p-6 max-md:p-5 rounded-2xl border border-white/10">
-                <div className="text-xs max-md:text-[10px] tracking-widest text-white/50 mb-2">Here's what most beginners get wrong...</div>
-                <div className="text-white/70 text-sm max-md:text-xs mb-4">They start with: <span className="text-white font-medium">"Which tool should I learn?"</span></div>
-                <div className="text-xs max-md:text-[10px] tracking-widest text-[var(--gold)] mb-2 font-bold">But the better question is:</div>
-                <div className="text-white font-display text-xl max-md:text-lg">"Which problem am I trying to solve?"</div>
+                <div className="text-xs max-md:text-[10px] tracking-widest text-white/50 mb-2">Here's the difference...</div>
+                <div className="text-white/70 text-sm max-md:text-xs mb-4">Most beginners ask: <span className="text-white font-medium">"Which tool should I learn?"</span></div>
+                <div className="text-xs max-md:text-[10px] tracking-widest text-[var(--gold)] mb-2 font-bold">We ask:</div>
+                <div className="text-white font-display text-xl max-md:text-lg">"What problem do you want to solve?"</div>
               </div>
             </div>
           </div>
@@ -652,24 +651,17 @@ function WebinarPage() {
 
             <div className="p-8 max-md:p-4">
               <h3 className="font-display text-2xl max-md:text-xl text-[var(--ink)] mb-6 max-md:mb-4">
-                How much would it cost to figure all this out on your own?
+                Why just ₹39?
               </h3>
-              <p className="text-[var(--ink-soft)] max-md:text-sm mb-6 max-md:mb-4">You could spend weeks jumping between:</p>
-              <ul className="space-y-2 text-[var(--ink)] max-md:text-sm font-medium mb-6">
-                <li>• YouTube videos.</li>
-                <li>• Random blogs.</li>
-                <li>• Instagram reels.</li>
-                <li>• Different courses.</li>
-                <li>• Different tools.</li>
-                <li>• Different opinions.</li>
-              </ul>
-              <p className="italic text-[var(--ink-soft)] max-md:text-sm mb-6 max-md:mb-4">And still wonder: "Where do I actually start?"</p>
-              <p className="text-[var(--ink-soft)] max-md:text-sm mb-8 max-md:mb-6">This webinar gives you a structured overview of the digital marketing ecosystem so you can understand the bigger picture before deciding your next step.</p>
+              <p className="text-[var(--ink-soft)] max-md:text-sm mb-6 max-md:mb-4">Because clarity shouldn't cost a fortune.</p>
               
-              <div className="bg-white border border-[var(--ink)]/10 p-6 max-md:p-5 rounded-2xl text-center">
-                <div className="text-xs max-md:text-[10px] tracking-[0.2em] text-[var(--ink-soft)] font-semibold mb-2">Your investment today:</div>
-                <div className="font-display text-4xl max-md:text-3xl text-[var(--ink)] mb-2">₹39</div>
-                <div className="text-[var(--ink-soft)] text-sm max-md:text-xs">That's it.</div>
+              <p className="text-[var(--ink-soft)] max-md:text-sm mb-6 max-md:mb-4">For less than a cup of coffee, you get a structured introduction to the digital economy — and know exactly what to learn next.</p>
+              <p className="italic text-[var(--ink-soft)] max-md:text-sm mb-6 max-md:mb-4">Your digital future is worth ₹39.</p>
+              
+              <div className="mt-8">
+                <Button href={WHATSAPP_LINK} variant="primary" className="w-full">
+                  🔥 SECURE MY SEAT →
+                </Button>
               </div>
             </div>
           </div>
@@ -743,34 +735,30 @@ function WebinarPage() {
       {/* ── FINAL CTA ──────────────────────────────────────────────────── */}
       <section className="py-24 max-md:py-20 px-6 max-md:px-4 bg-[var(--ink)] text-white text-center z-10 relative shadow-2xl">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[10px] tracking-[0.2em] text-[var(--gold)] font-bold mb-4">YOUR DIGITAL FUTURE WON'T WAIT.</div>
-          <p className="text-white/70 text-lg max-md:text-base mb-8 leading-relaxed">
-            The world is already digital.<br/>
-            Businesses are already competing for attention online.<br/>
-            AI is already changing how marketing works.<br/><br/>
-            <span className="font-display text-2xl max-md:text-xl text-white">The opportunity is not just to watch it happen.<br className="hidden sm:block" /> IT'S TO UNDERSTAND IT.</span>
-          </p>
-          <p className="text-white/60 max-md:text-sm mb-12 max-md:mb-10 max-w-xl mx-auto">
-            Start with the basics. Understand the ecosystem. Discover the skills. See where you fit. And decide your next move.
-          </p>
-          
-          <h2 className="font-display text-6xl max-md:text-3xl leading-tight font-light mb-8">
-            THE WORLD IS GOING DIGITAL.<br/>ARE YOU KEEPING UP?
+          <h2 className="font-display text-5xl max-md:text-3xl leading-tight font-light mb-8">
+            Don't just watch the digital world change. Learn how it works.
           </h2>
           
+          <p className="text-white/70 text-lg max-md:text-base mb-8 leading-relaxed">
+            Digital Marketing + AI is the new career currency.<br/><br/>
+            Understand the skills.<br/>
+            See the opportunities.<br/>
+            Choose your next step.
+          </p>
+          
           <div className="bg-white/5 border border-white/10 rounded-3xl p-12 max-md:p-6 max-w-2xl mx-auto mb-8 max-md:mx-4 sm:max-md:mx-auto">
-            <div className="text-xs max-md:text-[10px] tracking-widest text-white/50 mb-6 font-semibold">JOIN THE AUTODIGIX DIGITAL MARKETING WEBINAR</div>
+            <div className="text-xs max-md:text-[10px] tracking-widest text-white/50 mb-6 font-semibold">AutoDigix Digital Marketing + AI Webinar</div>
             <div className="flex flex-row max-md:flex-col justify-center items-center gap-4 max-md:gap-2 text-sm max-md:text-xs font-semibold tracking-widest mb-8 max-md:mb-6 text-[var(--gold)]">
-              <span>LIVE ONLINE</span> <span className="max-md:hidden">•</span> <span>29 AUGUST 2026</span> <span className="max-md:hidden">•</span> <span>6:00 PM</span>
+              <span>29 AUGUST 2026</span> <span className="max-md:hidden">•</span> <span>6:00 PM</span> <span className="max-md:hidden">•</span> <span>LIVE ONLINE</span>
             </div>
-            <div className="font-display text-6xl max-md:text-5xl font-light mb-8 max-md:mb-6">₹39/-</div>
+            <div className="font-display text-6xl max-md:text-5xl font-light mb-8 max-md:mb-6">₹39/- ONLY</div>
             <Button href={WHATSAPP_LINK} variant="secondary" className="max-md:w-full">
-              REGISTER NOW →
+              YES, I WANT TO JOIN FOR ₹39 →
             </Button>
           </div>
           
           <div className="text-xs max-md:text-[10px] text-white/40 tracking-widest font-semibold flex flex-row max-md:flex-col justify-center gap-3 max-md:gap-2">
-            <span>Limited Seats</span> <span className="max-md:hidden">|</span> <span>Live Online</span> <span className="max-md:hidden">|</span> <span>Expert-Led Webinar</span>
+            <span>Limited Seats</span> <span className="max-md:hidden">•</span> <span>Live Online</span> <span className="max-md:hidden">•</span> <span>Expert-Led</span>
           </div>
         </div>
       </section>
