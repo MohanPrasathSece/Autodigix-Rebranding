@@ -44,7 +44,8 @@ export const Route = createFileRoute("/webinar")({
   component: WebinarPage,
 });
 
-const WHATSAPP_LINK = "https://wa.me/918639191907?text=Hello%20AutoDigiX%2C%20I%20want%20to%20register%20for%20the%20Digital%20Marketing%20Webinar";
+const PAYMENT_LINK = "https://rzp.io/rzp/UxboVht";
+const WHATSAPP_LINK = "https://wa.me/918639191907?text=Hello%20AutoDigiX%2C%20I%20have%20a%20question%20about%20the%20Digital%20Marketing%20Webinar";
 
 // ─── Shared Components ──────────────────────────────────────────────────────
 
@@ -74,9 +75,9 @@ function Button({ children, href, variant = "primary", className = "" }: { child
 function WebinarHeader() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--beige-light)]/90 backdrop-blur-md border-b border-[var(--ink)]/5">
-      <div className="max-w-7xl mx-auto px-6 max-md:px-4 h-20 max-md:h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 max-md:px-4 h-24 max-md:h-18 flex items-center justify-between">
         <div className="flex items-center">
-          <img src={logo} alt="AutoDigiX Logo" className="h-10 max-md:h-7 w-auto object-contain" />
+          <img src={logo} alt="AutoDigiX Logo" className="h-14 md:h-16 max-md:h-10 w-auto object-contain" />
         </div>
         <div className="flex items-center gap-4 max-md:gap-2">
           <span className="inline-flex items-center gap-2 text-xs max-md:text-[10px] font-semibold tracking-widest text-[var(--ink-soft)] max-md:hidden">
@@ -84,10 +85,10 @@ function WebinarHeader() {
             Live Session
           </span>
           <a 
-            href={WHATSAPP_LINK}
+            href={PAYMENT_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs max-md:text-[10px] font-semibold px-5 py-2.5 max-md:px-4 max-md:py-2 bg-[var(--beige)] text-[var(--ink)] rounded-full border border-[var(--ink)]/10 hover:bg-[var(--ink)] hover:text-[var(--beige-light)] transition-colors tracking-wider whitespace-nowrap"
+            className="text-xs max-md:text-[10px] font-semibold px-5 py-2.5 max-md:px-4 max-md:py-2 bg-[var(--ink)] text-[var(--beige-light)] hover:bg-[var(--gold)] hover:text-[var(--ink)] rounded-full border border-[var(--ink)]/10 transition-colors tracking-wider whitespace-nowrap shadow-sm"
           >
             Register <span className="max-md:hidden">— ₹39</span>
           </a>
@@ -102,7 +103,7 @@ function WebinarFooter() {
     <footer className="bg-[var(--ink)] text-white py-12 px-6 border-t border-white/5 relative z-50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 max-md:gap-6">
         <div className="flex flex-col items-center md:items-start gap-4 max-md:gap-3">
-          <img src={logo} alt="AutoDigiX Logo" className="h-8 max-md:h-6 w-auto object-contain brightness-0 invert" />
+          <img src={logo} alt="AutoDigiX Logo" className="h-14 md:h-16 max-md:h-10 w-auto object-contain brightness-0 invert" />
           <p className="text-white/50 text-xs">
             Helping you understand, learn, and leverage the digital world.
           </p>
@@ -186,23 +187,15 @@ const faqItems = [
   },
   {
     q: "What will I learn in this webinar?",
-    a: "You'll get a complete overview of the digital marketing landscape — SEO, Google Ads, Social Media, Content, Automation, AI, and career/freelancing opportunities. You'll leave with a clear roadmap of what to learn next.",
-  },
-  {
-    q: "Do I need any tools or software?",
-    a: "No. Just a device with an internet connection. Everything is explained in a beginner-friendly way.",
-  },
-  {
-    q: "Will I get a recording after the webinar?",
-    a: "The session is live. Details about recordings, if any, will be shared with registered participants closer to the date.",
+    a: "You'll get a complete overview of the digital marketing landscape — SEO, Social Media, Paid Ads, Email Marketing, Content Strategy, and how AI is transforming it all. By the end, you'll know exactly where to focus and what steps to take next.",
   },
   {
     q: "How do I register?",
-    a: "Click any 'Register' button on this page. You'll be redirected to WhatsApp where our team will guide you through the payment and confirm your seat.",
+    a: "Click any 'Register' button on this page to complete your registration via our secure Razorpay gateway and confirm your seat instantly.",
   },
   {
     q: "What happens after I register?",
-    a: "You'll receive all session details (link, timing, instructions) via WhatsApp before the webinar date.",
+    a: "You'll receive all session details (link, timing, instructions) via WhatsApp/Email before the webinar date.",
   },
 ];
 
@@ -348,7 +341,7 @@ function WebinarPage() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-row max-md:flex-col items-center gap-4 max-md:w-full max-md:px-4"
           >
-            <Button href={WHATSAPP_LINK} variant="primary" className="max-md:w-full">
+            <Button href={PAYMENT_LINK} variant="primary" className="max-md:w-full">
               SAVE MY SEAT →
             </Button>
             <div className="text-xs font-bold text-red-600 tracking-widest max-md:mt-2 animate-pulse mt-3 flex items-center justify-center gap-1.5">
@@ -414,7 +407,7 @@ function WebinarPage() {
               <span className="font-display text-7xl max-md:text-5xl font-light text-[var(--ink)]">₹39/-</span>
             </div>
             <div className="text-sm max-md:text-xs text-red-500 font-bold mb-8 animate-pulse">Registration Closing Soon!</div>
-            <Button href={WHATSAPP_LINK} variant="primary" className="w-full">
+            <Button href={PAYMENT_LINK} variant="primary" className="w-full">
               RESERVE MY SEAT FOR ₹39 →
             </Button>
           </div>
@@ -437,7 +430,7 @@ function WebinarPage() {
           <h2 className="font-display text-5xl max-md:text-3xl leading-tight font-medium mb-8 text-[var(--ink)]">
             One small investment. A bigger understanding of your digital future.
           </h2>
-          <Button href={WHATSAPP_LINK} variant="primary" className="max-md:w-full">
+          <Button href={PAYMENT_LINK} variant="primary" className="max-md:w-full">
             <Sparkles className="w-4 h-4 shrink-0" /> SECURE MY SEAT FOR ₹39 →
           </Button>
         </div>
@@ -453,7 +446,7 @@ function WebinarPage() {
           <p className="font-display text-2xl max-md:text-xl text-[var(--gold)] mb-10 max-md:mb-8 italic max-md:px-4">
             Get ahead. Don't get left behind.
           </p>
-          <Button href={WHATSAPP_LINK} variant="secondary" className="max-md:w-full">
+          <Button href={PAYMENT_LINK} variant="secondary" className="max-md:w-full">
             YES, I'M READY — JOIN FOR ₹39 →
           </Button>
         </div>
@@ -644,7 +637,7 @@ function WebinarPage() {
                 <div className="text-xs max-md:text-[10px] text-[var(--gold)] tracking-widest">Just ₹39 to reserve your seat.</div>
               </div>
 
-              <Button href={WHATSAPP_LINK} variant="secondary" className="w-full">
+              <Button href={PAYMENT_LINK} variant="secondary" className="w-full">
                 YES, I WANT TO JOIN FOR ₹39 →
               </Button>
             </div>
@@ -659,7 +652,7 @@ function WebinarPage() {
               <p className="italic text-[var(--ink-soft)] max-md:text-sm mb-6 max-md:mb-4">Your digital future is worth ₹39.</p>
               
               <div className="mt-8">
-                <Button href={WHATSAPP_LINK} variant="primary" className="w-full">
+                <Button href={PAYMENT_LINK} variant="primary" className="w-full">
                   🔥 SECURE MY SEAT →
                 </Button>
               </div>
@@ -683,7 +676,7 @@ function WebinarPage() {
             Or if you simply want to understand what everyone is talking about when they say AI + Digital Marketing...<br/><br/>
             <strong className="text-[var(--ink)] font-display text-2xl max-md:text-xl block max-md:text-center mt-4">This is a great place to start.</strong>
           </p>
-          <Button href={WHATSAPP_LINK} variant="primary" className="max-md:w-full">
+          <Button href={PAYMENT_LINK} variant="primary" className="max-md:w-full">
             RESERVE MY SEAT FOR ₹39 →
           </Button>
         </div>
@@ -752,7 +745,7 @@ function WebinarPage() {
               <span>29 AUGUST 2026</span> <span className="max-md:hidden">•</span> <span>6:00 PM</span> <span className="max-md:hidden">•</span> <span>LIVE ONLINE</span>
             </div>
             <div className="font-display text-6xl max-md:text-5xl font-light mb-8 max-md:mb-6">₹39/- ONLY</div>
-            <Button href={WHATSAPP_LINK} variant="secondary" className="max-md:w-full">
+            <Button href={PAYMENT_LINK} variant="secondary" className="max-md:w-full">
               YES, I WANT TO JOIN FOR ₹39 →
             </Button>
           </div>
