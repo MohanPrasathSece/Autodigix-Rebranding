@@ -37,8 +37,15 @@ export const Route = createFileRoute("/webinar")({
   head: () => ({
     meta: [
       { title: "Digital Marketing Webinar | AutoDigiX" },
-      { name: "description", content: "Master the digital ecosystem. Live online session." },
+      { name: "description", content: "Learn Digital Marketing + AI with practical strategies, tools, and real-world insights. Webinar Fee: ₹39 ONLY. Limited Seats." },
       { name: "robots", content: "noindex, nofollow" },
+    ],
+    // ── Meta Pixel — webinar page ONLY ──────────────────────────────────
+    scripts: [
+      {
+        // noscript fallback is rendered inline in the component
+        children: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1794680704409333');fbq('track','PageView');`,
+      },
     ],
   }),
   component: WebinarPage,
@@ -330,10 +337,25 @@ function WebinarPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base max-md:text-sm text-[var(--ink-soft)] max-w-lg mx-auto mb-8 max-md:mb-6 leading-relaxed max-md:px-4"
+            className="text-base max-md:text-sm text-[var(--ink-soft)] max-w-lg mx-auto mb-4 max-md:mb-3 leading-relaxed max-md:px-4"
           >
-            Join 1,000+ students, professionals & business owners who got clarity on Digital Marketing, AI, SEO, Ads & Automation — in just one live session.
+            Learn Digital Marketing + AI with practical strategies, tools, and real-world insights.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="flex flex-wrap justify-center items-center gap-3 max-md:gap-2 mb-8 max-md:mb-6"
+          >
+            <span className="inline-flex items-center gap-2 bg-[var(--ink)] text-[var(--beige-light)] text-xs font-bold tracking-widest px-4 py-2 rounded-full shadow">
+              🎯 Webinar Fee: ₹39 ONLY
+            </span>
+            <span className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 text-xs font-bold tracking-widest px-4 py-2 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
+              Limited Seats • Register Now!
+            </span>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
