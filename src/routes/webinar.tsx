@@ -308,68 +308,166 @@ function WebinarPage() {
       <WebinarHeader />
 
       {/* ── HERO ───────────────────────────────────────────────────────── */}
-      <section className="relative h-screen flex flex-col items-center justify-center px-6 bg-[var(--beige)] overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
-        
-        <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center -mt-10 max-md:-mt-6">
+      <section className="relative min-h-screen flex items-center px-6 max-md:px-4 bg-[var(--beige)] overflow-hidden">
+        {/* Background grid */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
+        {/* Subtle gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--gold)]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[var(--ink)]/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-2 max-md:grid-cols-1 gap-12 max-md:gap-8 items-center py-20 max-md:py-12">
+
+          {/* ── LEFT: Headline + CTA ────────────────────────────────── */}
+          <div className="flex flex-col max-md:items-center max-md:text-center">
+            {/* Live badge */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 self-start max-md:self-auto text-[10px] font-bold tracking-[0.25em] text-[var(--ink-soft)] mb-6 bg-white border border-[var(--ink)]/10 px-4 py-2 rounded-full shadow-sm"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+              </span>
+              LIVE WEBINAR &nbsp;•&nbsp; 29 AUG 2026
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="font-display text-5xl lg:text-6xl max-md:text-4xl leading-[1.08] font-light mb-5 text-[var(--ink)]"
+            >
+              Your competitors
+              <br />
+              are already using
+              <br />
+              <span className="italic text-[var(--gold)]">AI + Digital</span>
+              <br />
+              <span className="italic text-[var(--gold)]">Marketing.</span>
+            </motion.h1>
+
+            {/* Sub-text */}
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-base max-md:text-sm text-[var(--ink-soft)] max-w-md mb-8 leading-relaxed"
+            >
+              Learn Digital Marketing + AI with practical strategies, tools, and real-world insights — in one live session.
+            </motion.p>
+
+            {/* CTA row */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-wrap max-md:justify-center items-center gap-4"
+            >
+              <Button href={PAYMENT_LINK} variant="primary">
+                SAVE MY SEAT →
+              </Button>
+              <div className="flex items-center gap-2 text-xs text-[var(--ink-soft)] font-medium">
+                <CheckCircle2 className="w-4 h-4 text-[var(--gold)]" strokeWidth={2} />
+                No experience needed
+              </div>
+            </motion.div>
+
+            {/* Trust row */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="flex flex-wrap max-md:justify-center items-center gap-5 mt-8 pt-8 border-t border-[var(--ink)]/8"
+            >
+              {[
+                { label: "1,000+ Attended", icon: "👥" },
+                { label: "Live & Interactive", icon: "🎙️" },
+                { label: "Expert-Led", icon: "⭐" },
+              ].map((t, i) => (
+                <div key={i} className="flex items-center gap-1.5 text-xs font-semibold text-[var(--ink-soft)]">
+                  <span>{t.icon}</span> {t.label}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* ── RIGHT: Minimal Card ──────────────────────────────────── */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.25em] text-[var(--ink-soft)] mb-6 bg-white border border-[var(--ink)]/10 px-4 py-2 rounded-full shadow-sm"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="bg-white rounded-2xl border border-[var(--ink)]/8 shadow-sm flex flex-col overflow-hidden"
           >
-            <Sparkles className="w-3.5 h-3.5 text-[var(--gold)] shrink-0" /> LIVE WEBINAR — ₹39/-
-          </motion.div>
+            {/* Header */}
+            <div className="px-7 py-6 border-b border-[var(--ink)]/6">
+              <p className="text-[9px] tracking-[0.25em] text-[var(--ink-soft)] font-semibold uppercase mb-1">AutoDigiX Presents</p>
+              <h2 className="font-display text-xl text-[var(--ink)] font-light leading-snug">
+                Digital Marketing + <span className="italic text-[var(--gold)]">AI Webinar</span>
+              </h2>
+            </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display text-5xl lg:text-6xl max-md:text-4xl leading-[1.1] font-light mb-6 text-[var(--ink)] max-w-3xl mx-auto"
-          >
-            Your competitors are already using <br className="hidden md:block" />
-            <span className="italic text-[var(--gold)]">AI + Digital Marketing.</span>
-            <br />
-            Are you still figuring out where to start?
-          </motion.h1>
+            {/* Event details — simple rows */}
+            <div className="px-7 py-5 space-y-3.5 border-b border-[var(--ink)]/6">
+              {[
+                { Icon: Calendar, value: "29 August 2026" },
+                { Icon: Clock,    value: "6:00 PM IST" },
+                { Icon: Laptop,   value: "Live Online" },
+                { Icon: Ticket,   value: "Limited Seats" },
+              ].map(({ Icon, value }, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <Icon className="w-4 h-4 text-[var(--ink-soft)] shrink-0" strokeWidth={1.5} />
+                  <span className="text-sm text-[var(--ink)] font-medium">{value}</span>
+                </div>
+              ))}
+            </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base max-md:text-sm text-[var(--ink-soft)] max-w-lg mx-auto mb-4 max-md:mb-3 leading-relaxed max-md:px-4"
-          >
-            Learn Digital Marketing + AI with practical strategies, tools, and real-world insights.
-          </motion.p>
+            {/* Price */}
+            <div className="px-7 py-5 border-b border-[var(--ink)]/6 flex items-end justify-between">
+              <div>
+                <p className="text-[9px] tracking-widest text-[var(--ink-soft)] uppercase font-semibold mb-1">Webinar Fee</p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-sm text-[var(--ink-soft)] line-through">₹599</span>
+                  <span className="font-display text-4xl font-light text-[var(--ink)]">₹39</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-1.5 mb-1">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-60" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500" />
+                </span>
+                <span className="text-[9px] tracking-widest text-red-500 font-bold uppercase">Filling up fast</span>
+              </div>
+            </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.25 }}
-            className="flex flex-wrap justify-center items-center gap-3 max-md:gap-2 mb-8 max-md:mb-6"
-          >
-            <span className="inline-flex items-center gap-2 bg-[var(--ink)] text-[var(--beige-light)] text-xs font-bold tracking-widest px-4 py-2 rounded-full shadow">
-              🎯 Webinar Fee: ₹39 ONLY
-            </span>
-            <span className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 text-xs font-bold tracking-widest px-4 py-2 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
-              Limited Seats • Register Now!
-            </span>
-          </motion.div>
+            {/* Includes */}
+            <div className="px-7 py-5 border-b border-[var(--ink)]/6">
+              <ul className="space-y-2.5">
+                {["Live interactive session", "Full DM + AI roadmap", "Q&A with the expert", "Career & freelance insights"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2.5 text-sm text-[var(--ink-soft)]">
+                    <CheckCircle2 className="w-4 h-4 text-[var(--gold)] shrink-0" strokeWidth={1.5} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-row max-md:flex-col items-center gap-4 max-md:w-full max-md:px-4"
-          >
-            <Button href={PAYMENT_LINK} variant="primary" className="max-md:w-full">
-              SAVE MY SEAT →
-            </Button>
-            <div className="text-xs font-bold text-red-600 tracking-widest max-md:mt-2 animate-pulse mt-3 flex items-center justify-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> ONLY A FEW SEATS LEFT!
+            {/* CTA */}
+            <div className="px-7 py-6">
+              <a
+                href={PAYMENT_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 bg-[var(--ink)] text-[var(--beige-light)] text-xs font-bold tracking-widest uppercase px-6 py-3.5 rounded-xl hover:bg-[var(--ink)]/90 transition-colors"
+              >
+                Register for ₹39 →
+              </a>
+              <p className="text-center text-[10px] text-[var(--ink-soft)]/50 mt-3 tracking-wider">Secure payment via Razorpay</p>
             </div>
           </motion.div>
+
         </div>
       </section>
 
