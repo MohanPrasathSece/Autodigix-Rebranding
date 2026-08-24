@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   CheckCircle2, 
@@ -40,13 +40,7 @@ export const Route = createFileRoute("/webinar")({
       { name: "description", content: "Learn Digital Marketing + AI with practical strategies, tools, and real-world insights. Webinar Fee: ₹39 ONLY. Limited Seats." },
       { name: "robots", content: "noindex, nofollow" },
     ],
-    // ── Meta Pixel — webinar page ONLY ──────────────────────────────────
-    scripts: [
-      {
-        // noscript fallback is rendered inline in the component
-        children: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1794680704409333');fbq('track','PageView');`,
-      },
-    ],
+
   }),
   component: WebinarPage,
 });
@@ -302,6 +296,34 @@ function RoadmapSection() {
 function WebinarPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // ── Meta Pixel — webinar page ONLY ──────────────────────────────────────
+  useEffect(() => {
+    // Inject the fbevents.js loader script
+    const script = document.createElement("script");
+    script.id = "meta-pixel-webinar";
+    script.async = true;
+    script.innerHTML = `
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1794680704409333');
+      fbq('track', 'PageView');
+    `;
+    document.head.appendChild(script);
+
+    return () => {
+      // Clean up on unmount so pixel doesn't linger on other pages
+      const el = document.getElementById("meta-pixel-webinar");
+      if (el) el.remove();
+    };
+  }, []);
+  // ────────────────────────────────────────────────────────────────────────
 
   return (
     <div ref={containerRef} className="bg-[var(--beige-light)] min-h-screen text-[var(--ink)] font-sans pt-20 max-md:pt-16">
