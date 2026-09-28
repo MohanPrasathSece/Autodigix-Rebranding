@@ -64,9 +64,11 @@ export function Footer() {
                 { to: "/services", label: "Services" },
                 { to: "/courses", label: "Courses" },
                 { to: "/portfolio", label: "Portfolio" },
+                { to: "/blogs", label: "Blogs" },
                 { to: "/partnerships", label: "Partnerships" },
                 { to: "/about", label: "About" },
                 { to: "/contact", label: "Contact" },
+                { to: "/privacy", label: "Privacy Policy" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link
@@ -186,10 +188,18 @@ export function Footer() {
             </div>
           </div>
         </motion.div>
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 text-[11px] opacity-50">
+        <div className="flex flex-col md:flex-row items-center justify-between pt-8 text-[11px] opacity-70 border-t border-[var(--beige-light)]/10 mt-8">
           <div>© 2026 AutoDigiX. All rights reserved.</div>
-          <div className="mt-3 md:mt-0">
-            <span>Built for performance marketing and automation systems.</span>
+          <div className="flex items-center gap-6 mt-3 md:mt-0">
+            <Link
+              to="/privacy"
+              onClick={() => window.scrollTo(0, 0)}
+              className="hover:text-[var(--beige-light)] transition underline underline-offset-4"
+            >
+              Privacy Policy
+            </Link>
+            <span className="hidden sm:inline opacity-40">·</span>
+            <span className="hidden sm:inline">Built for performance marketing and automation systems.</span>
           </div>
         </div>
       </div>

@@ -52,12 +52,20 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Journal / Blog — content marketing -->
+  <!-- Blogs & Growth Insights — content marketing -->
   <url>
-    <loc>https://autodigix.in/journal</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://autodigix.in/blogs</loc>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Policy — legal compliance -->
+  <url>
+    <loc>https://autodigix.in/privacy</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- Contact — local SEO "near me" keyword page -->
