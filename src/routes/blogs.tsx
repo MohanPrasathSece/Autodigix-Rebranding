@@ -18,7 +18,8 @@ import {
   Target, 
   Workflow, 
   ChevronRight,
-  Mail
+  Mail,
+  Layers
 } from "lucide-react";
 import { Reveal, RevealText } from "../components/Reveal";
 import founderImage from "../assets/founder.png";
@@ -97,265 +98,8 @@ export interface BlogPost {
   };
 }
 
-export const blogPosts: BlogPost[] = [
-  {
-    id: "ai-cac-reduction-2026",
-    slug: "how-ai-automation-slashes-customer-acquisition-costs",
-    title: "How AI Automation is Slashing Customer Acquisition Costs by 42% in 2026",
-    excerpt: "Legacy lead capture loses up to 60% of high-intent prospects in first-contact latency. Here is how modern multi-agent AI pipelines qualify, route, and book demos in under 90 seconds.",
-    category: "AI & Automation",
-    date: "March 2026",
-    readTime: "7 min read",
-    featured: true,
-    author: {
-      name: "Praveen Gorla",
-      role: "Founder & CEO, AutoDigiX",
-    },
-    tags: ["AI Agents", "CAC Reduction", "Automation", "Lead Qualification"],
-    stats: "42% CAC Drop",
-    content: {
-      overview: "Customer acquisition costs across B2B and high-ticket B2C verticals have escalated dramatically. The secret to breaking the cost curve isn't spending more on ad inventory—it's eliminating human response friction through real-time AI automation agents.",
-      keyTakeaways: [
-        "Leads contacted within 5 minutes are 21x more likely to convert than those contacted after 30 minutes.",
-        "Autonomous AI enrichment agents can parse company revenue, tech stack, and LinkedIn profiles before triggering custom outreach.",
-        "Multi-modal agents qualify prospect intent over WhatsApp, Email, and SMS seamlessly without robotic canned answers.",
-        "Integrating webhook triggers directly into CRM pipelines cuts SDR overhead by up to 65%."
-      ],
-      sections: [
-        {
-          heading: "The Speed-to-Lead Breakdown",
-          body: [
-            "In traditional sales development workflows, an inbound lead fills out a form, gets deposited into a CRM queue, waits for manual assignment, and receives a cold calendar link several hours (or days) later. By then, buying intent has degraded.",
-            "With AutoDigiX AI automation frameworks, the moment an ad click or organic search form is submitted, a dedicated AI agent executes instant enrichment via Clearbit and Apollo APIs, grades the ICP match, and initiates a conversational greeting via WhatsApp or verified email within 45 seconds."
-          ],
-          highlight: "Speed to lead is no longer a sales luxury; it is the single largest determinant of paid campaign ROAS."
-        },
-        {
-          heading: "Architecting the Zero-Latency Pipeline",
-          body: [
-            "A modern AI revenue architecture connects three core layers: Ingestion (Meta/Google Ad webhooks), Cognition (LLM agent reasoning with strict system boundaries), and Execution (instant calendar reservation and personalized onboarding).",
-            "This architecture allows boutique and mid-market firms to deliver the responsiveness of a 50-person SDR bullpen with zero marginal payroll."
-          ]
-        },
-        {
-          heading: "Quantifiable ROI Metrics",
-          body: [
-            "Across our global client accounts in 7 countries, implementing autonomous qualification resulted in an immediate 3.4x lift in scheduled consultation shows and a 42% reduction in blended cost per acquisition."
-          ]
-        }
-      ],
-      actionChecklist: [
-        "Audit existing lead response time across all web forms.",
-        "Implement instant webhook routing directly to AI qualification agents.",
-        "Integrate two-way calendar sync for immediate frictionless scheduling.",
-        "Measure demo attendance rate before and after agent rollout."
-      ]
-    }
-  },
-  {
-    id: "meta-google-ads-playbook-2026",
-    slug: "2026-playbook-meta-google-ads-maximizing-roas",
-    title: "The 2026 Paid Ads Playbook: Scaling Meta & Google ROAS With First-Party Data",
-    excerpt: "With privacy sandbox updates and third-party cookie phase-outs, basic pixel tracking is broken. Here is our exact blueprint for server-side CAPI tracking and creative iteration.",
-    category: "Performance Marketing",
-    date: "February 2026",
-    readTime: "8 min read",
-    author: {
-      name: "Praveen Gorla",
-      role: "Performance Marketing Strategist",
-    },
-    tags: ["Google Ads", "Meta Ads", "Server-Side CAPI", "Performance Marketing"],
-    stats: "3.8x Avg ROAS",
-    content: {
-      overview: "Standard browser-based tracking now misattributes up to 35% of ad conversions due to iOS privacy constraints and ad-blockers. Scaling ad spend profitably requires transitioning to robust server-side conversion APIs and high-velocity creative testing.",
-      keyTakeaways: [
-        "Server-Side Conversions API (CAPI) recovers lost conversion signals and stabilizes algorithmic bidding.",
-        "Broad targeting paired with high-intent creative hooks outperforms micro-targeted audiences on Meta Advantage+.",
-        "Google Performance Max campaigns require strict negative keyword sculpting and asset group segmentation.",
-        "Creative iteration cycles must deliver 5-10 fresh hooks weekly to prevent ad fatigue."
-      ],
-      sections: [
-        {
-          heading: "Why Browser Pixels Fail in 2026",
-          body: [
-            "Relying solely on client-side pixel scripts leaves massive gaps in attribution. Safari ITP, Firefox Enhanced Tracking Protection, and Chrome Privacy Sandbox restrict cookies, blinding ad algorithms.",
-            "By setting up server-to-server tracking via Google Tag Manager Server Container and Cloudflare Workers, we pass back hashed customer data directly to Meta and Google servers with a 98%+ event match quality score."
-          ],
-          highlight: "Algorithmic bidding engines are only as intelligent as the conversion data you feed them."
-        },
-        {
-          heading: "Creative Strategy as the New Targeting",
-          body: [
-            "With Meta's machine learning algorithms handling demographic matching automatically, your creative asset is your primary filter. Problem-centric visual hooks, UGC case study breakdowns, and high-contrast typography consistently beat generic agency stock graphics."
-          ]
-        }
-      ],
-      actionChecklist: [
-        "Deploy Server-Side CAPI with high Event Quality match score (>8.5/10).",
-        "Implement offline conversion tracking for closed-won CRM deals.",
-        "Establish a weekly creative sprint producing at least 6 angle variations."
-      ]
-    }
-  },
-  {
-    id: "seo-sge-ai-overviews-2026",
-    slug: "seo-in-the-age-of-ai-overviews-sge-dominance",
-    title: "SEO in the Age of AI Overviews: Capturing Zero-Click Search Traffic",
-    excerpt: "Google AI Overviews are answering search queries directly in the SERP. Learn how to optimize for information gain, brand citations, and topical authority to stay on top.",
-    category: "SEO & Search",
-    date: "February 2026",
-    readTime: "6 min read",
-    author: {
-      name: "AutoDigiX Editorial",
-      role: "SEO & Content Architecture",
-    },
-    tags: ["SEO", "AI Overviews", "SGE", "Topical Authority"],
-    stats: "+180% Organic Reach",
-    content: {
-      overview: "Traditional keyword stuffing is completely dead. Google's Search Generative Experience (SGE) prioritizes original data, expert commentary, schema graphs, and verified entity trust.",
-      keyTakeaways: [
-        "AI Overviews cite websites that provide unique numerical data, proprietary case studies, and clear structured answers.",
-        "Schema markup (JSON-LD) with comprehensive Organization, WebPage, and Author entities is mandatory.",
-        "Optimizing for conversational long-tail queries captures high-intent buyers ready for solutions.",
-        "Brand mentions across reputable industry publications build the entity graph that AI engines reference."
-      ],
-      sections: [
-        {
-          heading: "The Information Gain Principle",
-          body: [
-            "Google's AI evaluation models look for 'Information Gain'—content that contributes new insights beyond what existing search results already synthesize. Summarizing existing articles will get your pages ignored by AI Overviews.",
-            "To win, every published piece must feature primary research, original client metrics, proprietary frameworks, or unique contrarian viewpoints."
-          ],
-          highlight: "If an AI model can summarize your entire article without losing nuance, your content has zero information gain."
-        },
-        {
-          heading: "Technical Architecture & Entity Graph",
-          body: [
-            "Ensure structured data is error-free. Connecting your founders' author profiles, linked social profiles, and company registration in the Schema graph establishes the semantic authority needed to appear as an AI source snippet."
-          ]
-        }
-      ],
-      actionChecklist: [
-        "Embed proprietary stats and original screenshots in every key guide.",
-        "Implement nested Schema.org JSON-LD across all service & blog routes.",
-        "Target conversational problem-solving query patterns."
-      ]
-    }
-  },
-  {
-    id: "lead-enrichment-zero-touch-crm",
-    slug: "zero-touch-crm-lead-enrichment-workflows",
-    title: "Zero-Touch CRM Lead Enrichment: Building Intelligent B2B Pipelines",
-    excerpt: "Stop having sales reps waste 15 hours a week manually researching prospect titles and company data. Here is the automated workflow that enriches leads automatically.",
-    category: "RevOps & Workflows",
-    date: "January 2026",
-    readTime: "9 min read",
-    author: {
-      name: "Praveen Gorla",
-      role: "RevOps & AI Systems Engineer",
-    },
-    tags: ["RevOps", "CRM Enrichment", "Zapier/Make", "HubSpot Automation"],
-    stats: "15 hrs/wk Saved",
-    content: {
-      overview: "Manual data entry is the biggest drain on sales productivity. By coupling modern webhook listeners with enrichment APIs and LLM analysis, every new contact in your CRM is automatically updated with revenue estimates, tech stack, and a personalized conversation hook.",
-      keyTakeaways: [
-        "Eliminate 90% of manual data entry for account executives and sales reps.",
-        "Score lead tier instantly (Tier 1 Enterprise vs Tier 3 Self-Serve) for prioritized outreach.",
-        "Generate custom sales icebreakers tailored to the prospect's latest company announcement.",
-        "Trigger automatic Slack/Telegram alerts to executive team on high-value inbound submissions."
-      ],
-      sections: [
-        {
-          heading: "Workflow Logic Breakdown",
-          body: [
-            "1. Lead enters via Webform or Ads Campaign.\n2. Webhook fires to Make.com / Custom Node.js serverless function.\n3. Domain enrichment lookup executes across Apollo, Hunter, and Clearbit.\n4. LLM analyzes the prospect's website and produces a 2-sentence value proposition hook.\n5. Enriched data writes back into HubSpot / Salesforce / Airtable within 4 seconds."
-          ],
-          highlight: "Sales reps equipped with pre-enriched insights have 3x higher discovery call booking rates."
-        }
-      ],
-      actionChecklist: [
-        "Audit CRM fields for missing company size, industry, and tech stack attributes.",
-        "Set up webhook listeners for immediate data transformation.",
-        "Create custom notification alerts for high-ticket enterprise accounts."
-      ]
-    }
-  },
-  {
-    id: "local-seo-service-businesses",
-    slug: "local-seo-google-maps-3pack-dominance",
-    title: "Local SEO Dominance: How Local & Regional Businesses Capture #1 Google Maps Rankings",
-    excerpt: "The step-by-step blueprint for conquering Google Business Profile (GBP) 3-pack rankings, review velocity, and geo-targeted landing page structures.",
-    category: "SEO & Search",
-    date: "January 2026",
-    readTime: "5 min read",
-    author: {
-      name: "AutoDigiX Editorial",
-      role: "Local Growth Specialists",
-    },
-    tags: ["Local SEO", "Google Maps", "GBP Optimization", "Lead Gen"],
-    stats: "+320% Calls",
-    content: {
-      overview: "Local search queries with 'near me' and city modifiers represent the highest purchase intent on the internet. Dominating the Google 3-Pack requires a synchronized blend of GBP activity, localized schema, and authentic customer sentiment signals.",
-      keyTakeaways: [
-        "Google Business Profile completeness and primary category selection drive 40% of local rank weight.",
-        "Consistent monthly photo uploads and review response frequency signal active business operations.",
-        "Geo-targeted landing pages with localized FAQs capture adjacent regional suburbs.",
-        "Name, Address, Phone (NAP) citation consistency across major aggregators prevents algorithmic confusion."
-      ],
-      sections: [
-        {
-          heading: "The Google 3-Pack Algorithm Factors",
-          body: [
-            "Google evaluates local rankings on three pillars: Proximity, Prominence, and Relevance. While proximity is determined by searcher coordinates, prominence and relevance can be engineered through targeted optimization."
-          ]
-        }
-      ],
-      actionChecklist: [
-        "Verify primary and secondary Google Business Profile categories.",
-        "Automate review generation workflows post-service completion.",
-        "Publish weekly updates and high-resolution geotagged photos to GBP."
-      ]
-    }
-  },
-  {
-    id: "cro-subtle-ux-tweaks",
-    slug: "cro-subtle-ui-ux-tweaks-doubling-lead-conversion",
-    title: "Conversion Rate Optimization: 7 Subtle UI/UX Tweaks That Doubled Client Conversion Rates",
-    excerpt: "Small friction points kill ad conversion rates. We audited over 50 landing pages to uncover the highest-impact visual hierarchy and psychological trust triggers.",
-    category: "Growth Strategy",
-    date: "December 2025",
-    readTime: "7 min read",
-    author: {
-      name: "Praveen Gorla",
-      role: "Growth & CRO Specialist",
-    },
-    tags: ["CRO", "UI/UX", "Landing Pages", "Conversion Optimization"],
-    stats: "2.1x Conv Lift",
-    content: {
-      overview: "Doubling your conversion rate cuts your customer acquisition cost in half without needing to spend an extra dollar on traffic. We analyzed over 500,000 visitor sessions to isolate the high-impact design elements that move the needle.",
-      keyTakeaways: [
-        "Reducing form fields from 8 to 4 increases completed submissions by up to 120%.",
-        "Sticky mobile CTA buttons eliminate scroll-fatigue drop-offs.",
-        "Displaying verified third-party review badges and client logos directly next to the primary button boosts trust.",
-        "Micro-animations on hover and page load convey high craftsmanship and brand authority."
-      ],
-      sections: [
-        {
-          heading: "The Frictionless Form Principle",
-          body: [
-            "Every extra input field acts as a barrier. For high-ticket inquiries, collect only Name, Email, Phone, and Project Type on Step 1, then progressively profile for deeper budget parameters on Step 2."
-          ],
-          highlight: "Never ask for information before establishing immediate perceived value."
-        }
-      ],
-      actionChecklist: [
-        "Remove unnecessary form fields.",
-        "Add client outcome metrics above the fold.",
-        "Implement floating sticky consultation CTA on mobile viewports."
-      ]
-    }
-  }
-];
+// Emptied as requested
+export const blogPosts: BlogPost[] = [];
 
 const categories = [
   "All",
@@ -444,52 +188,54 @@ function BlogsPage() {
             </p>
           </Reveal>
 
-          {/* Search Bar & Category Filters */}
-          <div className="mt-10 md:mt-14 space-y-5">
-            {/* Search Input */}
-            <div className="relative max-w-xl">
-              <Search className="w-5 h-5 text-[var(--ink-soft)]/50 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search articles on AI, Google Ads, SEO, RevOps, CAC..."
-                className="w-full pl-12 pr-10 py-3.5 rounded-full bg-[var(--beige-light)] border border-[var(--ink)]/15 text-sm text-[var(--ink)] placeholder:text-[var(--ink-soft)]/50 focus:outline-none focus:border-[var(--ink)] focus:ring-2 focus:ring-[var(--ink)]/10 shadow-soft transition-all"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--ink-soft)]/50 hover:text-[var(--ink)]"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              )}
-            </div>
-
-            {/* Category Filter Pills */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-              {categories.map((cat) => {
-                const isActive = selectedCategory === cat;
-                return (
+          {/* Search Bar & Category Filters (Rendered when posts exist) */}
+          {blogPosts.length > 0 && (
+            <div className="mt-10 md:mt-14 space-y-5">
+              {/* Search Input */}
+              <div className="relative max-w-xl">
+                <Search className="w-5 h-5 text-[var(--ink-soft)]/50 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search articles on AI, Google Ads, SEO, RevOps, CAC..."
+                  className="w-full pl-12 pr-10 py-3.5 rounded-full bg-[var(--beige-light)] border border-[var(--ink)]/15 text-sm text-[var(--ink)] placeholder:text-[var(--ink-soft)]/50 focus:outline-none focus:border-[var(--ink)] focus:ring-2 focus:ring-[var(--ink)]/10 shadow-soft transition-all"
+                />
+                {searchQuery && (
                   <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-300 ${
-                      isActive
-                        ? "bg-[var(--ink)] text-[var(--beige-light)] shadow-sm scale-105"
-                        : "bg-[var(--beige-light)] text-[var(--ink-soft)] hover:text-[var(--ink)] border border-[var(--ink)]/10 hover:border-[var(--ink)]/30"
-                    }`}
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--ink-soft)]/50 hover:text-[var(--ink)]"
                   >
-                    {cat}
+                    <X className="w-4 h-4" />
                   </button>
-                );
-              })}
+                )}
+              </div>
+
+              {/* Category Filter Pills */}
+              <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+                {categories.map((cat) => {
+                  const isActive = selectedCategory === cat;
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => setSelectedCategory(cat)}
+                      className={`px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-300 ${
+                        isActive
+                          ? "bg-[var(--ink)] text-[var(--beige-light)] shadow-sm scale-105"
+                          : "bg-[var(--beige-light)] text-[var(--ink-soft)] hover:text-[var(--ink)] border border-[var(--ink)]/10 hover:border-[var(--ink)]/30"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 
-      {/* Featured Article Spotlight (Only shown if 'All' and no search) */}
+      {/* Featured Article Spotlight (When posts exist) */}
       {selectedCategory === "All" && !searchQuery && featuredPost && (
         <section className="py-12 md:py-16 px-6 max-w-7xl mx-auto">
           <div className="text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)]/70 mb-4 font-semibold">
@@ -550,93 +296,97 @@ function BlogsPage() {
         </section>
       )}
 
-      {/* Articles Grid Section */}
-      <section className="py-12 md:py-16 px-6 max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-8 pb-4 border-b border-[var(--ink)]/10">
-          <div className="text-sm font-medium text-[var(--ink)]">
-            Showing <span className="font-bold text-gold">{filteredPosts.length}</span> {filteredPosts.length === 1 ? "article" : "articles"}
-            {selectedCategory !== "All" && <span> in <strong className="text-[var(--ink)]">{selectedCategory}</strong></span>}
-          </div>
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery("")}
-              className="text-xs text-[var(--ink-soft)] hover:text-[var(--ink)] underline"
-            >
-              Clear search
-            </button>
-          )}
-        </div>
-
+      {/* Articles Grid / Empty State Section */}
+      <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto">
         {filteredPosts.length === 0 ? (
-          <div className="bg-[var(--beige-light)] p-12 rounded-3xl text-center border border-[var(--ink)]/10 max-w-xl mx-auto my-12">
-            <BookOpen className="w-12 h-12 mx-auto text-[var(--ink-soft)]/40 mb-4" />
-            <h3 className="font-display text-2xl text-[var(--ink)] font-light mb-2">No matching articles found</h3>
-            <p className="text-sm text-[var(--ink-soft)] mb-6">
-              Try searching for different keywords such as AI, SEO, Ads, or select another category filter.
+          <div className="bg-[var(--beige-light)] p-10 md:p-16 rounded-3xl text-center border border-[var(--ink)]/10 shadow-soft max-w-2xl mx-auto">
+            <div className="w-16 h-16 rounded-3xl bg-[var(--ink)]/5 flex items-center justify-center mx-auto mb-6">
+              <BookOpen className="w-8 h-8 text-gold" />
+            </div>
+            <div className="text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)]/70 mb-3 font-semibold">
+              ◆ Publishing Soon
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl text-[var(--ink)] font-light mb-4">
+              New Articles & Case Studies Coming Soon
+            </h2>
+            <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed max-w-lg mx-auto mb-8">
+              We are finalizing in-depth field notes on AI automation architectures, performance marketing ROI frameworks, and revenue operations.
             </p>
-            <button
-              onClick={() => {
-                setSelectedCategory("All");
-                setSearchQuery("");
-              }}
-              className="px-6 py-2.5 rounded-full bg-[var(--ink)] text-[var(--beige-light)] text-xs font-medium"
-            >
-              Reset Filters
-            </button>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--beige)] border border-[var(--ink)]/10 text-xs text-[var(--ink)] font-medium">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Subscribe to the Growth Briefing below to get notified on publish.
+            </div>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                onClick={() => setActivePost(post)}
-                className="group cursor-pointer bg-[var(--beige-light)] rounded-3xl p-7 border border-[var(--ink)]/10 shadow-soft hover:shadow-gold hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--beige)] text-[var(--ink)] border border-[var(--ink)]/10">
-                      {post.category}
-                    </span>
-                    <span className="text-xs text-[var(--ink-soft)]/60 flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-gold" /> {post.readTime}
-                    </span>
-                  </div>
+          <div>
+            <div className="flex items-center justify-between mb-8 pb-4 border-b border-[var(--ink)]/10">
+              <div className="text-sm font-medium text-[var(--ink)]">
+                Showing <span className="font-bold text-gold">{filteredPosts.length}</span> {filteredPosts.length === 1 ? "article" : "articles"}
+                {selectedCategory !== "All" && <span> in <strong className="text-[var(--ink)]">{selectedCategory}</strong></span>}
+              </div>
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="text-xs text-[var(--ink-soft)] hover:text-[var(--ink)] underline"
+                >
+                  Clear search
+                </button>
+              )}
+            </div>
 
-                  <h3 className="font-display text-xl md:text-2xl text-[var(--ink)] font-light leading-snug mb-3 group-hover:text-gold transition-colors">
-                    {post.title}
-                  </h3>
-
-                  <p className="text-xs md:text-sm text-[var(--ink-soft)]/80 leading-relaxed mb-6 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                </div>
-
-                <div>
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {post.tags.slice(0, 3).map((tag, tIdx) => (
-                      <span key={tIdx} className="text-[10px] text-[var(--ink-soft)]/70 bg-[var(--beige)]/80 px-2.5 py-0.5 rounded-md">
-                        #{tag}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  onClick={() => setActivePost(post)}
+                  className="group cursor-pointer bg-[var(--beige-light)] rounded-3xl p-7 border border-[var(--ink)]/10 shadow-soft hover:shadow-gold hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-4">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--beige)] text-[var(--ink)] border border-[var(--ink)]/10">
+                        {post.category}
                       </span>
-                    ))}
+                      <span className="text-xs text-[var(--ink-soft)]/60 flex items-center gap-1">
+                        <Clock className="w-3 h-3 text-gold" /> {post.readTime}
+                      </span>
+                    </div>
+
+                    <h3 className="font-display text-xl md:text-2xl text-[var(--ink)] font-light leading-snug mb-3 group-hover:text-gold transition-colors">
+                      {post.title}
+                    </h3>
+
+                    <p className="text-xs md:text-sm text-[var(--ink-soft)]/80 leading-relaxed mb-6 line-clamp-3">
+                      {post.excerpt}
+                    </p>
                   </div>
 
-                  <div className="pt-4 border-t border-[var(--ink)]/5 flex items-center justify-between text-xs">
-                    <div className="flex items-center gap-2 text-[var(--ink-soft)]/80">
-                      <Calendar className="w-3.5 h-3.5 text-gold" />
-                      <span>{post.date}</span>
+                  <div>
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-1.5 mb-5">
+                      {post.tags.slice(0, 3).map((tag, tIdx) => (
+                        <span key={tIdx} className="text-[10px] text-[var(--ink-soft)]/70 bg-[var(--beige)]/80 px-2.5 py-0.5 rounded-md">
+                          #{tag}
+                        </span>
+                      ))}
                     </div>
-                    <span className="font-medium text-[var(--ink)] flex items-center gap-1 group-hover:text-gold transition-colors">
-                      Read <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </span>
+
+                    <div className="pt-4 border-t border-[var(--ink)]/5 flex items-center justify-between text-xs">
+                      <div className="flex items-center gap-2 text-[var(--ink-soft)]/80">
+                        <Calendar className="w-3.5 h-3.5 text-gold" />
+                        <span>{post.date}</span>
+                      </div>
+                      <span className="font-medium text-[var(--ink)] flex items-center gap-1 group-hover:text-gold transition-colors">
+                        Read <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </motion.article>
-            ))}
+                </motion.article>
+              ))}
+            </div>
           </div>
         )}
       </section>
@@ -685,7 +435,7 @@ function BlogsPage() {
         </div>
       </section>
 
-      {/* Full Article Reader Modal */}
+      {/* Full Article Reader Modal (When active post exists) */}
       <AnimatePresence>
         {activePost && (
           <motion.div
