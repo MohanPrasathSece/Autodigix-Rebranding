@@ -55,9 +55,17 @@
   <!-- Blogs & Growth Insights — content marketing -->
   <url>
     <loc>https://autodigix.in/blogs</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post: SEO Trends in 2026 -->
+  <url>
+    <loc>https://autodigix.in/blogs/seo-trends-2026</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- Privacy Policy — legal compliance -->
