@@ -1,16 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { 
-  Search, 
-  Sparkles, 
-  Clock, 
-  Calendar, 
-  ArrowUpRight, 
-  X, 
+import {
+  Search,
+  Sparkles,
+  Clock,
+  Calendar,
+  ArrowUpRight,
+  X,
   ChevronRight,
   Mail,
-  BookOpen
+  BookOpen,
 } from "lucide-react";
 import { Reveal, RevealText } from "../components/Reveal";
 import founderImage from "../assets/founder.png";
@@ -33,7 +33,8 @@ export const Route = createFileRoute("/blogs")({
       { property: "og:title", content: "Blogs & Growth Intelligence · AutoDigiX" },
       {
         property: "og:description",
-        content: "Battle-tested frameworks, AI automation guides, and performance marketing strategies.",
+        content:
+          "Battle-tested frameworks, AI automation guides, and performance marketing strategies.",
       },
       { property: "og:url", content: "https://autodigix.in/blogs" },
       { property: "og:image", content: "https://autodigix.in/blog1-banner.png" },
@@ -42,7 +43,8 @@ export const Route = createFileRoute("/blogs")({
       { name: "twitter:title", content: "Blogs & Growth Intelligence · AutoDigiX" },
       {
         name: "twitter:description",
-        content: "Battle-tested frameworks, AI automation guides, and performance marketing strategies.",
+        content:
+          "Battle-tested frameworks, AI automation guides, and performance marketing strategies.",
       },
       { name: "twitter:image", content: "https://autodigix.in/blog1-banner.png" },
     ],
@@ -92,8 +94,7 @@ function BlogsPage() {
   // Filter posts based on category and search query
   const filteredPosts = useMemo(() => {
     return BLOG_POSTS.filter((post) => {
-      const matchesCategory =
-        selectedCategory === "All" || post.category === selectedCategory;
+      const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
       const matchesSearch =
         searchQuery === "" ||
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -120,7 +121,10 @@ function BlogsPage() {
   return (
     <div className="bg-[var(--beige)] min-h-screen">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative pt-36 pb-16 md:pt-44 md:pb-24 px-6 overflow-hidden border-b border-[var(--ink)]/5">
+      <section
+        ref={heroRef}
+        className="relative pt-36 pb-16 md:pt-44 md:pb-24 px-6 overflow-hidden border-b border-[var(--ink)]/5"
+      >
         <motion.div
           style={{ y: yBg }}
           aria-hidden
@@ -132,7 +136,9 @@ function BlogsPage() {
 
         <div className="relative max-w-7xl mx-auto z-10">
           <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-[var(--ink-soft)]/70 mb-4">
-            <Link to="/" className="hover:text-[var(--ink)] transition-colors">Home</Link>
+            <Link to="/" className="hover:text-[var(--ink)] transition-colors">
+              Home
+            </Link>
             <ChevronRight className="w-3.5 h-3.5 opacity-50" />
             <span className="text-[var(--ink)] font-semibold">Blogs & Insights</span>
           </div>
@@ -152,7 +158,8 @@ function BlogsPage() {
 
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-2xl text-base md:text-xl text-[var(--ink-soft)] leading-relaxed font-light">
-              Tactical playbooks, automation architectures, and conversion frameworks from our team. No fluff, no generic listicles—only battle-tested methodologies.
+              Tactical playbooks, automation architectures, and conversion frameworks from our team.
+              No fluff, no generic listicles—only battle-tested methodologies.
             </p>
           </Reveal>
 
@@ -213,19 +220,21 @@ function BlogsPage() {
             className="group block relative bg-[var(--beige-light)] rounded-3xl p-6 md:p-10 border border-[var(--ink)]/10 shadow-soft hover:shadow-gold transition-all duration-500 overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-gold/10 via-transparent to-transparent rounded-bl-full pointer-events-none" />
-            
+
             <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
               {featuredPost.bannerImage && (
-                <div className="lg:col-span-5 overflow-hidden rounded-2xl border border-[var(--ink)]/10 shadow-sm aspect-video lg:aspect-[4/3] bg-black/5">
+                <div className="lg:col-span-6 overflow-hidden rounded-2xl border border-[var(--ink)]/10 shadow-sm aspect-[2/1] bg-black/5 flex items-center justify-center">
                   <img
                     src={featuredPost.bannerImage}
                     alt={featuredPost.bannerAlt || featuredPost.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               )}
-              
-              <div className={`${featuredPost.bannerImage ? "lg:col-span-7" : "lg:col-span-8"} space-y-4`}>
+
+              <div
+                className={`${featuredPost.bannerImage ? "lg:col-span-6" : "lg:col-span-8"} space-y-4`}
+              >
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[var(--ink)] text-[var(--beige-light)]">
                     {featuredPost.category}
@@ -254,11 +263,19 @@ function BlogsPage() {
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[var(--ink)]/10 overflow-hidden flex items-center justify-center border border-[var(--ink)]/10">
-                      <img src={founderImage} alt={featuredPost.author.name} className="w-full h-full object-cover" />
+                      <img
+                        src={founderImage}
+                        alt={featuredPost.author.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
-                      <div className="text-sm font-medium text-[var(--ink)]">{featuredPost.author.name}</div>
-                      <div className="text-xs text-[var(--ink-soft)]/70">{featuredPost.author.role}</div>
+                      <div className="text-sm font-medium text-[var(--ink)]">
+                        {featuredPost.author.name}
+                      </div>
+                      <div className="text-xs text-[var(--ink-soft)]/70">
+                        {featuredPost.author.role}
+                      </div>
                     </div>
                   </div>
 
@@ -303,8 +320,14 @@ function BlogsPage() {
           <div>
             <div className="flex items-center justify-between mb-8 pb-4 border-b border-[var(--ink)]/10">
               <div className="text-sm font-medium text-[var(--ink)]">
-                Showing <span className="font-bold text-gold">{filteredPosts.length}</span> {filteredPosts.length === 1 ? "article" : "articles"}
-                {selectedCategory !== "All" && <span> in <strong className="text-[var(--ink)]">{selectedCategory}</strong></span>}
+                Showing <span className="font-bold text-gold">{filteredPosts.length}</span>{" "}
+                {filteredPosts.length === 1 ? "article" : "articles"}
+                {selectedCategory !== "All" && (
+                  <span>
+                    {" "}
+                    in <strong className="text-[var(--ink)]">{selectedCategory}</strong>
+                  </span>
+                )}
               </div>
               {searchQuery && (
                 <button
@@ -328,11 +351,11 @@ function BlogsPage() {
                 >
                   <Link to="/blogs/$slug" params={{ slug: post.slug }} className="block">
                     {post.bannerImage && (
-                      <div className="aspect-video w-full rounded-2xl overflow-hidden mb-5 border border-[var(--ink)]/10 bg-black/5">
+                      <div className="aspect-[2/1] w-full rounded-2xl overflow-hidden mb-5 border border-[var(--ink)]/10 bg-black/5 flex items-center justify-center">
                         <img
                           src={post.bannerImage}
                           alt={post.bannerAlt || post.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                     )}
@@ -359,7 +382,10 @@ function BlogsPage() {
                     {/* Tags */}
                     <div className="flex flex-wrap gap-1.5 mb-5">
                       {post.tags.slice(0, 3).map((tag, tIdx) => (
-                        <span key={tIdx} className="text-[10px] text-[var(--ink-soft)]/70 bg-[var(--beige)]/80 px-2.5 py-0.5 rounded-md">
+                        <span
+                          key={tIdx}
+                          className="text-[10px] text-[var(--ink-soft)]/70 bg-[var(--beige)]/80 px-2.5 py-0.5 rounded-md"
+                        >
                           #{tag}
                         </span>
                       ))}
@@ -375,7 +401,8 @@ function BlogsPage() {
                         params={{ slug: post.slug }}
                         className="font-medium text-[var(--ink)] flex items-center gap-1 group-hover:text-gold transition-colors"
                       >
-                        Read Article <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        Read Article{" "}
+                        <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </Link>
                     </div>
                   </div>
@@ -399,10 +426,14 @@ function BlogsPage() {
             Get High-ROI Growth Tactics in Your Inbox
           </h2>
           <p className="mt-4 text-sm md:text-base text-[var(--beige-light)]/75 max-w-xl mx-auto leading-relaxed">
-            Bi-weekly frameworks on paid advertising, AI automations, and search dominance curated directly by Praveen Gorla and our senior revenue engineers.
+            Bi-weekly frameworks on paid advertising, AI automations, and search dominance curated
+            directly by Praveen Gorla and our senior revenue engineers.
           </p>
 
-          <form onSubmit={handleSubscribe} className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+          <form
+            onSubmit={handleSubscribe}
+            className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto"
+          >
             <input
               type="email"
               required

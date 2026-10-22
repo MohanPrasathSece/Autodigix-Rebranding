@@ -1,26 +1,26 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState, useEffect, useMemo, useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { 
-  Clock, 
-  Calendar, 
-  ChevronRight, 
-  ArrowLeft, 
-  ArrowUpRight, 
-  Share2, 
-  CheckCircle2, 
-  Sparkles, 
-  Target, 
-  HelpCircle, 
-  BookOpen, 
-  Tag, 
-  Twitter, 
-  Linkedin, 
-  Copy, 
+import {
+  Clock,
+  Calendar,
+  ChevronRight,
+  ArrowLeft,
+  ArrowUpRight,
+  Share2,
+  CheckCircle2,
+  Sparkles,
+  Target,
+  HelpCircle,
+  BookOpen,
+  Tag,
+  Twitter,
+  Linkedin,
+  Copy,
   Check,
   TrendingUp,
   Flame,
-  Bookmark
+  Bookmark,
 } from "lucide-react";
 import { BLOG_POSTS, type BlogPost } from "../data/blogsData";
 import founderImage from "../assets/founder.png";
@@ -142,7 +142,7 @@ export const Route = createFileRoute("/blogs_/$slug")({
 });
 
 function BlogPostPage() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: BlogPost };
   const [copied, setCopied] = useState(false);
   const [activeHeading, setActiveHeading] = useState<string>("");
 
@@ -157,7 +157,9 @@ function BlogPostPage() {
   // Related & Recent Articles
   const relatedPosts = useMemo(() => {
     return BLOG_POSTS.filter(
-      (p) => p.slug !== post.slug && (p.category === post.category || p.tags.some((t) => post.tags.includes(t)))
+      (p) =>
+        p.slug !== post.slug &&
+        (p.category === post.category || p.tags.some((t) => post.tags.includes(t))),
     ).slice(0, 3);
   }, [post]);
 
@@ -281,7 +283,11 @@ function BlogPostPage() {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[var(--beige-light)] border border-[var(--ink)]/10 text-xs text-[var(--ink-soft)] hover:text-[var(--ink)] hover:border-[var(--ink)]/30 transition-all shadow-sm"
                 title="Copy article link"
               >
-                {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                {copied ? (
+                  <Check className="w-3.5 h-3.5 text-emerald-600" />
+                ) : (
+                  <Copy className="w-3.5 h-3.5" />
+                )}
                 <span>{copied ? "Copied!" : "Copy Link"}</span>
               </button>
             </div>
@@ -289,11 +295,11 @@ function BlogPostPage() {
         </div>
 
         {/* Featured Banner Image */}
-        <div className="my-8 md:my-12 rounded-3xl overflow-hidden border border-[var(--ink)]/10 shadow-soft bg-black/5 aspect-[16/9] max-h-[580px] w-full">
+        <div className="my-8 md:my-12 rounded-3xl overflow-hidden border border-[var(--ink)]/10 shadow-soft bg-black/5 aspect-[2/1] max-h-[580px] w-full flex items-center justify-center">
           <img
             src={post.bannerImage}
             alt={post.bannerAlt || post.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
 
@@ -309,10 +315,15 @@ function BlogPostPage() {
               </div>
               {post.content.overview.map((para, pIdx) => (
                 <p key={pIdx}>
-                  {pIdx === 0 ? (
+                  {post.slug === "seo-trends-2026" && pIdx === 0 ? (
                     <>
-                      Search is evolving rapidly in 2026. AI-powered search, voice search, and changing customer behaviour are transforming how people discover businesses online. However, Search Engine Optimization (SEO) remains an important part of{" "}
-                      <Link to="/services" className="text-gold font-semibold underline hover:text-[var(--ink)]">
+                      Search is evolving rapidly in 2026. AI-powered search, voice search, and
+                      changing customer behaviour are transforming how people discover businesses
+                      online. However, Search Engine Optimization (SEO) remains an important part of{" "}
+                      <Link
+                        to="/services"
+                        className="text-gold font-semibold underline hover:text-[var(--ink)]"
+                      >
                         digital marketing
                       </Link>
                       .
@@ -331,7 +342,10 @@ function BlogPostPage() {
               </h2>
               <ul className="space-y-3">
                 {post.content.keyTakeaways.map((takeaway, tIdx) => (
-                  <li key={tIdx} className="flex items-start gap-3 text-sm md:text-base text-[var(--ink)]">
+                  <li
+                    key={tIdx}
+                    className="flex items-start gap-3 text-sm md:text-base text-[var(--ink)]"
+                  >
                     <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                     <span>{takeaway}</span>
                   </li>
@@ -349,15 +363,20 @@ function BlogPostPage() {
                 {section.heading === "The Importance of Local SEO" ? (
                   <>
                     <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
-                      Local SEO helps businesses become more visible when customers search for products or services in a specific location.
+                      Local SEO helps businesses become more visible when customers search for
+                      products or services in a specific location.
                     </p>
                     <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
-                      For businesses targeting Hyderabad, local SEO can help attract relevant enquiries and improve local visibility. Important activities include:
+                      For businesses targeting Hyderabad, local SEO can help attract relevant
+                      enquiries and improve local visibility. Important activities include:
                     </p>
                     {section.bullets && (
                       <ul className="space-y-2.5 my-3 pl-2">
                         {section.bullets.map((b, bIdx) => (
-                          <li key={bIdx} className="flex items-start gap-2.5 text-sm md:text-base text-[var(--ink-soft)]">
+                          <li
+                            key={bIdx}
+                            className="flex items-start gap-2.5 text-sm md:text-base text-[var(--ink-soft)]"
+                          >
                             <span className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
                             <span>{b}</span>
                           </li>
@@ -366,44 +385,66 @@ function BlogPostPage() {
                     )}
                     <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed pt-2">
                       For example, a{" "}
-                      <Link to="/services" className="text-gold font-medium underline hover:text-[var(--ink)]">
+                      <Link
+                        to="/services"
+                        className="text-gold font-medium underline hover:text-[var(--ink)]"
+                      >
                         digital marketing agency
                       </Link>{" "}
                       serving Hyderabad can create a service page explaining its{" "}
-                      <Link to="/services" search={{ service: "seo-optimization" } as any} className="text-gold font-medium underline hover:text-[var(--ink)]">
+                      <Link
+                        to="/services"
+                        className="text-gold font-medium underline hover:text-[var(--ink)]"
+                      >
                         SEO services
                       </Link>{" "}
-                      and how they help local businesses. Location keywords should be used naturally rather than repeated excessively.
+                      and how they help local businesses. Location keywords should be used naturally
+                      rather than repeated excessively.
                     </p>
                   </>
                 ) : section.heading === "Content Marketing and Search Intent" ? (
                   <>
                     <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
-                      Effective SEO content answers the questions users actually have. For example, someone searching for “
-                      <Link to="/services" search={{ service: "seo-optimization" } as any} className="text-gold font-medium underline hover:text-[var(--ink)]">
+                      Effective SEO content answers the questions users actually have. For example,
+                      someone searching for “
+                      <Link
+                        to="/services"
+                        className="text-gold font-medium underline hover:text-[var(--ink)]"
+                      >
                         SEO services in Hyderabad
                       </Link>
-                      ” may be comparing agencies, while someone searching for “what is SEO” may want basic information.
+                      ” may be comparing agencies, while someone searching for “what is SEO” may
+                      want basic information.
                     </p>
                     <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
                       Businesses can address these different needs through educational blogs,{" "}
-                      <Link to="/services" className="text-gold font-medium underline hover:text-[var(--ink)]">
+                      <Link
+                        to="/services"
+                        className="text-gold font-medium underline hover:text-[var(--ink)]"
+                      >
                         service pages
                       </Link>
                       , FAQs, and useful guides. Through high-impact{" "}
-                      <Link to="/services" className="text-gold font-medium underline hover:text-[var(--ink)]">
+                      <Link
+                        to="/services"
+                        className="text-gold font-medium underline hover:text-[var(--ink)]"
+                      >
                         content marketing
                       </Link>
-                      , internal links between related blogs and service pages also help visitors discover relevant information and explore a business's offerings.
+                      , internal links between related blogs and service pages also help visitors
+                      discover relevant information and explore a business's offerings.
                     </p>
                   </>
                 ) : section.heading === "Final Thoughts: Is SEO Still Worth It in 2026?" ? (
                   <>
                     <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
-                      SEO is not disappearing; it is evolving. Businesses that combine helpful content, technical optimization, local SEO, and a positive website experience can strengthen their organic visibility over time.
+                      SEO is not disappearing; it is evolving. Businesses that combine helpful
+                      content, technical optimization, local SEO, and a positive website experience
+                      can strengthen their organic visibility over time.
                     </p>
                     <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
-                      SEO also works alongside social media marketing, paid advertising, and lead generation to support broader business goals.
+                      SEO also works alongside social media marketing, paid advertising, and lead
+                      generation to support broader business goals.
                     </p>
 
                     {/* Step 3 Internal Links Box */}
@@ -413,11 +454,17 @@ function BlogPostPage() {
                       </h3>
                       <p className="text-sm md:text-base text-[var(--beige-light)]/85 leading-relaxed">
                         At AutoDigiX, we help businesses strengthen their online presence through{" "}
-                        <Link to="/services" search={{ service: "seo-optimization" } as any} className="text-gold-soft font-semibold underline hover:text-white">
+                        <Link
+                          to="/services"
+                          className="text-gold-soft font-semibold underline hover:text-white"
+                        >
                           SEO services
                         </Link>
                         ,{" "}
-                        <Link to="/services" className="text-gold-soft font-semibold underline hover:text-white">
+                        <Link
+                          to="/services"
+                          className="text-gold-soft font-semibold underline hover:text-white"
+                        >
                           digital marketing
                         </Link>
                         , social media marketing, and lead-generation strategies.
@@ -438,22 +485,121 @@ function BlogPostPage() {
                       </div>
                     </div>
                   </>
+                ) : section.heading === "Final Thoughts: Are AI Agents Worth Exploring in 2026?" ? (
+                  <>
+                    <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
+                      AI agents are becoming an important part of modern marketing automation.
+                      Although they can improve efficiency and support repetitive workflows, they do
+                      not eliminate the need for marketing strategy, creativity, responsible
+                      decision-making, and human supervision.
+                    </p>
+                    <p className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
+                      Businesses that adopt AI thoughtfully can explore new ways to improve customer
+                      engagement, streamline operations, and support sustainable growth.
+                    </p>
+
+                    {/* Step 3 Internal Links Box */}
+                    <div className="my-8 p-6 md:p-8 rounded-3xl bg-gradient-to-br from-[var(--ink)] to-[#152e59] text-[var(--beige-light)] space-y-3 shadow-md">
+                      <h3 className="font-display text-xl md:text-2xl text-[var(--beige-light)] font-medium">
+                        Accelerate Your Marketing with AutoDigiX
+                      </h3>
+                      <p className="text-sm md:text-base text-[var(--beige-light)]/85 leading-relaxed">
+                        At{" "}
+                        <a
+                          href="https://www.autodigix.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gold-soft font-semibold underline hover:text-white"
+                        >
+                          AutoDigiX
+                        </a>
+                        , we help businesses strengthen their online presence through{" "}
+                        <Link
+                          to="/services"
+                          className="text-gold-soft font-semibold underline hover:text-white"
+                        >
+                          AI automation
+                        </Link>
+                        ,{" "}
+                        <Link
+                          to="/services"
+                          className="text-gold-soft font-semibold underline hover:text-white"
+                        >
+                          digital marketing
+                        </Link>
+                        ,{" "}
+                        <Link
+                          to="/services"
+                          className="text-gold-soft font-semibold underline hover:text-white"
+                        >
+                          SEO
+                        </Link>
+                        ,{" "}
+                        <Link
+                          to="/services"
+                          className="text-gold-soft font-semibold underline hover:text-white"
+                        >
+                          social media marketing
+                        </Link>
+                        , paid advertising, and{" "}
+                        <Link
+                          to="/services"
+                          className="text-gold-soft font-semibold underline hover:text-white"
+                        >
+                          lead-generation strategies
+                        </Link>
+                        .
+                      </p>
+                      <div className="pt-3">
+                        <p className="text-sm md:text-base text-[var(--beige-light)]/90">
+                          Ready to take your digital marketing to the next level? Visit{" "}
+                          <a
+                            href="https://www.autodigix.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gold-soft font-bold underline hover:text-white inline-flex items-center gap-1.5"
+                          >
+                            AutoDigiX <ArrowUpRight className="w-4 h-4 inline" />
+                          </a>
+                          .
+                        </p>
+                      </div>
+                    </div>
+                  </>
                 ) : (
                   <>
                     {section.paragraphs.map((p, pIdx) => (
-                      <p key={pIdx} className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
+                      <p
+                        key={pIdx}
+                        className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed"
+                      >
                         {p}
                       </p>
                     ))}
                     {section.bullets && (
                       <ul className="space-y-2.5 my-3 pl-2">
                         {section.bullets.map((b, bIdx) => (
-                          <li key={bIdx} className="flex items-start gap-2.5 text-sm md:text-base text-[var(--ink-soft)]">
+                          <li
+                            key={bIdx}
+                            className="flex items-start gap-2.5 text-sm md:text-base text-[var(--ink-soft)]"
+                          >
                             <span className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
                             <span>{b}</span>
                           </li>
                         ))}
                       </ul>
+                    )}
+                    {section.postParagraphs && (
+                      <div className="space-y-4 pt-1">
+                        {section.postParagraphs.map((p, pIdx) => (
+                          <p
+                            key={pIdx}
+                            className="text-sm md:text-base text-[var(--ink-soft)] leading-relaxed"
+                          >
+                            {p}
+                          </p>
+                        ))}
+                      </div>
                     )}
                   </>
                 )}
@@ -525,8 +671,12 @@ function BlogPostPage() {
                 />
               </div>
               <div className="space-y-2 text-center sm:text-left">
-                <div className="text-xs uppercase tracking-widest text-gold font-semibold">About the Author</div>
-                <h4 className="font-display text-xl text-[var(--ink)] font-medium">{post.author.name}</h4>
+                <div className="text-xs uppercase tracking-widest text-gold font-semibold">
+                  About the Author
+                </div>
+                <h4 className="font-display text-xl text-[var(--ink)] font-medium">
+                  {post.author.name}
+                </h4>
                 <p className="text-xs sm:text-sm text-[var(--ink-soft)] leading-relaxed max-w-xl">
                   {post.author.bio ||
                     "Growth and revenue engineering strategist at AutoDigiX, specializing in technical SEO, performance advertising, and revenue operations frameworks."}
@@ -648,7 +798,8 @@ function BlogPostPage() {
                 Ready to dominate search in 2026?
               </h3>
               <p className="text-xs text-[var(--beige-light)]/75 leading-relaxed">
-                Let AutoDigiX design, automate, and scale your organic pipeline with data-driven frameworks.
+                Let AutoDigiX design, automate, and scale your organic pipeline with data-driven
+                frameworks.
               </p>
               <Link
                 to="/contact"

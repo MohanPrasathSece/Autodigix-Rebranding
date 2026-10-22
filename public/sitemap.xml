@@ -68,6 +68,14 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- Blog Post: AI Agents in Digital Marketing: The Next Big Trend in 2026 -->
+  <url>
+    <loc>https://autodigix.in/blogs/ai-agents-digital-marketing-2026</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Privacy Policy — legal compliance -->
   <url>
     <loc>https://autodigix.in/privacy</loc>
