@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 dotenv.config({ path: path.join(__dirname, '.env') });
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -23,7 +24,7 @@ const transporter = nodemailer.createTransport({
   secure: parseInt(process.env.SMTP_PORT || '465', 10) === 465, // true for 465, false for other ports
   auth: {
     user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS, // This should be an App Password, not your regular password
+    pass: (process.env.SMTP_PASS || '').replace(/["'\s]/g, ''), // Strip quotes and spaces from App Password
   },
   tls: {
     // Do not fail on invalid certs (common issue in local dev environments on Windows)
