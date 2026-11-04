@@ -230,8 +230,9 @@ function ContactPage() {
           setForm({ name: "", email: "", company: "", budget: "", message: "" });
         }, 3000);
       } else {
-        console.error("Failed to send message");
-        alert("Failed to send message. Please try again later.");
+        const errorData = await response.json().catch(() => ({}));
+        console.error("Failed to send message:", errorData);
+        alert(errorData.error || "Failed to send message. Please try again later.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);

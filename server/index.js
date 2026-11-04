@@ -39,6 +39,23 @@ app.post('/api/contact', async (req, res) => {
     return res.status(400).json({ error: 'Name, email, and message are required.' });
   }
 
+  // Reload env in case it was updated while server is running
+  dotenv.config({ path: path.join(__dirname, '.env'), override: true });
+  dotenv.config({ path: path.join(__dirname, '..', '.env'), override: true });
+
+  const activeTransporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: parseInt(process.env.SMTP_PORT || '465', 10),
+    secure: parseInt(process.env.SMTP_PORT || '465', 10) === 465,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: (process.env.SMTP_PASS || '').replace(/["'\s]/g, ''),
+    },
+    tls: {
+      rejectUnauthorized: false
+    }
+  });
+
   try {
     const adminMailOptions = {
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
@@ -82,8 +99,8 @@ ${message}
     };
 
     await Promise.all([
-      transporter.sendMail(adminMailOptions),
-      transporter.sendMail(userMailOptions)
+      activeTransporter.sendMail(adminMailOptions),
+      activeTransporter.sendMail(userMailOptions)
     ]);
     res.status(200).json({ message: 'Email sent successfully!' });
   } catch (error) {
