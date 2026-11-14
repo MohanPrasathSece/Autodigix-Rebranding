@@ -162,6 +162,30 @@ function RootComponent() {
     }
   }, [location.pathname]);
 
+  // Force scroll to top on every page navigation
+  useEffect(() => {
+    const scrollToTop = () => {
+      if (typeof window !== "undefined") {
+        if ((window as any).lenis) {
+          try {
+            (window as any).lenis.scrollTo(0, { immediate: true, force: true, lock: false });
+          } catch (_) {}
+        }
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" as any });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+    };
+
+    scrollToTop();
+    const raf = requestAnimationFrame(scrollToTop);
+    const t = setTimeout(scrollToTop, 80);
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(t);
+    };
+  }, [location.pathname]);
+
   return (
     <>
       <PageIntro />
