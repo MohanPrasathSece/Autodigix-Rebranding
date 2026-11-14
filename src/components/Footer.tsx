@@ -65,6 +65,7 @@ export function Footer() {
                 { to: "/courses", label: "Courses" },
                 { to: "/portfolio", label: "Portfolio" },
                 { to: "/blogs", label: "Blogs" },
+                { to: "/careers", label: "Careers" },
                 { to: "/partnerships", label: "Partnerships" },
                 { to: "/about", label: "About" },
                 { to: "/contact", label: "Contact" },

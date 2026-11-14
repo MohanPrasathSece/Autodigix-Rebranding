@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BlogsRouteImport } from './routes/blogs'
+import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as JournalRouteImport } from './routes/journal'
@@ -42,6 +43,11 @@ const BlogRoute = BlogRouteImport.update({
 const BlogsRoute = BlogsRouteImport.update({
   id: '/blogs',
   path: '/blogs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/blogs': typeof BlogsRoute
+  '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/journal': typeof JournalRoute
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/blogs': typeof BlogsRoute
+  '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/journal': typeof JournalRoute
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/blogs': typeof BlogsRoute
+  '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/journal': typeof JournalRoute
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/blogs'
+    | '/careers'
     | '/contact'
     | '/courses'
     | '/journal'
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/blogs'
+    | '/careers'
     | '/contact'
     | '/courses'
     | '/journal'
@@ -183,6 +194,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/blogs'
+    | '/careers'
     | '/contact'
     | '/courses'
     | '/journal'
@@ -200,6 +212,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
   BlogsRoute: typeof BlogsRoute
+  CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRoute
   JournalRoute: typeof JournalRoute
@@ -240,6 +253,13 @@ declare module '@tanstack/react-router' {
       path: '/blogs'
       fullPath: '/blogs'
       preLoaderRoute: typeof BlogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -320,6 +340,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
   BlogsRoute: BlogsRoute,
+  CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
   CoursesRoute: CoursesRoute,
   JournalRoute: JournalRoute,

@@ -11,6 +11,7 @@ const links = [
   { to: "/courses", label: "Courses" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/blogs", label: "Blogs" },
+  { to: "/careers", label: "Careers" },
   { to: "/partnerships", label: "Partnerships" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -45,19 +46,18 @@ export function Navbar() {
     <motion.nav
       {...(!isMobile
         ? {
-            initial: { y: -40, opacity: 0 },
-            animate: { y: 0, opacity: 1 },
-            transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 2.0 },
-          }
+          initial: { y: -40, opacity: 0 },
+          animate: { y: 0, opacity: 1 },
+          transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 2.0 },
+        }
         : {})}
       style={{ position: "fixed" }}
       className={`fixed top-0 inset-x-0 z-50 transition-[padding] duration-500 ${scrolled ? "py-2" : "py-4"}`}
     >
       <div className="mx-auto max-w-7xl px-6">
         <div
-          className={`flex items-center justify-between rounded-full px-5 py-1.5 transition-[background-color,box-shadow] duration-500 ${
-            scrolled ? "glass shadow-soft" : ""
-          }`}
+          className={`flex items-center justify-between rounded-full px-5 py-1.5 transition-[background-color,box-shadow] duration-500 ${scrolled ? "glass shadow-soft" : ""
+            }`}
         >
           <Link
             to="/"
@@ -76,14 +76,14 @@ export function Navbar() {
                 to={l.to}
                 onClick={() => window.scrollTo(0, 0)}
                 activeOptions={{ exact: true }}
-                className="px-3.5 py-2 text-sm text-[var(--ink)]/75 hover:text-[var(--ink)] transition-colors relative group"
+                className="px-2.5 xl:px-3.5 py-2 text-sm text-[var(--ink)]/75 hover:text-[var(--ink)] transition-colors relative group"
                 activeProps={{ className: "text-[var(--ink)]" }}
               >
                 {({ isActive }) => (
                   <>
                     <span>{l.label}</span>
                     <span
-                      className={`absolute left-3.5 right-3.5 -bottom-0.5 h-px bg-[var(--ink)] transition-transform origin-left ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                      className={`absolute left-2.5 right-2.5 xl:left-3.5 xl:right-3.5 -bottom-0.5 h-px bg-[var(--ink)] transition-transform origin-left ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
                     />
                   </>
                 )}

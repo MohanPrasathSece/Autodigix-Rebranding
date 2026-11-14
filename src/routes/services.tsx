@@ -186,7 +186,7 @@ export const Route = createFileRoute("/services")({
 const services = [
   {
     icon: Target,
-    title: "All Digital Marketing",
+    title: "Digital Marketing",
     short: "Data-driven marketing and professional video editing.",
     long: "Growth marketing and high-quality creative assets engineered to capture attention and scale authority.",
     bullets: [
@@ -470,10 +470,9 @@ function ServicesPage() {
               }}
               onClick={(e) => e.stopPropagation()}
               className={`fixed z-[70] bg-[var(--beige-light)] shadow-gold border-[var(--ink)]/20 overflow-hidden 
-                ${
-                  isMobile
-                    ? "inset-x-0 bottom-0 rounded-t-[2.5rem] p-10 pt-12 pb-16 h-[85vh] overflow-y-auto"
-                    : "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl rounded-[2rem] p-10 md:p-14"
+                ${isMobile
+                  ? "inset-x-0 bottom-0 rounded-t-[2.5rem] p-10 pt-12 pb-16 h-[85vh] overflow-y-auto"
+                  : "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl rounded-[2rem] p-10 md:p-14"
                 }`}
             >
               {isMobile && (

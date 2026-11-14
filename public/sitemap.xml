@@ -52,6 +52,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Careers — hiring & talent acquisition -->
+  <url>
+    <loc>https://autodigix.in/careers</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blogs & Growth Insights — content marketing -->
   <url>
     <loc>https://autodigix.in/blogs</loc>

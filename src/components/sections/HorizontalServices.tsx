@@ -7,7 +7,7 @@ import { Link } from "@tanstack/react-router";
 const services = [
   {
     icon: Target,
-    title: "All Digital Marketing",
+    title: "Digital Marketing",
     desc: "Data-driven marketing and professional video editing.",
   },
   {
