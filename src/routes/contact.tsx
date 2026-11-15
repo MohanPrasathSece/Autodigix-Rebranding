@@ -268,8 +268,8 @@ function ContactPage() {
                   {
                     icon: Mail,
                     label: "Support Email",
-                    value: "info@autodigix.in",
-                    link: "mailto:info@autodigix.in",
+                    value: "info@autodigix.com",
+                    link: "mailto:info@autodigix.com",
                   },
                   { icon: Phone, label: "Phone", value: "+91 8639191907", link: "tel:+918639191907" },
                 ].map((c) => (

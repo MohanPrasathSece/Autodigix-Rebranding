@@ -162,10 +162,10 @@ function PrivacyPage() {
                   Our Data Protection team is available to assist with any access or deletion requests.
                 </p>
                 <a
-                  href="mailto:info@autodigix.in?subject=Privacy%20Inquiry"
+                  href="mailto:info@autodigix.com?subject=Privacy%20Inquiry"
                   className="inline-flex items-center gap-2 text-xs font-medium text-[var(--ink)] hover:text-gold transition-colors"
                 >
-                  <Mail className="w-3.5 h-3.5 text-gold" /> info@autodigix.in
+                  <Mail className="w-3.5 h-3.5 text-gold" /> info@autodigix.com
                 </a>
               </div>
             </div>
@@ -417,7 +417,7 @@ function PrivacyPage() {
                   </div>
                 </div>
                 <p className="text-xs md:text-sm">
-                  To exercise any of these rights, email us at <a href="mailto:info@autodigix.in" className="text-gold font-medium hover:underline">info@autodigix.in</a> with the subject line <em>&quot;Privacy Rights Request&quot;</em>.
+                  To exercise any of these rights, email us at <a href="mailto:info@autodigix.com" className="text-gold font-medium hover:underline">info@autodigix.com</a> with the subject line <em>&quot;Privacy Rights Request&quot;</em>.
                 </p>
               </div>
             </article>
@@ -442,7 +442,7 @@ function PrivacyPage() {
                   <div className="text-xs md:text-sm space-y-1.5 text-[var(--ink-soft)]">
                     <p><strong>Founder & CEO:</strong> Praveen Gorla</p>
                     <p><strong>Official Email:</strong> <a href="mailto:officialautodigix@gmail.com" className="text-[var(--ink)] hover:text-gold transition">officialautodigix@gmail.com</a></p>
-                    <p><strong>Inquiries & Support:</strong> <a href="mailto:info@autodigix.in" className="text-[var(--ink)] hover:text-gold transition">info@autodigix.in</a></p>
+                    <p><strong>Inquiries & Support:</strong> <a href="mailto:info@autodigix.com" className="text-[var(--ink)] hover:text-gold transition">info@autodigix.com</a></p>
                     <p><strong>Direct Helpline:</strong> <a href="tel:+918639191907" className="text-[var(--ink)] hover:text-gold transition">+91 8639191907</a></p>
                     <p><strong>Headquarters:</strong> India · Serving Global Clients (USA, UAE, UK, Europe)</p>
                   </div>

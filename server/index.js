@@ -151,7 +151,7 @@ ${message}
   try {
     const adminMailOptions = {
       from: smtpFrom,
-      to: smtpTo,
+      to: isCareer ? (process.env.CAREER_SMTP_TO || 'info@autodigix.com') : smtpTo,
       replyTo: email,
       subject: adminSubject,
       text: adminText,

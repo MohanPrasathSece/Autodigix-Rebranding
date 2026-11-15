@@ -160,10 +160,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@autodigix.in"
+                  href="mailto:info@autodigix.com"
                   className="hover:text-[var(--beige-light)] transition"
                 >
-                  info@autodigix.in
+                  info@autodigix.com
                 </a>
               </li>
               <li>
