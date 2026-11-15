@@ -55,15 +55,12 @@ const openingsData = [
     roleName: "Digital Marketing Intern" as const,
     badge: "Immediate Opening",
     icon: TrendingUp,
-    type: "3 Months Internship (Leading to Full-Time)",
-    duration: "3 Months",
+    type: "Internship (Leading to Full-Time)",
     batch: "2025 Graduates (Any Degree)",
-    location: "Remote",
+    location: "Hyderabad / Hybrid",
     overview:
       "Work directly on live client acquisition funnels, Meta & Google Ads campaigns, SEO optimization, and data-driven growth strategies.",
     highlights: [
-      "Duration: 3 Months Internship (Leading to Full-Time Conversion)",
-      "Location: 100% Remote (Work from Anywhere)",
       "Graduation Year: 2025 Batch (Passing out in 2025)",
       "Degree: Open to ALL degrees (B.Tech, B.E., B.Sc, BCA, BBA, B.Com, etc.) - We value real skills over college brand or degree branch",
       "Communication: Strong English verbal and written communication with the confidence for client discussions",
@@ -76,15 +73,12 @@ const openingsData = [
     roleName: "AI Automation Intern" as const,
     badge: "Immediate Opening",
     icon: Bot,
-    type: "3 Months Internship (Leading to Full-Time)",
-    duration: "3 Months",
+    type: "Internship (Leading to Full-Time)",
     batch: "2025 Graduates (Any Degree)",
-    location: "Remote",
+    location: "Hyderabad / Hybrid",
     overview:
       "Build real-world automation pipelines, webhook integrations, and AI agent workflows using N8N, Zapier, Make.com, and LLM APIs.",
     highlights: [
-      "Duration: 3 Months Internship (Leading to Full-Time Conversion)",
-      "Location: 100% Remote (Work from Anywhere)",
       "Graduation Year: 2025 Batch (Passing out in 2025)",
       "Degree: Open to ALL degrees (B.Tech, B.E., B.Sc, BCA, BBA, B.Com, etc.) - Skills, curiosity and execution power are what count",
       "Communication: Clear English articulation and client communication to understand business bottlenecks",
@@ -349,7 +343,7 @@ function CareersPage() {
                     Application Successfully Submitted!
                   </h4>
                   <p className="text-sm md:text-base text-[var(--ink-soft)] max-w-md mx-auto leading-relaxed">
-                    Thank you! Your resume document and application have been sent to our talent team at <strong>info@autodigix.com</strong>. We will review your profile and contact you for the next round.
+                    Thank you! Your application and resume have been successfully received. Our team will review your profile and contact you for the next round.
                   </p>
                 </motion.div>
               ) : (
@@ -536,8 +530,8 @@ function CareersPage() {
 
                     <button
                       type="submit"
-                      disabled={isSubmitting}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[var(--ink)] text-[var(--beige-light)] text-sm md:text-base font-medium hover:shadow-gold transition-all duration-300 disabled:opacity-50 cursor-pointer"
+                      disabled={isSubmitting || !agreedToTerms}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[var(--ink)] text-[var(--beige-light)] text-sm md:text-base font-medium hover:shadow-gold transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:shadow-none cursor-pointer"
                     >
                       {isSubmitting ? (
                         "Sending Application..."
