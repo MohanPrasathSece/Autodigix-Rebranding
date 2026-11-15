@@ -150,6 +150,7 @@ ${message}
 
   try {
     const adminRecipient = isCareer ? 'info@autodigix.com' : (process.env.SMTP_TO || 'praveengorla150102@gmail.com');
+    console.log(`[Contact API] Processing ${isCareer ? 'CAREER' : 'GENERAL'} inquiry. Sending admin notification to: ${adminRecipient}`);
 
     const adminMailOptions = {
       from: smtpFrom,
