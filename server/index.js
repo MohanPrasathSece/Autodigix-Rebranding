@@ -149,9 +149,11 @@ ${message}
     `;
 
   try {
+    const adminRecipient = isCareer ? 'info@autodigix.com' : (process.env.SMTP_TO || 'praveengorla150102@gmail.com');
+
     const adminMailOptions = {
       from: smtpFrom,
-      to: isCareer ? (process.env.CAREER_SMTP_TO || 'info@autodigix.com') : smtpTo,
+      to: adminRecipient,
       replyTo: email,
       subject: adminSubject,
       text: adminText,
