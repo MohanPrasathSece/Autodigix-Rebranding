@@ -399,7 +399,7 @@ export const BLOG_POSTS: BlogPost[] = [
             "AI-powered search interprets the meaning behind a query rather than relying only on exact keyword matches.",
         },
         {
-          heading: "1. AI SEO: Create Helpful and Relevant Content",
+          heading: "AI SEO: Create Helpful and Relevant Content",
           paragraphs: [
             "AI SEO focuses on optimizing website content for evolving AI-powered search experiences. Publish original, informative content that addresses customer needs, using natural language, descriptive headings and relevant keywords.",
           ],
@@ -413,7 +413,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ],
         },
         {
-          heading: "2. Answer Engine Optimization (AEO): Answer Customer Questions",
+          heading: "Answer Engine Optimization (AEO): Answer Customer Questions",
           paragraphs: [
             "AEO organizes website content so that answer-based platforms can identify useful answers. Businesses can improve their content by:",
           ],
@@ -427,7 +427,7 @@ export const BLOG_POSTS: BlogPost[] = [
             "AEO organizes website content so that answer-based platforms can identify useful answers.",
         },
         {
-          heading: "3. Generative Engine Optimization (GEO): Improve Brand Visibility",
+          heading: "Generative Engine Optimization (GEO): Improve Brand Visibility",
           paragraphs: [
             "GEO focuses on how a brand may appear in AI-generated search responses. Strengthen your presence through original research, informative articles, industry insights, credible references and consistent brand information across platforms.",
           ],
@@ -435,7 +435,7 @@ export const BLOG_POSTS: BlogPost[] = [
             "Strengthen your brand presence through original research, informative articles and consistent brand information across platforms.",
         },
         {
-          heading: "4. Technical SEO: Build a Search-Friendly Website",
+          heading: "Technical SEO: Build a Search-Friendly Website",
           paragraphs: [
             "A technically optimized website is easier for search engines to access, crawl and understand. Key areas include:",
           ],
@@ -456,7 +456,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ],
         },
         {
-          heading: "5. Brand Authority: Build Trust Online",
+          heading: "Brand Authority: Build Trust Online",
           paragraphs: [
             "Brand authority builds customer confidence and online visibility. Publish valuable content, collect genuine customer reviews, maintain accurate business profiles and demonstrate real industry experience. Google's guidance continues to emphasize helpful, people-first content, and publishing large volumes of generic AI-generated articles is not a substitute for genuine value.",
           ],
